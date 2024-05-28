@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<section
+  id="hero"
+  class="w-full h-screen bg-red-base flex justify-center items-center px-6 lg:px-0 relative"
+>
+  <article
+    class="flex flex-col items-center gap-6 lg:gap-10 w-full max-w-4xl text-center z-[2]"
+  >
+    <div class="flex flex-col gap-1">
+      <p
+        class="text-green-light text-base lg:text-xl font-heading drop-shadow-[0_0px_5px]"
+      >
+        From Vision to Reality: Creating a Brighter Tomorrow
+      </p>
+      <h1
+        class="text-yellow-base font-heading text-5xl lg:text-7xl drop-shadow-[0_0px_5px]"
+      >
+        Soedirman Student Summit
+      </h1>
+      <p
+        class="text-white font-heading text-3xl lg:text-4xl drop-shadow-[0_0px_5px]"
+      >
+        2024
+      </p>
+    </div>
+    <p
+      class="text-white text-sm lg:text-base max-w-3xl drop-shadow-[0_0px_5px]"
+    >
+      By fostering creativity and collaboration, we turn bold visions into
+      tangible realities. Our dedication to sustainability, education, and
+      community empowerment shapes a future where everyone can thrive.
+    </p>
+  </article>
+  <div class="w-full flex justify-center overflow-hidden absolute top-full -translate-y-full">
+    <img
+      src="/images/flower.png"
+      alt="Flower"
+      class="w-[1440px] max-w-[unset] lg:w-full"
+    />
+  </div>
+  <img
+    src="/images/left_cloud.png"
+    alt="Cloud"
+    class="absolute z-[1] h-[250px] md:h-[300px] -left-[200px] top-[5%] lg:-left-[140px] lg:top-[50%] lg:-translate-y-[40%] lg:h-[350px]"
+  />
+  <img
+    src="/images/right_cloud.png"
+    alt="Cloud"
+    class="absolute z-[1] h-[250px] md:h-[300px] -right-[200px] top-[65%] lg:-right-[140px] lg:top-[50%] lg:-translate-y-[40%] lg:h-[350px]"
+  />
+</section>
