@@ -1,0 +1,48 @@
+---
+import FooterLink from "./FooterLink.astro";
+---
+
+<footer class="py-4 px-2 my-4 lg:px-64 lg:py-16">
+  <div
+    class="flex flex-wrap md:flex-nowrap justify-around gap-4 md:flex-row lg:justify-around"
+  >
+    <div class="max-w-md px-3">
+      <h2 class="font-bold text-4xl mb-4">LOGO</h2>
+      <p class="mb-4 pr-2 text-slate-700 font-body text-sm lg:text-base max-w-sm">
+        By fostering creativity and collaboration, we turn bold visions into
+        tangible realities. Our dedication to sustainability, education, and
+        community empowerment shapes a future where everyone can thrive.
+      </p>
+      <p class="font-semibold text-slate-900 text-sm lg:text-base">
+        Copyright &copy; Soedirman Student Summit {new Date().getFullYear()}
+      </p>
+    </div>
+    <div class="flex max-w-md gap-16">
+      <div class="">
+        <h2 class="font-bold text-2xl font-body mb-4 text-slate-900">Link</h2>
+        <div class="flex flex-col gap-1">
+          <FooterLink href="/">Beranda</FooterLink>
+          <FooterLink href="/tentang-unsoed">Tentang Unsoed</FooterLink>
+          <FooterLink href="/timeline">Timeline</FooterLink>
+          <FooterLink href="/penugasan">Penugasan</FooterLink>
+          <FooterLink href="/faq">FAQ</FooterLink>
+          <FooterLink href="/hubungi-kami">Hubungi Kami</FooterLink>
+        </div>
+      </div>
+      <div class="">
+        <h2 class="font-bold text-2xl font-body mb-4 text-slate-900">Social Media</h2>
+        <div class="flex justify-around gap-2">
+          <FooterLink href="https://www.instagram.com/soedirmanstudentsummit/"
+            ><i class="fa-brands fa-instagram text-2xl md:text-4xl"></i></FooterLink
+          >
+          <FooterLink href="https://www.tiktok.com/@soedirmanstudentsummit"
+            ><i class="fa-brands fa-tiktok text-2xl md:text-4xl"></i></FooterLink
+          >
+          <FooterLink href="https://www.youtube.com/@unsoedofficial"
+            ><i class="fa-brands fa-youtube text-2xl md:text-4xl"></i></FooterLink
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
