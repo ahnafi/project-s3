@@ -2,47 +2,84 @@
 import FooterLink from "./FooterLink.astro";
 ---
 
-<footer class="py-4 px-2 my-4 lg:px-64 lg:py-16">
-  <div
-    class="flex flex-wrap md:flex-nowrap justify-around gap-4 md:flex-row lg:justify-around"
-  >
-    <div class="max-w-md px-3">
-      <h2 class="font-bold text-4xl mb-4">LOGO</h2>
-      <p class="mb-4 pr-2 text-slate-700 font-body text-sm lg:text-base max-w-sm">
-        By fostering creativity and collaboration, we turn bold visions into
-        tangible realities. Our dedication to sustainability, education, and
-        community empowerment shapes a future where everyone can thrive.
-      </p>
-      <p class="font-semibold text-slate-900 text-sm lg:text-base">
-        Copyright &copy; Soedirman Student Summit {new Date().getFullYear()}
-      </p>
-    </div>
-    <div class="flex max-w-md gap-16">
-      <div class="">
-        <h2 class="font-bold text-2xl font-body mb-4 text-slate-900">Link</h2>
-        <div class="flex flex-col gap-1">
-          <FooterLink href="/">Beranda</FooterLink>
-          <FooterLink href="/tentang-unsoed">Tentang Unsoed</FooterLink>
-          <FooterLink href="/timeline">Timeline</FooterLink>
-          <FooterLink href="/penugasan">Penugasan</FooterLink>
-          <FooterLink href="/faq">FAQ</FooterLink>
-          <FooterLink href="/hubungi-kami">Hubungi Kami</FooterLink>
-        </div>
+<footer
+  id="footer"
+  class="bg-white-base px-4 md:px-12 lg:px-40 pt-8 md:pt-12 pb-8 font-sans"
+>
+  <div class="container">
+    <div class="flex flex-wrap gap-4 md:gap-8 mb-4 md:mb-8">
+      <div class="px-4 text-dark-base max-w-md">
+        <h2
+          class="font-bold mb-2 md:mb-5 font-heading text-yellow-base drop-shadow-[0_0px_1px_rgba(0,0,0,0.1)] stroke-10 stroke-green-base uppercase"
+        >
+          <span class="text-3xl sm:text-4xl">soedirman</span><span
+            class="block text-xl sm:text-2xl text-green-base drop-shadow-[0_0px_1px_rgba(0,0,0,0.1)] stroke-10 stroke-yellow-base"
+            >student summit</span
+          >
+        </h2>
+        <p class="text-sm md:text-base">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse alias
+          eligendi provident consequuntur harum neque ut fugit quam ea veritatis
+          delectus quis consequatur!
+        </p>
       </div>
-      <div class="">
-        <h2 class="font-bold text-2xl font-body mb-4 text-slate-900">Social Media</h2>
-        <div class="flex justify-around gap-2">
+      <div class="px-4 text-sm max-w-md">
+        <h3 class="font-semibold text-lg sm:text-xl mb-2 md:mb-5">
+          Alternatif Tautan
+        </h3>
+        <ul class="text-dark-base flex flex-col gap-1 md:gap-2">
+          <li>
+            <FooterLink href="/">Beranda</FooterLink>
+          </li>
+          <li>
+            <FooterLink href="/tentang-unsoed">Tentang Unsoed</FooterLink>
+          </li>
+          <li>
+            <FooterLink href="/timeline">Timeline</FooterLink>
+          </li>
+          <li>
+            <FooterLink href="/penugasan">Penugasan</FooterLink>
+          </li>
+          <li>
+            <FooterLink href="/faq">FAQ</FooterLink>
+          </li>
+          <li>
+            <FooterLink href="/hubungi-kami">Hubungi Kami</FooterLink>
+          </li>
+        </ul>
+      </div>
+      <div class="px-4 text-sm max-w-md">
+        <h2
+          class="font-bold text-lg sm:text-xl font-body mb-2 md:mb-5 text-slate-900"
+        >
+          Social Media
+        </h2>
+        <div class="flex gap-6 md:gap-8">
           <FooterLink href="https://www.instagram.com/soedirmanstudentsummit/"
-            ><i class="fa-brands fa-instagram text-2xl md:text-4xl"></i></FooterLink
+            ><i class="fa-brands fa-instagram text-2xl md:text-4xl"
+            ></i></FooterLink
           >
           <FooterLink href="https://www.tiktok.com/@soedirmanstudentsummit"
-            ><i class="fa-brands fa-tiktok text-2xl md:text-4xl"></i></FooterLink
+            ><i class="fa-brands fa-tiktok text-2xl md:text-4xl"
+            ></i></FooterLink
           >
           <FooterLink href="https://www.youtube.com/@unsoedofficial"
-            ><i class="fa-brands fa-youtube text-2xl md:text-4xl"></i></FooterLink
+            ><i class="fa-brands fa-youtube text-2xl md:text-4xl"
+            ></i></FooterLink
           >
         </div>
       </div>
+    </div>
+    <div class="pt-4 border-t border-slate-700">
+      <p class="font-medium text-xs md:text-sm text-dark-base text-center">
+        Copyright &copy;
+        <a
+          href="https://github.com/JackBerck/purbalingga-exhaust-store"
+          class="font-bold hover:text-yellow-base hover:font-medium transition-all duration-300 inline-block"
+          target="_blank">Soedirman Student Summit</a
+        >
+        {new Date().getFullYear()}
+      </p>
     </div>
   </div>
 </footer>

@@ -1,9 +1,10 @@
 ---
-import NavLink from './NavLink.astro';
+import NavLink from "./NavLink.astro";
 ---
 
 <header
-  class="bg-red-base w-full flex justify-center items-center fixed top-0 left-0 z-[99]"
+  id="header"
+  class="bg-dark-base bg-opacity-80 backdrop-blur-sm shadow-[inset_0_-4px_0_0_rgba(0,0,0,0.5)] w-full flex justify-center items-center fixed top-0 left-0 z-[99]"
 >
   <nav class="w-full max-w-7xl relative px-6 lg:p-0">
     <!-- Desktop Nav -->
@@ -13,7 +14,11 @@ import NavLink from './NavLink.astro';
         <NavLink href="/tentang-unsoed">Tentang Unsoed</NavLink>
         <NavLink href="/timeline">Timeline</NavLink>
       </div>
-      <div class="text-white text-3xl">Logo</div>
+      <img
+        src="/butterfly_logo.png"
+        alt="Soedirman Student Summit Logo"
+        width="50"
+      />
       <div class="flex items-center gap-6">
         <NavLink href="/penugasan">Penugasan</NavLink>
         <NavLink href="/faq">FAQ</NavLink>
@@ -22,16 +27,19 @@ import NavLink from './NavLink.astro';
     </div>
     <!-- Mobile Nav -->
     <div class="lg:hidden flex justify-between items-center py-5">
-      <div class="text-white text-3xl">Logo</div>
+      <img
+        src="/butterfly_logo.png"
+        alt="Soedirman Student Summit Logo"
+        width="50"
+      />
       <button class="hamburger hamburger--collapse h-[21px]" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
       </button>
-
       <!-- Nav Items -->
       <div
-        class="absolute top-full w-[250px] z-[999] bg-red-base h-[calc(100vh-76px)] transition-all duration-300 flex flex-col gap-6 px-6 py-6 items-end"
+        class="absolute top-full w-[250px] z-[999] h-[calc(100vh-76px)] transition-all duration-300 flex flex-col gap-6 px-6 py-6 items-end bg-dark-base bg-opacity-80 backdrop-blur-sm shadow-[inset_0_-4px_0_0_rgba(0,0,0,0.5)]"
         id="sidebar"
         style="right:-100%"
       >
@@ -100,7 +108,7 @@ import NavLink from './NavLink.astro';
   }
   .hamburger-inner::before,
   .hamburger-inner::after {
-    content: '';
+    content: "";
     display: block;
   }
   .hamburger-inner::before {
@@ -193,16 +201,16 @@ import NavLink from './NavLink.astro';
   }
 </style>
 <script>
-  const hamburgerButton = document.querySelector('.hamburger');
-  const sidebar = document.querySelector('#sidebar');
+  const hamburgerButton = document.querySelector(".hamburger");
+  const sidebar = document.querySelector("#sidebar");
   if (hamburgerButton && sidebar) {
-    hamburgerButton.addEventListener('click', (e) => {
-      if (hamburgerButton.classList.contains('is-active')) {
-        sidebar.setAttribute('style', 'right: -100%');
-        hamburgerButton.classList.remove('is-active');
+    hamburgerButton.addEventListener("click", (e) => {
+      if (hamburgerButton.classList.contains("is-active")) {
+        sidebar.setAttribute("style", "right: -100%");
+        hamburgerButton.classList.remove("is-active");
       } else {
-        sidebar.setAttribute('style', 'right: 0px');
-        hamburgerButton.classList.add('is-active');
+        sidebar.setAttribute("style", "right: 0px");
+        hamburgerButton.classList.add("is-active");
       }
     });
   }
