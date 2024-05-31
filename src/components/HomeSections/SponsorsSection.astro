@@ -1,0 +1,76 @@
+---
+const sponsors = [
+  {
+    img: "/images/left_cloud.png",
+    name: "",
+  },
+  {
+    img: "/images/left_cloud.png",
+    name: "",
+  },
+  {
+    img: "/images/left_cloud.png",
+    name: "",
+  },
+  {
+    img: "/images/left_cloud.png",
+    name: "",
+  },
+  {
+    img: "/images/left_cloud.png",
+    name: "",
+  },
+  {
+    img: "/images/left_cloud.png",
+    name: "",
+  },
+  {
+    img: "/images/left_cloud.png",
+    name: "",
+  },
+  {
+    img: "/images/left_cloud.png",
+    name: "",
+  },
+  {
+    img: "/images/left_cloud.png",
+    name: "",
+  },
+  {
+    img: "/images/left_cloud.png",
+    name: "",
+  },
+  {
+    img: "/images/left_cloud.png",
+    name: "",
+  },
+  {
+    img: "/images/left_cloud.png",
+    name: "",
+  },
+];
+---
+
+<section
+  id="sponsors"
+  class="w-full bg-red-base flex flex-col justify-center content-center gap-4 items-center py-14 px-4 lg:px-6 lg:pb-28"
+>
+  <h2
+    class="text-green-light font-heading text-3xl drop-shadow-[0px_0px_6px] mb-12"
+  >
+    Sponsors
+  </h2>
+  <div
+    class="flex flex-wrap justify-center gap-4 lg:gap-6 md:max-w-xl lg:max-w-4xl"
+  >
+    {
+      sponsors.map((sponsor) => (
+        <img
+          src={sponsor.img}
+          alt={sponsor.name}
+          class="max-w-16 md:max-w-20 lg:max-w-24 hover:drop-shadow-[0_0px_6px_#FFAA19] transition-all duration-300"
+        />
+      ))
+    }
+  </div>
+</section>
