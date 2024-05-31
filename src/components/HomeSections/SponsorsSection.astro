@@ -1,51 +1,19 @@
 ---
 const sponsors = [
   {
-    img: "/images/left_cloud.png",
+    img: "/images/sponsors/gojek.png",
     name: "",
   },
   {
-    img: "/images/left_cloud.png",
+    img: "/images/sponsors/google.png",
     name: "",
   },
   {
-    img: "/images/left_cloud.png",
+    img: "/images/sponsors/mie-gacoan.png",
     name: "",
   },
   {
-    img: "/images/left_cloud.png",
-    name: "",
-  },
-  {
-    img: "/images/left_cloud.png",
-    name: "",
-  },
-  {
-    img: "/images/left_cloud.png",
-    name: "",
-  },
-  {
-    img: "/images/left_cloud.png",
-    name: "",
-  },
-  {
-    img: "/images/left_cloud.png",
-    name: "",
-  },
-  {
-    img: "/images/left_cloud.png",
-    name: "",
-  },
-  {
-    img: "/images/left_cloud.png",
-    name: "",
-  },
-  {
-    img: "/images/left_cloud.png",
-    name: "",
-  },
-  {
-    img: "/images/left_cloud.png",
+    img: "/images/sponsors/coca-cola.png",
     name: "",
   },
 ];
@@ -53,23 +21,28 @@ const sponsors = [
 
 <section
   id="sponsors"
-  class="w-full bg-red-base flex flex-col justify-center content-center gap-4 items-center py-14 px-4 lg:px-6 lg:pb-28"
+  class="w-full flex flex-col justify-center content-center items-center py-14 px-4 pt-36 pb-16"
 >
   <h2
-    class="text-green-light font-heading text-3xl drop-shadow-[0px_0px_6px] mb-12"
+    class="text-green-light font-heading text-4xl md:text-5xl drop-shadow-[0px_0px_2px] md:drop-shadow-[0px_0px_6px] mb-8"
   >
-    Sponsors
+    Sponsorship
   </h2>
   <div
     class="flex flex-wrap justify-center gap-4 lg:gap-6 md:max-w-xl lg:max-w-4xl"
   >
     {
       sponsors.map((sponsor) => (
-        <img
-          src={sponsor.img}
-          alt={sponsor.name}
-          class="max-w-16 md:max-w-20 lg:max-w-24 hover:drop-shadow-[0_0px_6px_#FFAA19] transition-all duration-300"
-        />
+        <a
+          href="#"
+          class="max-w-36 sm:max-w-40 flex justify-center items-center"
+        >
+          <img
+            src={sponsor.img}
+            alt={sponsor.name}
+            class="hover:drop-shadow-[0_0px_6px_#FFAA19] transition-all duration-300"
+          />
+        </a>
       ))
     }
   </div>

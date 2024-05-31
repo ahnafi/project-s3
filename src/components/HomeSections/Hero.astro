@@ -1,10 +1,10 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 ---
 
 <section
   id="hero"
-  class="w-full h-screen bg-red-base flex justify-center items-center px-6 lg:px-0 relative"
+  class="w-full h-screen bg-transparent flex justify-center items-center px-6 lg:px-0 relative"
 >
   <article
     class="flex flex-col items-center gap-6 lg:gap-10 w-full max-w-4xl text-center z-[2]"
@@ -34,7 +34,9 @@ import { Image } from 'astro:assets';
       community empowerment shapes a future where everyone can thrive.
     </p>
   </article>
-  <div class="w-full flex justify-center overflow-hidden absolute top-full -translate-y-full">
+  <div
+    class="w-full flex justify-center overflow-hidden absolute top-full -translate-y-full"
+  >
     <img
       src="/images/flower.png"
       alt="Flower"
