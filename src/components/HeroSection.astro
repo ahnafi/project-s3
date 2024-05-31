@@ -1,0 +1,28 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  bgColor: string;
+  reverse: "noReverse" | "reverse";
+}
+
+const { src, alt, reverse, bgColor } = Astro.props;
+---
+
+<section
+  id="Hero"
+  class={`w-full flex justify-center items-center pt-36 pb-16 px-6 lg:px-32 gap-4 lg:gap-12
+  ${bgColor} ${reverse === "noReverse" ? "flex-col-reverse md:flex-row" : "flex-col md:flex-row-reverse"}
+  `}
+>
+  <div class="w-full max-w-md flex flex-col gap-2">
+    <slot />
+  </div>
+  <div class="w-full max-w-lg flex justify-center">
+    <img
+      src={src}
+      alt={alt}
+      class="w-full rounded-xl lg:max-w-md hover:drop-shadow-[0_0px_5px_#E8DCA8] transition-all duration-300"
+    />
+  </div>
+</section>
