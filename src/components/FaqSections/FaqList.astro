@@ -1,0 +1,54 @@
+---
+interface Props {
+  title: string;
+  faqs: { question: string; answer: string }[];
+}
+
+const { title, faqs } = Astro.props;
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".faq-item");
+    items.forEach((item) => {
+      const question = item.querySelector(".faq-question");
+      const answer = item.querySelector(".faq-answer");
+      const icon = item.querySelector(".fa-solid");
+
+      if (question && answer && icon) {
+        question.addEventListener("click", () => {
+          if (answer.classList.contains("hidden")) {
+            answer.classList.toggle("hidden");
+            icon.classList.toggle("rotate-180")
+        } else {
+            answer.classList.toggle("hidden");
+            icon.classList.toggle("rotate-180")
+          }
+        });
+      }
+    });
+  });
+</script>
+
+<div class="flex flex-col justify-center py-0 gap-2 md:flex-row lg:justify-around my-4" >
+  <h3
+    class="text-2xl text-left font-heading border-t-black border-t-2 inline-block"
+  >
+    {title}
+  </h3>
+  <ul class="flex flex-col w-full max-w-md lg:max-w-xl border-t-2 border-t-black">
+    {
+      faqs.map((faq) => (
+        <li class="faq-item bg-yellow-light px-2 my-2 rounded-md">
+          <h4 class="faq-question flex justify-between items-center font-semibold text-base lg:text-lg">
+            {faq.question}
+            <i class="fa-solid fa-chevron-down py-2 px-4 text-xl lg:text-2xl transition-all duration-300" />
+          </h4>
+          <p class="faq-answer hidden text-wrap text-sm font-body font-normal lg:text-base py-4 transition-all duration-500">
+            <i class="fa-solid fa-reply rotate-180 text-xl" /> {faq.answer}
+          </p>
+        </li>
+      ))
+    }
+  </ul>
+</div>
