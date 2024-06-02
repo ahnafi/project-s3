@@ -12,17 +12,24 @@ const { title, faqs } = Astro.props;
     const items = document.querySelectorAll(".faq-item");
     items.forEach((item) => {
       const question = item.querySelector(".faq-question");
-      const answer = item.querySelector(".faq-answer");
+      const answer = item.querySelector<HTMLDivElement>(".faq-answer");
       const icon = item.querySelector(".fa-solid");
-
       if (question && answer && icon) {
         question.addEventListener("click", () => {
-          if (answer.classList.contains("hidden")) {
-            answer.classList.toggle("hidden");
-            icon.classList.toggle("rotate-180")
-        } else {
-            answer.classList.toggle("hidden");
-            icon.classList.toggle("rotate-180")
+          question.setAttribute(
+            "aria-expanded",
+            question.getAttribute("aria-expanded") === "false" ? "true" : "false"
+          );
+
+          answer.style.maxHeight =
+            question.getAttribute("aria-expanded") === "true"
+              ? answer.scrollHeight + "px"
+              : "0";
+
+          if (question.getAttribute("aria-expanded") === "true") {
+            icon.classList.toggle("-rotate-180");
+          } else {
+            icon.classList.toggle("-rotate-180");
           }
         });
       }
@@ -30,23 +37,30 @@ const { title, faqs } = Astro.props;
   });
 </script>
 
-<div class="flex flex-col justify-center py-0 gap-2 md:flex-row lg:justify-around my-4" >
-  <h3
-    class="text-2xl text-left font-heading border-t-black border-t-2 inline-block"
-  >
-    {title}
-  </h3>
-  <ul class="flex flex-col w-full max-w-md lg:max-w-xl border-t-2 border-t-black">
+<div class="flex flex-col md:flex-row gap-8 md:gap-12 mb-6 md:mb-8 lg:mb-12">
+  <div class="flex flex-col text-left basis-1/2">
+    <p
+      class="text-xl md:text-3xl sm:text-2xl font-extrabold text-base-content md:border-t-4 md:border-dark md:pt-4"
+    >
+      {title}
+    </p>
+  </div>
+  <ul class="basis-1/2">
     {
       faqs.map((faq) => (
-        <li class="faq-item bg-yellow-light px-2 my-2 rounded-md">
-          <h4 class="faq-question flex justify-between items-center font-semibold text-base lg:text-lg">
-            {faq.question}
-            <i class="fa-solid fa-chevron-down py-2 px-4 text-xl lg:text-2xl transition-all duration-300" />
-          </h4>
-          <p class="faq-answer hidden text-wrap text-sm font-body font-normal lg:text-base py-4 transition-all duration-500">
-            <i class="fa-solid fa-reply rotate-180 text-xl" /> {faq.answer}
-          </p>
+        <li class="faq-item">
+          <button
+            class="faq-question relative flex gap-2 items-center w-full py-5 text-sm font-semibold text-left border-t sm:text-base lg:text-lg border-base-content/10"
+            aria-expanded="false"
+          >
+            <span class="flex-1 text-base-content">{faq.question}</span>
+            <i class="fa-solid fa-chevron-down flex-shrink-0 w-4 h-4 ml-auto fill-current transition duration-200 ease-out" />
+          </button>
+          <div class="faq-answer text-sm md:text-base transition-all duration-300 ease-in-out max-h-0 overflow-hidden ">
+            <div class="pb-5 leading-relaxed">
+              <div class="space-y-2 leading-relaxed">{faq.answer}</div>
+            </div>
+          </div>
         </li>
       ))
     }
