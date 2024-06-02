@@ -12,7 +12,7 @@ const { title, faqs } = Astro.props;
     const items = document.querySelectorAll(".faq-item");
     items.forEach((item) => {
       const question = item.querySelector(".faq-question");
-      const answer = item.querySelector(".faq-answer");
+      const answer = item.querySelector<HTMLDivElement>(".faq-answer");
       const icon = item.querySelector(".fa-solid");
       if (question && answer && icon) {
         question.addEventListener("click", () => {
