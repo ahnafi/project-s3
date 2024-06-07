@@ -4,11 +4,11 @@ import FooterLink from "./FooterLink.astro";
 
 <footer
   id="footer"
-  class="bg-white-base px-4 md:px-12 lg:px-40 pt-8 md:pt-12 pb-8 font-sans"
+  class="bg-dark-base text-white-base px-4 md:px-12 lg:px-40 pt-8 md:pt-12 pb-8 font-sans"
 >
   <div class="container">
     <div class="flex flex-wrap gap-4 md:gap-8 mb-4 md:mb-8">
-      <div class="px-4 text-dark-base max-w-md">
+      <div class="px-4 max-w-md">
         <h2
           class="font-bold mb-2 md:mb-5 font-heading text-yellow-base drop-shadow-[0_0px_1px_rgba(0,0,0,0.1)] stroke-10 stroke-green-base uppercase"
         >
@@ -27,7 +27,7 @@ import FooterLink from "./FooterLink.astro";
         <h3 class="font-semibold text-lg sm:text-xl mb-2 md:mb-5">
           Alternatif Tautan
         </h3>
-        <ul class="text-dark-base flex flex-col gap-1 md:gap-2">
+        <ul class="flex flex-col gap-1 md:gap-2">
           <li>
             <FooterLink href="/">Beranda</FooterLink>
           </li>
@@ -49,9 +49,7 @@ import FooterLink from "./FooterLink.astro";
         </ul>
       </div>
       <div class="px-4 text-sm max-w-md">
-        <h2
-          class="font-bold text-lg sm:text-xl font-body mb-2 md:mb-5 text-slate-900"
-        >
+        <h2 class="font-bold text-lg sm:text-xl font-body mb-2 md:mb-5">
           Social Media
         </h2>
         <div class="flex gap-6 md:gap-8">
@@ -71,11 +69,11 @@ import FooterLink from "./FooterLink.astro";
       </div>
     </div>
     <div class="pt-4 border-t border-slate-700">
-      <p class="font-medium text-xs md:text-sm text-dark-base text-center">
+      <p class="font-medium text-xs md:text-sm text-center">
         Copyright &copy;
         <a
           href="https://github.com/JackBerck/purbalingga-exhaust-store"
-          class="font-bold hover:text-yellow-base hover:font-medium transition-all duration-300 inline-block"
+          class="font-bold hover:text-yellow-base transition-all duration-300 inline-block"
           target="_blank">Soedirman Student Summit</a
         >
         {new Date().getFullYear()}
