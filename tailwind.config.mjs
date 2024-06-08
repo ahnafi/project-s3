@@ -24,6 +24,20 @@ export default {
       dropShadow: {
         "3xl": "0 35px 35px rgba(0, 0, 0, 0.25)",
       },
+      animation: {
+        marquee: 'marquee 50s linear infinite',
+        marqueeReverse: 'marqueeReverse 50s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        marqueeReverse: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+      },
     },
   },
   plugins: [],
