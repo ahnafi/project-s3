@@ -42,14 +42,16 @@ const faqs = [
 ];
 ---
 
-<Layout title="faq">
+<Layout title="FAQ">
   <HeroSection
-    src="https://assets.promediateknologi.id/crop/86x57:1214x676/750x500/webp/photo/2023/02/15/3737659551.png"
-    alt="foto camaba bingung"
+    src="/images/faq.png"
+    alt="Foto Mahasiswa Unsoed Kebingungan"
     bgColor=""
     reverse="noReverse"
   >
-    <h1 class="text-3xl lg:text-4xl font-heading font-normal">
+    <h1
+      class="text-3xl lg:text-4xl font-heading font-normal drop-shadow-[0_0px_1px_rgba(0,0,0,0.1)] stroke-10 stroke-green-base"
+    >
       Yuk, Cari Tahu Jawaban Atas Pertanyaan Kamu!
     </h1>
     <p class="text-sm lg:text-base font-body">
@@ -58,7 +60,7 @@ const faqs = [
       magni ea dolorum molestiae sunt sequi voluptatem ut, amet fuga alias.
     </p>
   </HeroSection>
-  <section id="faqList" class="text-white-base py-24 px-8 max-w-5xl mx-auto">
+  <section id="faqList" class="py-24 px-8 max-w-5xl mx-auto">
     {faqs.map((faq) => <FaqList title={faq.title} faqs={faq.qa} />)}
   </section>
 </Layout>
