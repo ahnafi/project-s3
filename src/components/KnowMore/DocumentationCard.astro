@@ -1,0 +1,61 @@
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="./images/cartoon/1.jpg" alt="" /></div>
+    <div class="swiper-slide"><img src="./images/cartoon/2.jpg" alt="" /></div>
+    <div class="swiper-slide"><img src="./images/cartoon/3.jpg" alt="" /></div>
+    <div class="swiper-slide"><img src="./images/cartoon/4.jpg" alt="" /></div>
+    <div class="swiper-slide"><img src="./images/cartoon/5.jpg" alt="" /></div>
+  </div>
+</div>
+
+<style>
+  .swipper {
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  .swiper-slide {
+    position: relative;
+    width: 320px;
+    aspect-ratio: 3/4;
+    border-radius: 14px;
+    border: 1px solid rgba(177, 177, 177, 0.8);
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    user-select: none;
+  }
+</style>
+
+<script type="module">
+  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+  let swiper = new Swiper(".swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    initialSlide: 2,
+    speed: 600,
+    preventClicks: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 80,
+      depth: 350,
+      modifier: 1,
+      slideShadows: true,
+    },
+    on: {
+      click(event) {
+        swiper.slideTo(this.clickedIndex);
+      },
+    },
+  });
+</script>

@@ -5,6 +5,9 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      container: {
+        center: true,
+      },
       fontFamily: {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
         body: ["Poppins", ...defaultTheme.fontFamily.sans],
@@ -23,19 +26,20 @@ export default {
       },
       dropShadow: {
         "3xl": "0 35px 35px rgba(0, 0, 0, 0.25)",
+        // heading: "drop-shadow-[0px_0px_2px] md:drop-shadow-[0px_0px_6px]",
       },
       animation: {
-        marquee: 'marquee 50s linear infinite',
-        marqueeReverse: 'marqueeReverse 50s linear infinite',
+        marquee: "marquee 50s linear infinite",
+        marqueeReverse: "marqueeReverse 50s linear infinite",
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
         marqueeReverse: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(0%)' },
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
         },
       },
     },
