@@ -1,0 +1,156 @@
+---
+const logos = [
+  {
+    title: "Teman Pintar di Dunia Digital",
+    desc: "Temukan informasi, dapatkan jawaban, dan ciptakan konten kreatif dengan Gemini, model bahasa besar dari Google.",
+    img: "./images/cartoon/1.jpg",
+  },
+  {
+    title: "Buka Pintu Pengetahuan dengan Gemini",
+    desc: "Jelajahi dunia baru dengan Gemini, model bahasa yang siap menjawab pertanyaan Anda dan membantu menyelesaikan berbagai tugas.",
+    img: "./images/cartoon/2.jpg",
+  },
+  {
+    title: "Pemandu Cerdas di Ujung Jari Anda",
+    desc: "Akses informasi dan wawasan luas, dapatkan jawaban informatif, dan ciptakan berbagai format teks kreatif dengan Gemini.",
+    img: "./images/cartoon/3.jpg",
+  },
+  {
+    title: "Rasakan Kekuatan Bahasa dengan Gemini",
+    desc: "Gemini, model bahasa besar dari Google, siap membantu Anda menjelajahi dunia digital dengan penuh informasi dan kreativitas.",
+    img: "./images/cartoon/4.jpg",
+  },
+  {
+    title: "Masa Depan Pencarian dan Kreativitas",
+    desc: "Temukan jawaban, ciptakan konten, dan pelajari hal baru dengan Gemini, model bahasa yang terus berkembang dan belajar.",
+    img: "./images/cartoon/5.jpg",
+  },
+];
+---
+
+<div class="swiper logo-swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    {
+      logos.map((logo, index) => (
+        <div class="swiper-slide">
+          <img src={logo.img} alt={logo.title} />
+        </div>
+      ))
+    }
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+<div class="max-w-2xl mx-auto text-center mt-8">
+  <h5
+    class="font-semibold text-primary mb-2 text-lg md:text-xl lg:text-2xl logo-title"
+  >
+    Teman Pintar di Dunia Digital
+  </h5>
+  <p class="logo-description">
+    Temukan informasi, dapatkan jawaban, dan ciptakan konten kreatif dengan
+    Gemini, model bahasa besar dari Google.
+  </p>
+</div>
+
+<style>
+  .swipper {
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  .swiper-slide {
+    position: relative;
+    width: 320px;
+    aspect-ratio: 1;
+    border-radius: 14px;
+    border: 1px solid rgba(177, 177, 177, 0.8);
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    user-select: none;
+  }
+</style>
+
+<script type="module">
+  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+  const logos = [
+    {
+      title: "Teman Pintar di Dunia Digital",
+      desc: "Temukan informasi, dapatkan jawaban, dan ciptakan konten kreatif dengan Gemini, model bahasa besar dari Google.",
+      img: "./images/cartoon/1.jpg",
+    },
+    {
+      title: "Buka Pintu Pengetahuan dengan Gemini",
+      desc: "Jelajahi dunia baru dengan Gemini, model bahasa yang siap menjawab pertanyaan Anda dan membantu menyelesaikan berbagai tugas.",
+      img: "./images/cartoon/2.jpg",
+    },
+    {
+      title: "Pemandu Cerdas di Ujung Jari Anda",
+      desc: "Akses informasi dan wawasan luas, dapatkan jawaban informatif, dan ciptakan berbagai format teks kreatif dengan Gemini.",
+      img: "./images/cartoon/3.jpg",
+    },
+    {
+      title: "Rasakan Kekuatan Bahasa dengan Gemini",
+      desc: "Gemini, model bahasa besar dari Google, siap membantu Anda menjelajahi dunia digital dengan penuh informasi dan kreativitas.",
+      img: "./images/cartoon/4.jpg",
+    },
+    {
+      title: "Masa Depan Pencarian dan Kreativitas",
+      desc: "Temukan jawaban, ciptakan konten, dan pelajari hal baru dengan Gemini, model bahasa yang terus berkembang dan belajar.",
+      img: "./images/cartoon/5.jpg",
+    },
+  ];
+
+  let logoSwiper = new Swiper(".logo-swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    initialSlide: 0,
+    speed: 600,
+    preventClicks: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 80,
+      depth: 350,
+      modifier: 1,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    on: {
+      click(event) {
+        logoSwiper.slideTo(this.clickedIndex);
+      },
+      slideChange() {
+        const activeIndex = logoSwiper.realIndex;
+        const logoTitle = document.querySelector(".logo-title");
+        const logoDescription = document.querySelector(".logo-description");
+
+        logoTitle.style.display = "block";
+        logoDescription.style.display = "block";
+
+        logoTitle.innerText = logos[activeIndex].title;
+        logoDescription.innerText = logos[activeIndex].desc;
+
+        // Add fade-in animation
+        logoTitle.style.opacity = "1";
+        logoDescription.style.opacity = "1";
+      },
+    },
+  });
+</script>

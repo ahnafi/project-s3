@@ -1,4 +1,4 @@
-<div class="swiper">
+<div class="swiper documentation-card">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
@@ -37,7 +37,7 @@
 <script type="module">
   import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-  let swiper = new Swiper(".swiper", {
+  let documentationSwiper = new Swiper(".documentation-card", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -54,7 +54,7 @@
     },
     on: {
       click(event) {
-        swiper.slideTo(this.clickedIndex);
+        documentationSwiper.slideTo(this.clickedIndex);
       },
     },
   });
