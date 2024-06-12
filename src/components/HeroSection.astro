@@ -2,17 +2,17 @@
 interface Props {
   src: string;
   alt: string;
-  bgColor: string;
+  addClass: string;
   reverse: "noReverse" | "reverse";
 }
 
-const { src, alt, reverse, bgColor } = Astro.props;
+const { src, alt, reverse, addClass } = Astro.props;
 ---
 
 <section
   id="Hero"
   class={`text-dark-base w-full flex justify-center items-center pt-36 pb-36 px-6 lg:px-32 gap-4 lg:gap-12
-  ${bgColor} ${reverse === "noReverse" ? "flex-col md:flex-row" : "flex-col md:flex-row-reverse"}
+  ${addClass} ${reverse === "noReverse" ? "flex-col md:flex-row" : "flex-col md:flex-row-reverse"}
   `}
 >
   <div class="w-full max-w-md flex flex-col gap-2">
