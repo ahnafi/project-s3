@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@designbycode/tailwindcss-text-stroke": "^1.2.1",
     "astro": "^4.10.2",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"

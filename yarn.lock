@@ -348,6 +348,11 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
+"@designbycode/tailwindcss-text-stroke@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@designbycode/tailwindcss-text-stroke/-/tailwindcss-text-stroke-1.2.1.tgz#53180ad7dfefe506a9d506e8b4c1c29356f8367f"
+  integrity sha512-6SqiFuMjJaWWv5Mm+RIu8Ui3Kc/8AK3m0qSocPOFhk4yS6aMVioy8QLghAj5KOR/8lsfZe3r7I1uJ7YM1FimUA==
+
 "@emmetio/abbreviation@^2.3.3":
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/@emmetio/abbreviation/-/abbreviation-2.3.3.tgz#ed2b88fe37b972292d6026c7c540aaf887cecb6e"
