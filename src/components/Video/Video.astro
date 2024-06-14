@@ -1,10 +1,12 @@
 ---
 interface Props {
   id: string;
+  title: string;
+  desc: string;
   link: string;
 }
 
-const { id, link } = Astro.props;
+const { id, link, title, desc } = Astro.props;
 ---
 
 <section id={id} class="pt-16 pb-16 px-4 bg-white-base text-dark-base">
@@ -16,15 +18,13 @@ const { id, link } = Astro.props;
         <h2
           class="font-heading font-bold mb-2 capitalize text-3xl sm:text-4xl lg:text-5xl text-dark-base text-center md:text-left"
         >
-          Profil Universitas Jenderal Soedirman
+          {title}
         </h2>
         <p class="text-sm sm:text-base text-center md:text-left">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          odio, adipisci soluta esse ducimus praesentium expedita error est
-          quaerat cum.
+          {desc}
         </p>
       </div>
-      <div class="w-3/5 md:w-1/2">
+      <div class="w-full md:w-1/2">
         <iframe
           class="w-full max-w-2xl aspect-video rounded-lg drop-shadow-[0_0px_5px]"
           src={link}
