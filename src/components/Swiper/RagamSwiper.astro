@@ -1,0 +1,107 @@
+---
+export interface RagamInfoItem {
+  title: string;
+  desc: string;
+  img: string;
+}
+
+interface Props {
+  ragamInfo: RagamInfoItem[];
+}
+
+const { ragamInfo } = Astro.props as Props;
+---
+
+<div
+  class="swiper mySwiper bg-transparent md:flex min-h-96 md:h-80 w-full relative"
+>
+  <div class="swiper-wrapper">
+    {
+      ragamInfo.map((data, index) => (
+        <div class="swiper-slide flex justify-between items-center flex-col md:flex-row md:px-8 lg:px-4 h-52">
+          <div class="flex justify-center items-center">
+            <div class="aspect-square flex items-center w-1/2 sm:w-1/3 md:w-3/5 rounded-full justify-center bg-dark-base">
+              <img src={data.img} alt={data.title} class="w-4/5 md:w-4/5" />
+            </div>
+          </div>
+          <div class=" text-center md:text-left px-4">
+            <h3 class="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl mb-2">
+              {data.title}
+            </h3>
+            <p class="text-xs sm:text-sm lg:text-base font-medium">
+              {data.desc}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <div class="swiper-pagination md:hidden"></div>
+  <div class="swiper-button-prev -translate-y-4 md:hidden"></div>
+  <div class="swiper-button-next -translate-y-4 md:hidden"></div>
+</div>
+<div
+  class="overflow-y-auto bg-dark-base text-white-base w-1/4 px-6 py-4 rounded-md gap-1 flex-col ragam-pagination hidden md:flex"
+>
+  {
+    ragamInfo.map((data, index) => (
+      <p
+        class="cursor-pointer ragam-title hover:text-yellow-base hover:font-medium transition-all duration-300 text-sm lg:text-base"
+        data-slide-index={index}
+      >
+        {data.title}
+      </p>
+    ))
+  }
+</div>
+
+<script type="module">
+  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+
+  const swiper = new Swiper(".mySwiper", {
+    direction: "vertical",
+    mousewheel: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    on: {
+      slideChange: function () {
+        updateActiveTitle(swiper.activeIndex);
+      },
+      resize: function () {
+        swiper.changeDirection(getDirection());
+      },
+    },
+  });
+
+  function updateActiveTitle(activeIndex) {
+    const titles = document.querySelectorAll(".ragam-title");
+    titles.forEach((title, index) => {
+      if (index === activeIndex) {
+        title.classList.add("text-yellow-base");
+      } else {
+        title.classList.remove("text-yellow-base");
+      }
+    });
+  }
+
+  const titles = document.querySelectorAll(".ragam-title");
+  titles.forEach((title, index) => {
+    title.addEventListener("click", (event) => {
+      event.preventDefault();
+      swiper.slideTo(index);
+    });
+  });
+
+  function getDirection() {
+    let direction = window.innerWidth > 768 ? "vertical" : "horizontal";
+    return direction;
+  }
+
+  updateActiveTitle(swiper.activeIndex);
+</script>
