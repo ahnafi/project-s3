@@ -1,11 +1,21 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
+import HeroAbout from "../components/About/HeroAbout.astro";
+import VisiMisi from "../components/About/VisiMisi.astro";
 import Fakultas from "../components/TentangUnsoedSections/Fakultas.astro"
 import Music from "../components/TentangUnsoedSections/Music.astro"
+import Video from "../components/Video/Video.astro";
 ---
 
 <Layout title="Universitas Jenderal Soedirman">
-    <div class="py-32"></div>
-    <Fakultas ></Fakultas>
-    <Music></Music>
+  <HeroAbout />
+  <VisiMisi />
+  <Fakultas ></Fakultas>
+  <Music></Music>
+  <Video
+    id="video-tentang-unsoed"
+    title="Profil Universitas Jenderal Soedirman"
+    desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odio, adipisci soluta esse ducimus praesentium expedita error est quaerat cum."
+    link="https://www.youtube.com/embed/3Wuof0OvQOg?si=1iJvTKchtKAYR5Ex"
+  />
 </Layout>

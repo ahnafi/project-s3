@@ -1,34 +1,34 @@
 ---
 const logos = [
   {
-    title: "Teman Pintar di Dunia Digital",
-    desc: "Temukan informasi, dapatkan jawaban, dan ciptakan konten kreatif dengan Gemini, model bahasa besar dari Google.",
-    img: "./images/cartoon/1.jpg",
-  },
-  {
-    title: "Buka Pintu Pengetahuan dengan Gemini",
+    title: "Aksara",
     desc: "Jelajahi dunia baru dengan Gemini, model bahasa yang siap menjawab pertanyaan Anda dan membantu menyelesaikan berbagai tugas.",
-    img: "./images/cartoon/2.jpg",
+    img: "/images/logoParts/aksara.png",
   },
   {
-    title: "Pemandu Cerdas di Ujung Jari Anda",
+    title: "Batik Lumbon",
     desc: "Akses informasi dan wawasan luas, dapatkan jawaban informatif, dan ciptakan berbagai format teks kreatif dengan Gemini.",
-    img: "./images/cartoon/3.jpg",
+    img: "/images/logoParts/batik-lumbon.png",
   },
   {
-    title: "Rasakan Kekuatan Bahasa dengan Gemini",
+    title: "Soedirman Student Summit 2024",
+    desc: "Temukan informasi, dapatkan jawaban, dan ciptakan konten kreatif dengan Gemini, model bahasa besar dari Google.",
+    img: "/images/logoParts/logo.png",
+  },
+  {
+    title: "Mahkota",
     desc: "Gemini, model bahasa besar dari Google, siap membantu Anda menjelajahi dunia digital dengan penuh informasi dan kreativitas.",
-    img: "./images/cartoon/4.jpg",
+    img: "/images/logoParts/mahkota.png",
   },
   {
-    title: "Masa Depan Pencarian dan Kreativitas",
+    title: "Saraf",
     desc: "Temukan jawaban, ciptakan konten, dan pelajari hal baru dengan Gemini, model bahasa yang terus berkembang dan belajar.",
-    img: "./images/cartoon/5.jpg",
+    img: "/images/logoParts/saraf.png",
   },
 ];
 ---
 
-<div class="swiper logo-swiper">
+<div class="swiper logo-swiper pb-[128px]">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     {
@@ -44,11 +44,11 @@ const logos = [
   <div class="swiper-pagination"></div>
 </div>
 <div class="max-w-2xl mx-auto text-center mt-8">
-  <h5
-    class="font-semibold text-primary mb-2 text-lg md:text-xl lg:text-2xl logo-title"
+  <h3
+    class="font-semibold text-primary mb-2 text-lg md:text-xl lg:text-[32px] logo-title font-heading"
   >
-    Teman Pintar di Dunia Digital
-  </h5>
+    Soedirman Student Summit 2024
+  </h3>
   <p class="logo-description">
     Temukan informasi, dapatkan jawaban, dan ciptakan konten kreatif dengan
     Gemini, model bahasa besar dari Google.
@@ -66,7 +66,6 @@ const logos = [
     width: 320px;
     aspect-ratio: 1;
     border-radius: 14px;
-    border: 1px solid rgba(177, 177, 177, 0.8);
   }
 
   .swiper-slide img {
@@ -84,45 +83,62 @@ const logos = [
 
   const logos = [
     {
-      title: "Teman Pintar di Dunia Digital",
-      desc: "Temukan informasi, dapatkan jawaban, dan ciptakan konten kreatif dengan Gemini, model bahasa besar dari Google.",
-      img: "./images/cartoon/1.jpg",
-    },
-    {
-      title: "Buka Pintu Pengetahuan dengan Gemini",
+      title: "Aksara",
       desc: "Jelajahi dunia baru dengan Gemini, model bahasa yang siap menjawab pertanyaan Anda dan membantu menyelesaikan berbagai tugas.",
-      img: "./images/cartoon/2.jpg",
+      img: "/images/logoParts/aksara.png",
     },
     {
-      title: "Pemandu Cerdas di Ujung Jari Anda",
+      title: "Batik Lumbon",
       desc: "Akses informasi dan wawasan luas, dapatkan jawaban informatif, dan ciptakan berbagai format teks kreatif dengan Gemini.",
-      img: "./images/cartoon/3.jpg",
+      img: "/images/logoParts/batik-lumbon.png",
     },
     {
-      title: "Rasakan Kekuatan Bahasa dengan Gemini",
+      title: "Soedirman Student Summit 2024",
+      desc: "Temukan informasi, dapatkan jawaban, dan ciptakan konten kreatif dengan Gemini, model bahasa besar dari Google.",
+      img: "/images/logoParts/logo.png",
+    },
+    {
+      title: "Mahkota",
       desc: "Gemini, model bahasa besar dari Google, siap membantu Anda menjelajahi dunia digital dengan penuh informasi dan kreativitas.",
-      img: "./images/cartoon/4.jpg",
+      img: "/images/logoParts/mahkota.png",
     },
     {
-      title: "Masa Depan Pencarian dan Kreativitas",
+      title: "Saraf",
       desc: "Temukan jawaban, ciptakan konten, dan pelajari hal baru dengan Gemini, model bahasa yang terus berkembang dan belajar.",
-      img: "./images/cartoon/5.jpg",
+      img: "/images/logoParts/saraf.png",
     },
   ];
 
-  let logoSwiper = new Swiper(".logo-swiper", {
-    effect: "coverflow",
+  const logoSwiper = new Swiper(".logo-swiper", {
+    effect: "creative",
     grabCursor: true,
     centeredSlides: true,
-    initialSlide: 0,
+    initialSlide: 2,
     speed: 600,
     preventClicks: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 80,
-      depth: 350,
-      modifier: 1,
+    slidesPerView: 1,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+    creativeEffect: {
+      perspective: true,
+      prev: {
+        shadow: false,
+        translate: ["-175px", "20%", -200],
+        origin: "bottom",
+      },
+      next: {
+        shadow: false,
+        translate: ["175px", "20%", -200],
+        origin: "bottom",
+      },
+      limitProgress: 2,
+      progressMultiplier: 2,
     },
     pagination: {
       el: ".swiper-pagination",
@@ -134,10 +150,10 @@ const logos = [
     },
     on: {
       click(event) {
-        logoSwiper.slideTo(this.clickedIndex);
+        this.slideTo(this.clickedIndex);
       },
       slideChange() {
-        const activeIndex = logoSwiper.realIndex;
+        const activeIndex = this.realIndex;
         const logoTitle = document.querySelector(".logo-title");
         const logoDescription = document.querySelector(".logo-description");
 
