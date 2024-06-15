@@ -1,151 +1,88 @@
 ---
-const data = [
+import RagamSwiper from "../Swiper/RagamSwiper.astro";
+import type { RagamInfoItem } from "../Swiper/RagamSwiper.astro";
+
+const data: RagamInfoItem[] = [
   {
-    fakultas: "fakultas",
-    color: "bg-[#FF9935]",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cum sint corporis ad nostrum esse nemo quis cumque consequuntur! Corrupti cupiditate omnis amet sint sed quam minima molestias unde sunt?",
+    title: "Fakultas Teknik",
+    desc: "Fakultas ini menawarkan pendidikan tinggi dalam bidang teknik sipil, teknik elektro, teknik mesin, dan arsitektur. Fokus utama adalah pada pengembangan keterampilan teknis dan inovasi di bidang teknik untuk mendukung pembangunan infrastruktur dan industri di Indonesia.",
+    img: "https://www.bem.ft.unsoed.ac.id/wp-content/uploads/2023/09/Logo-BEM-FT.png",
   },
   {
-    fakultas: "fakultas",
-    color: "#FF9935",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cum sint corporis ad nostrum esse nemo quis cumque consequuntur! Corrupti cupiditate omnis amet sint sed quam minima molestias unde sunt?",
+    title: "Fakultas MIPA",
+    desc: "Fakultas ini menawarkan pendidikan di bidang ilmu dasar seperti matematika, fisika, dan kimia. Tujuan utamanya adalah pengembangan keilmuan serta penerapan konsep ilmiah dalam berbagai konteks.",
+    img: "https://fmipa.unsoed.ac.id/v4/wp-content/uploads/logo-bem-km-mipa-1024x1024.png",
   },
   {
-    fakultas: "fakultas",
-    color: "#FF9935",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cum sint corporis ad nostrum esse nemo quis cumque consequuntur! Corrupti cupiditate omnis amet sint sed quam minima molestias unde sunt?",
+    title: "Fakultas Teknik",
+    desc: "Fakultas ini menawarkan pendidikan tinggi dalam bidang teknik sipil, teknik elektro, teknik mesin, dan arsitektur. Fokus utama adalah pada pengembangan keterampilan teknis dan inovasi di bidang teknik untuk mendukung pembangunan infrastruktur dan industri di Indonesia.",
+    img: "https://www.bem.ft.unsoed.ac.id/wp-content/uploads/2023/09/Logo-BEM-FT.png",
   },
   {
-    fakultas: "fakultas",
-    color: "#FF9935",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cum sint corporis ad nostrum esse nemo quis cumque consequuntur! Corrupti cupiditate omnis amet sint sed quam minima molestias unde sunt?",
+    title: "Fakultas MIPA",
+    desc: "Fakultas ini menawarkan pendidikan di bidang ilmu dasar seperti matematika, fisika, dan kimia. Tujuan utamanya adalah pengembangan keilmuan serta penerapan konsep ilmiah dalam berbagai konteks.",
+    img: "https://fmipa.unsoed.ac.id/v4/wp-content/uploads/logo-bem-km-mipa-1024x1024.png",
   },
   {
-    fakultas: "fakultas",
-    color: "#FF9935",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cum sint corporis ad nostrum esse nemo quis cumque consequuntur! Corrupti cupiditate omnis amet sint sed quam minima molestias unde sunt?",
+    title: "Fakultas Teknik",
+    desc: "Fakultas ini menawarkan pendidikan tinggi dalam bidang teknik sipil, teknik elektro, teknik mesin, dan arsitektur. Fokus utama adalah pada pengembangan keterampilan teknis dan inovasi di bidang teknik untuk mendukung pembangunan infrastruktur dan industri di Indonesia.",
+    img: "https://www.bem.ft.unsoed.ac.id/wp-content/uploads/2023/09/Logo-BEM-FT.png",
   },
   {
-    fakultas: "fakultas",
-    color: "#FF9935",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cum sint corporis ad nostrum esse nemo quis cumque consequuntur! Corrupti cupiditate omnis amet sint sed quam minima molestias unde sunt?",
+    title: "Fakultas MIPA",
+    desc: "Fakultas ini menawarkan pendidikan di bidang ilmu dasar seperti matematika, fisika, dan kimia. Tujuan utamanya adalah pengembangan keilmuan serta penerapan konsep ilmiah dalam berbagai konteks.",
+    img: "https://fmipa.unsoed.ac.id/v4/wp-content/uploads/logo-bem-km-mipa-1024x1024.png",
   },
   {
-    fakultas: "fakultas",
-    color: "#FF9935",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cum sint corporis ad nostrum esse nemo quis cumque consequuntur! Corrupti cupiditate omnis amet sint sed quam minima molestias unde sunt?",
+    title: "Fakultas Teknik",
+    desc: "Fakultas ini menawarkan pendidikan tinggi dalam bidang teknik sipil, teknik elektro, teknik mesin, dan arsitektur. Fokus utama adalah pada pengembangan keterampilan teknis dan inovasi di bidang teknik untuk mendukung pembangunan infrastruktur dan industri di Indonesia.",
+    img: "https://www.bem.ft.unsoed.ac.id/wp-content/uploads/2023/09/Logo-BEM-FT.png",
   },
   {
-    fakultas: "fakultas",
-    color: "#FF9935",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cum sint corporis ad nostrum esse nemo quis cumque consequuntur! Corrupti cupiditate omnis amet sint sed quam minima molestias unde sunt?",
+    title: "Fakultas MIPA",
+    desc: "Fakultas ini menawarkan pendidikan di bidang ilmu dasar seperti matematika, fisika, dan kimia. Tujuan utamanya adalah pengembangan keilmuan serta penerapan konsep ilmiah dalam berbagai konteks.",
+    img: "https://fmipa.unsoed.ac.id/v4/wp-content/uploads/logo-bem-km-mipa-1024x1024.png",
   },
   {
-    fakultas: "fakultas",
-    color: "#FF9935",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cum sint corporis ad nostrum esse nemo quis cumque consequuntur! Corrupti cupiditate omnis amet sint sed quam minima molestias unde sunt?",
+    title: "Fakultas Teknik",
+    desc: "Fakultas ini menawarkan pendidikan tinggi dalam bidang teknik sipil, teknik elektro, teknik mesin, dan arsitektur. Fokus utama adalah pada pengembangan keterampilan teknis dan inovasi di bidang teknik untuk mendukung pembangunan infrastruktur dan industri di Indonesia.",
+    img: "https://www.bem.ft.unsoed.ac.id/wp-content/uploads/2023/09/Logo-BEM-FT.png",
   },
   {
-    fakultas: "fakultas",
-    color: "#FF9935",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cum sint corporis ad nostrum esse nemo quis cumque consequuntur! Corrupti cupiditate omnis amet sint sed quam minima molestias unde sunt?",
+    title: "Fakultas MIPA",
+    desc: "Fakultas ini menawarkan pendidikan di bidang ilmu dasar seperti matematika, fisika, dan kimia. Tujuan utamanya adalah pengembangan keilmuan serta penerapan konsep ilmiah dalam berbagai konteks.",
+    img: "https://fmipa.unsoed.ac.id/v4/wp-content/uploads/logo-bem-km-mipa-1024x1024.png",
   },
   {
-    fakultas: "fakultas",
-    color: "#FF9935",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cum sint corporis ad nostrum esse nemo quis cumque consequuntur! Corrupti cupiditate omnis amet sint sed quam minima molestias unde sunt?",
+    title: "Fakultas Teknik",
+    desc: "Fakultas ini menawarkan pendidikan tinggi dalam bidang teknik sipil, teknik elektro, teknik mesin, dan arsitektur. Fokus utama adalah pada pengembangan keterampilan teknis dan inovasi di bidang teknik untuk mendukung pembangunan infrastruktur dan industri di Indonesia.",
+    img: "https://www.bem.ft.unsoed.ac.id/wp-content/uploads/2023/09/Logo-BEM-FT.png",
   },
   {
-    fakultas: "fakultas",
-    color: "#FF9935",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cum sint corporis ad nostrum esse nemo quis cumque consequuntur! Corrupti cupiditate omnis amet sint sed quam minima molestias unde sunt?",
+    title: "Fakultas MIPA",
+    desc: "Fakultas ini menawarkan pendidikan di bidang ilmu dasar seperti matematika, fisika, dan kimia. Tujuan utamanya adalah pengembangan keilmuan serta penerapan konsep ilmiah dalam berbagai konteks.",
+    img: "https://fmipa.unsoed.ac.id/v4/wp-content/uploads/logo-bem-km-mipa-1024x1024.png",
   },
 ];
 ---
 
-<section id="fakultas" class="my-32">
-  <article class="px-4 lg:px-32">
-    <div class="text-center w-full">
-      <h1 class="text-3xl lg:text-4xl font-heading font-normal text-dark-base drop-shadow-[0_0px_1px]">
-        FAKULTAS
-      </h1>
-      <p class="text-dark-base text-sm lg:text-base">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, accusamus.
-      </p>
-    </div>
-    <div class="swiper md:flex min-h-64 md:h-80 w-full relative">
-      <div class="swiper-wrapper py-4">
-        {
-          data.map((e) => (
-            <div class="swiper-slide h-52 w-full flex flex-col lg:flex-row items-center gap-4">
-              <div>
-                <img src="/images/Logo-UNSOED.png" alt="logo unsoed" class="max-w-28" />
-              </div>
-              <div class="md:px-12">
-                <h2 class="font-heading font-normal lg:font-semibold text-xl lg:text-4xl">
-                  {e.fakultas}
-                </h2>
-                <p class="text-center lg:text-left text-xs md:text-base py-2 font-body font-normal max-w-2xl">
-                  {e.desc}
-                </p>
-              </div>
-            </div>
-          ))
-        }
+<section id="visi-misi" class="pt-16 pb-16 px-4 bg-white-base text-dark-base">
+  <div class="container max-w-screen-xl">
+    <div class="flex flex-col gap-4 md:gap-8">
+      <div class="max-w-screen-md mx-auto text-center">
+        <h2
+          class="font-heading font-bold capitalize text-3xl sm:text-4xl lg:text-5xl mb-2"
+        >
+          Ragam Unsoed
+        </h2>
+        <p class="text-sm sm:text-base">
+          Berikut adalah daftar fakultas dan fasilitas di Universitas Jenderal
+          Soedirman (UNSOED).
+        </p>
       </div>
-      <div class="relative"></div>
-      <div class="swiper-button-prev -translate-y-4 lg:hidden"></div>
-      <div class="swiper-button-next -translate-y-4 lg:hidden"></div>
-      <div class="swiper-pagination absolute bg-yellow-base w-64 -right-20"></div>
+      <div class="max-h-80 flex min-h-64 md:h-80 w-full">
+        <RagamSwiper ragamInfo={data} />
+      </div>
     </div>
-  </article>
+  </div>
 </section>
-
-<style>
-  .swiper-pagination-bullet {
-    display: none;
-  }
-
-  .swiper-pagination span {
-    font-size: 16px;
-    margin: 0 4px;
-    color: black;
-    cursor: pointer;
-  }
-
-  .swiper-pagination .swiper-pagination-bullet-active {
-    font-weight: bold;
-    color: red; /* Ubah warna teks aktif sesuai keinginan */
-  }
-</style>
-
-<script type="module">
-  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
-
-  const swiper = new Swiper(".swiper", {
-    direction: "vertical",
-    mousewheel: true,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">Slide ' + (index + 1) + '</span>';
-      },
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    on: {
-      resize: function () {
-        swiper.changeDirection(getDirection());
-      },
-    },
-  });
-
-  function getDirection() {
-    let direction = window.innerWidth > 1024 ? "vertical" : "horizontal";
-    return direction;
-  }
-</script>
