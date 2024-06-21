@@ -2,23 +2,19 @@
 import TimelineCard from "./TimelineCard.astro";
 ---
 
-<section id="timeline" class="pt-16 pb-16 text-dark-base max-w-5xl m-auto">
-  <div class="container flex flex-col gap-4 lg:gap-8">
-    <div class="w-full px-4">
-      <div class="max-w-2xl mx-auto text-center">
-        <h2
-          class="font-semibold text-primary mb-2 text-2xl md:text-3xl lg:text-4xl font-heading"
-        >
+<section
+  id="timeline"
+  class="pt-16 pb-16 max-w-screen-xl section-padding-x m-auto"
+>
+  <div class="container flex flex-col">
+    <div class="w-full">
+      <div class="mx-auto text-center">
+        <h2 class="header-font-size font-semibold text-primary font-heading">
           Timeline
-      </h2>
-        <h2
-          class="font-bold capitalize text-dark text-3xl m:text-4xl lg:text-5xl font-heading"
-        >
-          Soedirman Student Summit 2024
         </h2>
       </div>
     </div>
-    <div class="w-full px-4">
+    <div class="w-full">
       <TimelineCard />
     </div>
   </div>

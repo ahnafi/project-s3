@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/HeroSection.astro";
 import FaqList from "../components/FaqSections/FaqList.astro";
+import Marque from "../components/Marque.astro";
 
 const faqs = [
   {
@@ -46,21 +47,25 @@ const faqs = [
   <HeroSection
     src="/images/faq.png"
     alt="Foto Mahasiswa Unsoed Kebingungan"
-    addClass=""
+    addClass="lg:h-screen"
     reverse="noReverse"
   >
     <h1
-      class="text-3xl lg:text-4xl font-heading font-normal drop-shadow-[0_0px_1px_rgba(0,0,0,0.1)] stroke-10 stroke-green-base"
+      class="header-font-size font-heading font-normal drop-shadow-[0_0px_1px_rgba(0,0,0,0.1)] stroke-10 stroke-green-base"
     >
       Yuk, Cari Tahu Jawaban Atas Pertanyaan Kamu!
     </h1>
-    <p class="text-sm lg:text-base font-body">
+    <p class="normal-font-size font-body">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit
       veniam aperiam ab velit dolores molestias consequuntur explicabo at est
       magni ea dolorum molestiae sunt sequi voluptatem ut, amet fuga alias.
     </p>
   </HeroSection>
-  <section id="faqList" class="py-24 px-8 max-w-5xl mx-auto">
+  <Marque img="/butterfly_logo.png" direction="left" />
+  <section
+    id="faqList"
+    class="container max-w-screen-xl py-24 section-padding-x"
+  >
     {faqs.map((faq) => <FaqList title={faq.title} faqs={faq.qa} />)}
   </section>
 </Layout>

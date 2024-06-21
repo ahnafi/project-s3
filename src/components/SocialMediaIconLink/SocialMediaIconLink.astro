@@ -3,43 +3,43 @@ const socialMedia = [
   {
     title: "Instagram",
     link: "#",
-    icon: "/social-media-icon/instagram.svg",
+    icon: "<i class='fa-brands fa-instagram'></i>",
   },
   {
     title: "TikTok",
     link: "#",
-    icon: "/social-media-icon/tiktok.svg",
+    icon: "<i class='fa-brands fa-tiktok'></i>",
   },
   {
     title: "YouTube",
     link: "#",
-    icon: "/social-media-icon/youtube.svg",
+    icon: "<i class='fa-brands fa-youtube'></i>",
   },
-  {
-    title: "Twitter",
-    link: "#",
-    icon: "/social-media-icon/twitterx.svg",
-  },
-  {
-    title: "Line",
-    link: "#",
-    icon: "/social-media-icon/line.svg",
-  },
-  {
-    title: "Facebook",
-    link: "#",
-    icon: "/social-media-icon/facebook.svg",
-  },
+  // {
+  //   title: "Twitter",
+  //   link: "#",
+  //   icon: "<i class='fa-brands fa-instagram'></i>",
+  // },
+  // {
+  //   title: "Line",
+  //   link: "#",
+  //   icon: "<i class='fa-brands fa-instagram'></i>",
+  // },
+  // {
+  //   title: "Facebook",
+  //   link: "#",
+  //   icon: "<i class='fa-brands fa-instagram'></i>",
+  // },
 ];
 ---
 
-<section id="reach-us" class="pt-24 pb-16 text-dark-base max-w-5xl m-auto">
+<section
+  id="reach-us"
+  class="pt-24 pb-16 section-padding-x text-dark-base max-w-screen-xl m-auto"
+>
   <div class="container">
-    <div class="w-full px-4">
+    <div class="w-full">
       <div class="max-w-xl mx-auto text-center mb-8">
-        <h4 class="font-semibold text-primary mb-2 text-lg font-heading">
-          Selalu Update dengan Kami
-        </h4>
         <h2
           class="font-bold capitalize text-dark text-3xl mb-4 m:text-4xl lg:text-5xl font-heading"
         >
@@ -56,15 +56,10 @@ const socialMedia = [
       {
         socialMedia.map((data, index) => (
           <a
-            class=" font-semibold text-white inline-flex items-center space-x-2 rounded"
+            class="text-dark-base text-6xl p-2 rounded-lg space-x-2 hover:text-yellow-base transition-colors duration-300 ease-in-out"
             href={data.link}
-          >
-            <img
-              class="w-10 md:w-16 text-yellow-base fill-current"
-              src={data.icon}
-              alt={data.title}
-            />
-          </a>
+            set:html={data.icon}
+          />
         ))
       }
     </div>

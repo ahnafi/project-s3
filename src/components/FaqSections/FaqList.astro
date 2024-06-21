@@ -39,10 +39,12 @@ const { title, faqs } = Astro.props;
   });
 </script>
 
-<div class="flex flex-col md:flex-row gap-8 md:gap-12 mb-6 md:mb-8 lg:mb-12">
+<div
+  class="flex flex-col md:flex-row gap-4 sm:gap-8 md:gap-12 mb-6 md:mb-8 lg:mb-12"
+>
   <div class="flex flex-col text-left basis-1/2">
     <p
-      class="text-xl md:text-3xl sm:text-2xl font-extrabold text-base-content md:border-t-4 font-heading border-dark-base md:pt-4"
+      class="sub-header-font-size font-extrabold text-base-content md:border-t-4 font-heading border-dark-base md:pt-4"
     >
       {title}
     </p>
@@ -50,15 +52,15 @@ const { title, faqs } = Astro.props;
   <ul class="basis-1/2">
     {
       faqs.map((faq) => (
-        <li class="faq-item">
+        <li class="faq-item normal-font-size">
           <button
-            class="faq-question relative flex gap-2 items-center w-full py-5 text-sm font-semibold border-dark-base text-left border-t sm:text-base lg:text-lg border-base-content/10"
+            class="faq-question relative flex gap-2 items-center w-full py-5 font-semibold border-dark-base text-left border-t  border-base-content/10"
             aria-expanded="false"
           >
             <span class="flex-1 text-base-content">{faq.question}</span>
             <i class="fa-solid fa-chevron-down flex-shrink-0 w-4 h-4 ml-auto fill-current transition duration-200 ease-out" />
           </button>
-          <div class="faq-answer text-sm md:text-base transition-all duration-300 ease-in-out max-h-0 overflow-hidden ">
+          <div class="faq-answer transition-all duration-300 ease-in-out max-h-0 overflow-hidden ">
             <div class="pb-5 leading-relaxed">
               <div class="space-y-2 leading-relaxed">{faq.answer}</div>
             </div>
