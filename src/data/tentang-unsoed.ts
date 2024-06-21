@@ -124,8 +124,8 @@ const ukm: DataUkm[] = [
   },
 ];
 
-const ormawa = [];
+// belum dibuat 
+// const ormawa = [];
+// const paguyuban = [];
 
-const paguyuban = [];
-
-export { ukm, ormawa, paguyuban };
+export { ukm };
