@@ -19,29 +19,30 @@ const sponsors = [
 ];
 ---
 
-<section
-  id="sponsors"
-  class="w-full flex flex-col justify-center content-center items-center py-14 px-4 pt-36 pb-16"
->
-  <h2 class="text-dark-base font-heading text-4xl md:text-5xl mb-8">
-    Sponsorship
-  </h2>
+<section id="sponsors" class="section-padding-x pt-16 pb-16">
   <div
-    class="flex flex-wrap justify-center gap-4 lg:gap-6 md:max-w-xl lg:max-w-4xl"
+    class="container max-w-screen-xl flex flex-col justify-center content-center items-center"
   >
-    {
-      sponsors.map((sponsor) => (
-        <a
-          href="#"
-          class="max-w-36 sm:max-w-40 flex justify-center items-center"
-        >
-          <img
-            src={sponsor.img}
-            alt={sponsor.name}
-            class="hover:drop-shadow-[0_0px_6px_#FFAA19] transition-all duration-300"
-          />
-        </a>
-      ))
-    }
+    <h2 class="text-dark-base font-heading text-4xl md:text-5xl mb-8">
+      Sponsorship
+    </h2>
+    <div
+      class="flex flex-wrap justify-center gap-4 lg:gap-6 md:max-w-xl lg:max-w-4xl"
+    >
+      {
+        sponsors.map((sponsor) => (
+          <a
+            href="#"
+            class="max-w-36 sm:max-w-40 flex justify-center items-center"
+          >
+            <img
+              src={sponsor.img}
+              alt={sponsor.name}
+              class="hover:drop-shadow-[0_0px_6px_#FFAA19] transition-all duration-300"
+            />
+          </a>
+        ))
+      }
+    </div>
   </div>
 </section>

@@ -1,14 +1,24 @@
 ---
 const timelines = [
   {
-    title: "Focus Group Discussion (FGD)",
-    desc: "Focus Group Discussion (FGD) pada Soedirman Student Summit (S3) dirancang untuk memberikan pengalaman diskusi yang mendalam dan interaktif bagi para peserta. Kegiatan FGD akan membantu mahasiswa baru memahami dan terlibat dalam proses akademik dan sosial di Universitas Jenderal Soedirman.",
-    img: "/images/fgd.png",
+    title: "Talk Show Branding",
+    desc: "Talkshow Branding merupakan rangkaian acara Soedirman Student Summit (S3) yang bertujuan untuk memberikan wawasan dan mengenalkan berbagai macam fakultas serta Unit Kegiatan Mahasiswa (UKM) yang ada di Universitas Jenderal Soedirman.",
+    img: "/images/documentations/documentation-1.webp",
   },
   {
-    title: "Lorem Ipsum",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe exercitationem, esse odit quam corrupti consequatur, minus animi facilis at molestias quidem voluptatum accusamus fuga atque molestiae adipisci! Harum, quis.",
-    img: "/images/cartoon/4.jpg",
+    title: "Forum Group Discussion",
+    desc: "Focus Group Discussion (FGD) merupakan salah satu rangkaian acara Soedirman Student Summit (S3) yang memfasilitasi  mahasiswa baru dalam berdiskusi, berbagi pendapat dan pengalaman, saling mengenal, disertai penyampaian informasi yang dilakukan dengan sistem diskusi kelompok yang sistematis.",
+    img: "/images/documentations/documentation-2.webp",
+  },
+  {
+    title: "Penugasan",
+    desc: "Penugasan merupakan rangkain acara Soedirman Student Summit yang dirancang untuk memberikan fondasi yang kuat bagi mahasiswa baru dalam menjalani kehidupan akademik dan sosial di lingkungan kampus.",
+    img: "/images/documentations/documentation-3.webp",
+  },
+  {
+    title: "D-Day of S3",
+    desc: "D-Day of S3 merupakan seluruh rangkaian kegiatan yang akan dilaksanakan pada hari-H Soedirman Student Summit (S3) yang meliputi Sidang Senat, Talkshow hingga malam puncak yang akan menandakan selesainya seluruh rangkaian Soedirman Student Summit (S3).",
+    img: "/images/documentations/documentation-4.webp",
   },
 ];
 ---
@@ -16,13 +26,20 @@ const timelines = [
 <div class="swiper timeline-swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
-    {timelines.map(timeline => (
+    {
+      timelines.map((timeline) => (
         <div class="swiper-slide">
           <div class="flex flex-col items-center md:flex-row w-full gap-4 md:gap-8 px-8 md:px-16 py-8">
-            <img src={timeline.img} alt={timeline.title} class="w-8/12 md:w-1/3 rounded-[24px] aspect-square object-cover" />
+            <img
+              src={timeline.img}
+              alt={timeline.title}
+              class="w-8/12 md:w-1/3 rounded-[24px] aspect-square object-cover"
+            />
             <article class="flex-grow flex flex-col gap-4 lg:gap-6 text-center md:text-left">
-              <h3 class="text-2xl md:text-[28px] lg:text-[32px] font-heading leading-[1.5]">{timeline.title}</h3>
-              <p class="text-sm md:text-base lg:text-xl">{timeline.desc}</p>
+              <h3 class="sub-header-font-size font-heading leading-[1.5]">
+                {timeline.title}
+              </h3>
+              <p class="normal-font-size">{timeline.desc}</p>
             </article>
           </div>
         </div>

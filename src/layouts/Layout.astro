@@ -47,4 +47,28 @@ const { title } = Astro.props;
   html {
     overflow-x: hidden;
   }
+
+  .section-padding-x {
+    @apply px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20;
+  }
+
+  .header-font-size {
+    @apply text-3xl sm:text-4xl lg:text-5xl;
+  }
+
+  .sub-header-font-size {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
+  }
+
+  .normal-font-size {
+    @apply text-sm sm:text-base;
+  }
+
+  .small-font-size {
+    @apply text-xs sm:text-sm lg:text-base;
+  }
+
+  .extra-small-font-size {
+    @apply text-xs lg:text-sm;
+  }
 </style>

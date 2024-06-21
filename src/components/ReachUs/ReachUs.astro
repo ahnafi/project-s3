@@ -13,19 +13,19 @@ const address = [
 ];
 ---
 
-<section id="reach-us" class="pt-24 pb-16 text-dark-base max-w-5xl m-auto">
-  <div class="container">
+<section
+  id="reach-us"
+  class="pt-24 pb-16 section-padding-x text-dark-base m-auto"
+>
+  <div class="container max-w-screen-xl">
     <div class="w-full px-4">
       <div class="max-w-xl mx-auto text-center mb-16">
-        <h4 class="font-semibold text-primary mb-2 text-lg font-heading">
-          Hubungi Kami
-        </h4>
         <h2
-          class="font-bold capitalize text-dark text-3xl mb-4 m:text-4xl lg:text-5xl font-heading"
+          class="font-bold capitalize text-dark header-font-size mb-4 font-heading"
         >
           Punya pertanyaan atau butuh bantuan?
         </h2>
-        <p class="font-medium text-sm text-secondary md:text-base">
+        <p class="font-medium normal-font-size text-secondary">
           Jangan ragu untuk chat dengan kami! Tim kami siap membantu kamu kapan
           saja melalui telepon, email, atau chat langsung. Yuk, hubungi kami dan
           rasakan layanan terbaik dari kami.
@@ -38,16 +38,18 @@ const address = [
           class="grid w-full grid-cols-1 content-center gap-5 md:grid-cols-2 lg:grid-cols-3"
         >
           <div
-            class="flex flex-col items-center gap-3 py-10 bg-white justify-center rounded-xl"
+            class="flex flex-col items-center gap-3 px-4 py-10 bg-white justify-center rounded-xl"
           >
-            <i class="fa-solid fa-envelope text-5xl text-yellow-base"></i>
-            <p class="text-2xl font-extrabold">Email</p>
+            <i
+              class="fa-solid fa-envelope text-4xl md:text-5xl text-yellow-base"
+            ></i>
+            <p class="text-xl md:text-2xl font-extrabold">Email</p>
             <p class="text-base leading-7">Contact us at</p>
             <div class="flex flex-col items-center gap-1">
               {
                 email.map((mail, index) => (
                   <a
-                    class="text-lg font-bold text-center hover:text-yellow-base transition duration-200"
+                    class="text-base md:text-lg  font-bold text-center hover:text-yellow-base transition duration-200"
                     href={`mailto: ${mail}`}
                   >
                     {mail}
@@ -57,15 +59,16 @@ const address = [
             </div>
           </div>
           <div
-            class="flex flex-col items-center gap-3 justify-center bg-white py-10 rounded-xl"
+            class="flex flex-col items-center gap-3 px-4 justify-center bg-white py-10 rounded-xl"
           >
-            <i class="fa-solid fa-phone text-5xl text-yellow-base"></i>
-            <p class="text-2xl font-extrabold">Phone</p>
+            <i class="fa-solid fa-phone text-4xl md:text-5xl text-yellow-base"
+            ></i>
+            <p class="text-xl md:text-2xl font-extrabold">Phone</p>
             <p class="text-base leading-7">Reach out to us by phone</p>
             {
               phoneNumber.map((number, index) => (
                 <a
-                  class="text-lg font-bold text-center hover:text-yellow-base transition duration-200"
+                  class="text-base md:text-lg  font-bold text-center hover:text-yellow-base transition duration-200"
                   href={`tel:${number}`}
                 >
                   {number}
@@ -74,16 +77,17 @@ const address = [
             }
           </div>
           <div
-            class="flex flex-col items-center gap-3 justify-center bg-white py-10 rounded-xl"
+            class="flex flex-col items-center gap-3 px-4 justify-center bg-white py-10 rounded-xl"
           >
-            <i class="fa-solid fa-map-location-dot text-5xl text-yellow-base"
+            <i
+              class="fa-solid fa-map-location-dot text-4xl md:text-5xl text-yellow-base"
             ></i>
-            <p class="text-2xl font-extrabold">Location</p>
+            <p class="text-xl md:text-2xl font-extrabold">Location</p>
             <p class="text-base leading-7">Find us at our office</p>
             {
               address.map((data, index) => (
                 <a
-                  class="text-lg font-bold text-center hover:text-yellow-base transition duration-200"
+                  class="text-base md:text-lg  font-bold text-center hover:text-yellow-base transition duration-200"
                   target="_blank"
                   href={data.link}
                 >

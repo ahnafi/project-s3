@@ -10,16 +10,17 @@ const misi = [
 ];
 ---
 
-<section id="visi-misi" class="pt-16 pb-16 px-4 bg-dark-base text-white-base">
+<section
+  id="visi-misi"
+  class="pt-16 pb-16 section-padding-x bg-dark-base text-white-base"
+>
   <div class="container max-w-screen-xl">
     <div class="flex flex-wrap gap-4 md:gap-8">
       <div class="max-w-screen-md mx-auto text-center">
-        <h2
-          class="font-heading font-bold capitalize text-3xl sm:text-4xl lg:text-5xl mb-2"
-        >
+        <h2 class="font-heading font-semibold capitalize header-font-size mb-2">
           Visi & Misi
         </h2>
-        <p class="text-sm sm:text-base">
+        <p class="small-font-size">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
           odio, adipisci soluta esse ducimus praesentium expedita error est
           quaerat cum.
@@ -28,33 +29,23 @@ const misi = [
       <div
         class="m-auto flex flex-wrap justify-center flex-col md:flex-row gap-4 md:gap-0"
       >
-        <div
-          class="w-full px-4 flex-1 flex flex-col gap-1 md:gap-2 items-center"
-        >
-          <h4
-            class="font-heading font-bold text-center text-2xl sm:text-3xl lg:text-4xl max-w-md"
-          >
+        <div class="w-full flex-1 flex flex-col gap-1 md:gap-2 items-center">
+          <h3 class="font-heading text-center sub-header-font-size max-w-md">
             Visi
-          </h4>
-          <p class="text-sm sm:text-base font-medium max-w-xl">
+          </h3>
+          <p class="normal-font-size">
             {visi}
           </p>
         </div>
         <div
-          class="min-h-full min-w-1 bg-white-base rounded-md hidden md:block"
+          class="min-h-full min-w-2 mx-4 bg-white-base rounded-md hidden md:block"
         >
         </div>
-        <div
-          class="w-full px-4 flex-1 flex flex-col gap-1 md:gap-2 items-center"
-        >
-          <h4
-            class="font-heading font-bold text-center text-2xl sm:text-3xl lg:text-4xl max-w-md"
-          >
+        <div class="w-full flex-1 flex flex-col gap-1 md:gap-2 items-center">
+          <h3 class="font-heading text-center sub-header-font-size max-w-md">
             Misi
-          </h4>
-          <ol
-            class="list-decimal text-sm sm:text-base font-medium max-w-xl list-inside"
-          >
+          </h3>
+          <ol class="list-decimal normal-font-size list-inside">
             {misi.map((data, index) => <li>{data}</li>)}
           </ol>
         </div>
