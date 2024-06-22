@@ -13,6 +13,7 @@ export default {
         body: ["Poppins", ...defaultTheme.fontFamily.sans],
         heading: ["Orelega One", ...defaultTheme.fontFamily.sans],
         jakarta: ["Plus Jakarta Sans", ...defaultTheme.fontFamily.sans],
+        love: ["Love Craft", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         "yellow-base": "#FFAA19",
@@ -31,6 +32,8 @@ export default {
       animation: {
         marquee: "marquee 50s linear infinite",
         marqueeReverse: "marqueeReverse 50s linear infinite",
+        downUp: "downUp 8s linear infinite",
+        upDown: "upDown 8s linear infinite",
       },
       keyframes: {
         marquee: {
@@ -40,6 +43,16 @@ export default {
         marqueeReverse: {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(0%)" },
+        },
+        downUp: {
+          "0%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(48px)" },
+          "100%": { transform: "translateY(0px)" },
+        },
+        upDown: {
+          "0%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-48px)" },
+          "100%": { transform: "translateY(0px)" },
         },
       },
     },
