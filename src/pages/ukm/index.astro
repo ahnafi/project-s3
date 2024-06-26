@@ -104,7 +104,7 @@ import Card from "../../components/Card.astro";
         newData.forEach((e) => {
           let cardText = `
         <div class="rounded-xl border border-slate-400 drop-shadow-md shadow">
-          <a href=${"/ukm/" + e.name}>
+          <a href="/ukm/${e.name}">
             <div class="w-36 md:w-52 lg:w-64">
               <img src=${e.logo} alt=${"logo ukm " + e.name}  class="w-full rounded-t-xl" />
             </div>
