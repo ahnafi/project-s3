@@ -1,131 +1,73 @@
-export interface DataUkm {
-  namaUkm: string;
-  kategori?: string;
-  deskripsi: string;
-  kegiatan: string[];
-  photoProfile: string;
-  galery?: string[];
-  prestasi?: string[];
+export interface Data {
+  name: string;
+  logo: string;
+  category: string;
+  description: string;
+  activity: string[];
+  galery: string[];
+  sosmed: string;
 }
 
-const ukm: DataUkm[] = [
+const ukm: Data[] = [
   {
-    namaUkm: "robotic",
-    deskripsi:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit veniam aperiam ab velit dolores molestias consequuntur explicabo at est magni ea dolorum molestiae sunt sequi voluptatem ut amet fuga alias.",
-    kegiatan: [
-      "kegiatan 1",
-      "kegiatan 2",
-      "kegiatan 3",
-      "kegiatan 4",
-      "kegiatan 5",
+    name: "tari jawa",
+    logo: "https://i.ibb.co/4Pw3Bv3/kesenian.png",
+    category: "kesenian",
+    description:
+      "UKM Kesenian merupakan wadah bagi mahasiswa yang memiliki minat dan bakat di bidang kesenian. UKM Kesenian memiliki beberapa divisi seperti musik, tari, teater, dan seni rupa.",
+    activity: ["Latihan", "Pentas", "Workshop"],
+    galery: [
+      "https://i.ibb.co/0cX3rQH/kesenian1.jpg",
+      "https://i.ibb.co/6w3J7b5/kesenian2.jpg",
+      "https://i.ibb.co/7W1gXzr/kesenian3.jpg",
     ],
-    photoProfile:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMEjPLjHnMburMWJrIIwxQLihDzLAyTM_YMQ&s",
-    galery:["/images/cartoon/1.jpg","/images/cartoon/2.jpg","/images/cartoon/3.jpg","/images/cartoon/4.jpg"]
+    sosmed: "https://www.instagram.com/ukmkesenianunsoed/",
   },
   {
-    namaUkm: "catur",
-    deskripsi:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit veniam aperiam ab velit dolores molestias consequuntur explicabo at est magni ea dolorum molestiae sunt sequi voluptatem ut amet fuga alias.",
-    kegiatan: [
-      "kegiatan 1",
-      "kegiatan 2",
-      "kegiatan 3",
-      "kegiatan 4",
-      "kegiatan 5",
+    name: "tari bali",
+    logo: "https://i.ibb.co/4Pw3Bv3/kesenian.png",
+    category: "kesenian",
+    description:
+      "UKM Kesenian merupakan wadah bagi mahasiswa yang memiliki minat dan bakat di bidang kesenian. UKM Kesenian memiliki beberapa divisi seperti musik, tari, teater, dan seni rupa.",
+    activity: ["Latihan", "Pentas", "Workshop"],
+    galery: [
+      "https://i.ibb.co/0cX3rQH/kesenian1.jpg",
+      "https://i.ibb.co/6w3J7b5/kesenian2.jpg",
+      "https://i.ibb.co/7W1gXzr/kesenian3.jpg",
     ],
-    photoProfile:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMEjPLjHnMburMWJrIIwxQLihDzLAyTM_YMQ&s",
+    sosmed: "https://www.instagram.com/ukmkesenianunsoed/",
   },
   {
-    namaUkm: "ukki",
-    deskripsi:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit veniam aperiam ab velit dolores molestias consequuntur explicabo at est magni ea dolorum molestiae sunt sequi voluptatem ut amet fuga alias.",
-    kegiatan: [
-      "kegiatan 1",
-      "kegiatan 2",
-      "kegiatan 3",
-      "kegiatan 4",
-      "kegiatan 5",
+    name: "voly",
+    logo: "https://i.ibb.co/4Pw3Bv3/kesenian.png",
+    category: "olahraga",
+    description:
+      "UKM Kesenian merupakan wadah bagi mahasiswa yang memiliki minat dan bakat di bidang kesenian. UKM Kesenian memiliki beberapa divisi seperti musik, tari, teater, dan seni rupa.",
+    activity: ["Latihan", "Pentas", "Workshop"],
+    galery: [
+      "https://i.ibb.co/0cX3rQH/kesenian1.jpg",
+      "https://i.ibb.co/6w3J7b5/kesenian2.jpg",
+      "https://i.ibb.co/7W1gXzr/kesenian3.jpg",
     ],
-    photoProfile:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMEjPLjHnMburMWJrIIwxQLihDzLAyTM_YMQ&s",
+    sosmed: "https://www.instagram.com/ukmkesenianunsoed/",
   },
   {
-    namaUkm: "ukki",
-    deskripsi:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit veniam aperiam ab velit dolores molestias consequuntur explicabo at est magni ea dolorum molestiae sunt sequi voluptatem ut amet fuga alias.",
-    kegiatan: [
-      "kegiatan 1",
-      "kegiatan 2",
-      "kegiatan 3",
-      "kegiatan 4",
-      "kegiatan 5",
+    name: "futsal",
+    logo: "https://i.ibb.co/4Pw3Bv3/kesenian.png",
+    category: "olahraga",
+    description:
+      "UKM Kesenian merupakan wadah bagi mahasiswa yang memiliki minat dan bakat di bidang kesenian. UKM Kesenian memiliki beberapa divisi seperti musik, tari, teater, dan seni rupa.",
+    activity: ["Latihan", "Pentas", "Workshop"],
+    galery: [
+      "https://i.ibb.co/0cX3rQH/kesenian1.jpg",
+      "https://i.ibb.co/6w3J7b5/kesenian2.jpg",
+      "https://i.ibb.co/7W1gXzr/kesenian3.jpg",
     ],
-    photoProfile:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMEjPLjHnMburMWJrIIwxQLihDzLAyTM_YMQ&s",
-  },
-  {
-    namaUkm: "ukki",
-    deskripsi:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit veniam aperiam ab velit dolores molestias consequuntur explicabo at est magni ea dolorum molestiae sunt sequi voluptatem ut amet fuga alias.",
-    kegiatan: [
-      "kegiatan 1",
-      "kegiatan 2",
-      "kegiatan 3",
-      "kegiatan 4",
-      "kegiatan 5",
-    ],
-    photoProfile:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMEjPLjHnMburMWJrIIwxQLihDzLAyTM_YMQ&s",
-  },
-  {
-    namaUkm: "ukki",
-    deskripsi:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit veniam aperiam ab velit dolores molestias consequuntur explicabo at est magni ea dolorum molestiae sunt sequi voluptatem ut amet fuga alias.",
-    kegiatan: [
-      "kegiatan 1",
-      "kegiatan 2",
-      "kegiatan 3",
-      "kegiatan 4",
-      "kegiatan 5",
-    ],
-    photoProfile:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMEjPLjHnMburMWJrIIwxQLihDzLAyTM_YMQ&s",
-  },
-  {
-    namaUkm: "ukki",
-    deskripsi:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit veniam aperiam ab velit dolores molestias consequuntur explicabo at est magni ea dolorum molestiae sunt sequi voluptatem ut amet fuga alias.",
-    kegiatan: [
-      "kegiatan 1",
-      "kegiatan 2",
-      "kegiatan 3",
-      "kegiatan 4",
-      "kegiatan 5",
-    ],
-    photoProfile:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMEjPLjHnMburMWJrIIwxQLihDzLAyTM_YMQ&s",
-  },
-  {
-    namaUkm: "ukki",
-    deskripsi:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit veniam aperiam ab velit dolores molestias consequuntur explicabo at est magni ea dolorum molestiae sunt sequi voluptatem ut amet fuga alias.",
-    kegiatan: [
-      "kegiatan 1",
-      "kegiatan 2",
-      "kegiatan 3",
-      "kegiatan 4",
-      "kegiatan 5",
-    ],
-    photoProfile:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMEjPLjHnMburMWJrIIwxQLihDzLAyTM_YMQ&s",
+    sosmed: "https://www.instagram.com/ukmkesenianunsoed/",
   },
 ];
 
-// belum dibuat 
-// const ormawa = [];
+// belum dibuat
 // const paguyuban = [];
 
 export { ukm };
