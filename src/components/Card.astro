@@ -9,7 +9,7 @@ interface Props {
 const { href, title, body, img } = Astro.props;
 ---
 
-<div class="rounded-xl border border-slate-400 drop-shadow-md shadow">
+<div class="rounded-xl border border-slate-400 drop-shadow-md shadow w-36 md:w-52 lg:w-64">
   <a href={href}>
     <div class="w-36 md:w-52 lg:w-64">
       <img src={img} alt={`foto ${title}`}  class="w-full rounded-t-xl" />

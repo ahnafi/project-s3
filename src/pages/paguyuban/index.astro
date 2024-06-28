@@ -1,17 +1,17 @@
 ---
-import { ukm } from "../../data/tentang-unsoed";
+import { paguyuban } from "../../data/tentang-unsoed";
 import Layout from "../../layouts/Layout.astro";
 import Card from "../../components/Card.astro";
 ---
 
-<Layout title="Unit Kegiatan Mahasiswa">
+<Layout title="Paguyuban Mahasiswa Daerah">
   <section id="hero" class="pt-28 bg-slate-300">
     <div class="w-full px-6 text-center py-12">
       <p class="text-sm md:text-base font-body">Lorem ipsum dolor sit amet.</p>
       <h1
         class="text-3xl lg:text-4xl font-heading font-normal text-dark-base drop-shadow-[0_0px_1px_rgba(0,0,0,0.6)] stroke-10 stroke-green-base"
       >
-        UNIT KEGIATAN MAHASISWA
+        PAGUYUBAN MAHASISWA DAERAH
       </h1>
       <a
         href="#cards"
@@ -58,10 +58,10 @@ import Card from "../../components/Card.astro";
     >
       <!-- card -->
       {
-        ukm.map((e) => (
+        paguyuban.map((e) => (
           <Card
             body="abc"
-            href={`/ukm/` + e.name}
+            href={`/paguyuban/` + e.name}
             title={e.name}
             img={e.logo}
           />
@@ -72,7 +72,7 @@ import Card from "../../components/Card.astro";
   </section>
 </Layout>
 <script>
-  import { ukm } from "../../data/tentang-unsoed";
+  import { paguyuban } from "../../data/tentang-unsoed";
   const search = document.getElementById("search") as HTMLFormElement;
   const cards = document.getElementById("cards") as HTMLDivElement;
 
@@ -91,7 +91,7 @@ import Card from "../../components/Card.astro";
           mengambil array ukm di filter apakah terdapat dalam input nama dan kategori 
           membuat array baru
         */
-        let newData = ukm.filter((data) => {
+        let newData = paguyuban.filter((data) => {
           let nameMatches = searchName
             ? data.name.toLowerCase().includes(searchName)
             : true;

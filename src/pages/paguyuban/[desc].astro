@@ -1,0 +1,119 @@
+---
+import { paguyuban } from "../../data/tentang-unsoed";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return paguyuban.map(
+    ({ name, activity, category, description, galery, sosmed, logo }) => {
+      return {
+        params: { desc: name },
+        props: {
+          name,
+          activity,
+          category,
+          description,
+          galery,
+          sosmed,
+          logo,
+        },
+      };
+    }
+  );
+}
+
+const { name, activity, category, description, galery, sosmed, logo } =
+  Astro.props;
+---
+
+<Layout title=`PAGUYUBAN ${name}`>
+  <section id="description" class="py-32">
+    <div
+      class="flex gap-4 px-6 flex-col lg:flex-row justify-around w-full lg:px-32"
+    >
+      <div class="max-w-lg md:max-w-full">
+        <div
+          class="flex justify-center gap-4 max-w-lg items-center md:max-w-full lg:max-w-lg md:py-8 px-6 md:flex-row lg:flex-col"
+        >
+          <div class="max-w-md md:w-1/2 lg:w-full">
+            <img src={logo} alt=`foto profile Paguyuban ${name}` class="w-full" />
+          </div>
+          {
+            galery ? (
+              <div class="hidden md:py-4 md:flex flex-wrap gap-4 justify-center md:w-1/2 lg:w-auto">
+                {galery.map((src) => (
+                  <img
+                    src={src}
+                    alt="galery Paguyuban"
+                    class="max-w-36 lg:w-fit rounded-lg"
+                  />
+                ))}
+              </div>
+            ) : (
+              ""
+            )
+          }
+        </div>
+      </div>
+      <!--  -->
+      <article class="py-8 max-w-md md:max-w-full lg:max-w-lg">
+        <!--  -->
+        <div class="py-4">
+          <h1
+            class="font-heading font-bold capitalize text-3xl sm:text-4xl lg:text-5xl mb-2"
+          >
+            {name}
+          </h1>
+          <p class="text-sm md:text-base font-body md:pe-16 lg:pe-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+            explicabo.
+          </p>
+        </div>
+        <!--  -->
+        <div class="py-4">
+          <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
+            Deskripsi Paguyuban
+          </h2>
+          <p class="text-sm md:text-base font-body md:pe-16 lg:pe-0">
+            {description}
+          </p>
+        </div>
+        <!--  -->
+        <div class="py-4">
+          <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
+            Kegiatan Paguyuban
+          </h2>
+          <ul>
+            {
+              activity.map((data) => (
+                <li class="text-sm md:text-base font-body md:pe-16 lg:pe-0">
+                  {data}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <!--  -->
+        <div class="py-4">
+          <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
+            sosial media
+          </h2>
+          <a href={sosmed}>instagram</a>
+        </div>
+      </article>
+      <div class="md:hidden">
+        <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">Galery</h2>
+        {
+          galery ? (
+            <div class="md:hidden flex flex-wrap gap-2 justify-center py-2">
+              {galery.map((src) => (
+                <img src={src} alt="galery Paguyuban" class="max-w-36  rounded-lg" />
+              ))}
+            </div>
+          ) : (
+            "-"
+          )
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

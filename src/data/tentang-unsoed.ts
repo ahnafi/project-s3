@@ -68,6 +68,63 @@ const ukm: Data[] = [
 ];
 
 // belum dibuat
-// const paguyuban = [];
+const paguyuban: Data[] = [
+  {
+    name: "Himpunan Mahasiswa Jogja Istimewa",
+    logo: "https://i.ibb.co/4Pw3Bv3/kesenian.png",
+    category: "Jogja",
+    description:
+      "UKM Kesenian merupakan wadah bagi mahasiswa yang memiliki minat dan bakat di bidang kesenian. UKM Kesenian memiliki beberapa divisi seperti musik, tari, teater, dan seni rupa.",
+    activity: ["Latihan", "Pentas", "Workshop"],
+    galery: [
+      "https://i.ibb.co/0cX3rQH/kesenian1.jpg",
+      "https://i.ibb.co/6w3J7b5/kesenian2.jpg",
+      "https://i.ibb.co/7W1gXzr/kesenian3.jpg",
+    ],
+    sosmed: "https://www.instagram.com/ukmkesenianunsoed/",
+  },
+  {
+    name: "Himpunan Mahasiswa Jogja Istimewa",
+    logo: "https://i.ibb.co/4Pw3Bv3/kesenian.png",
+    category: "Jogja",
+    description:
+      "UKM Kesenian merupakan wadah bagi mahasiswa yang memiliki minat dan bakat di bidang kesenian. UKM Kesenian memiliki beberapa divisi seperti musik, tari, teater, dan seni rupa.",
+    activity: ["Latihan", "Pentas", "Workshop"],
+    galery: [
+      "https://i.ibb.co/0cX3rQH/kesenian1.jpg",
+      "https://i.ibb.co/6w3J7b5/kesenian2.jpg",
+      "https://i.ibb.co/7W1gXzr/kesenian3.jpg",
+    ],
+    sosmed: "https://www.instagram.com/ukmkesenianunsoed/",
+  },
+  {
+    name: "Himpunan Mahasiswa Jogja Istimewa",
+    logo: "https://i.ibb.co/4Pw3Bv3/kesenian.png",
+    category: "Jogja",
+    description:
+      "UKM Kesenian merupakan wadah bagi mahasiswa yang memiliki minat dan bakat di bidang kesenian. UKM Kesenian memiliki beberapa divisi seperti musik, tari, teater, dan seni rupa.",
+    activity: ["Latihan", "Pentas", "Workshop"],
+    galery: [
+      "https://i.ibb.co/0cX3rQH/kesenian1.jpg",
+      "https://i.ibb.co/6w3J7b5/kesenian2.jpg",
+      "https://i.ibb.co/7W1gXzr/kesenian3.jpg",
+    ],
+    sosmed: "https://www.instagram.com/ukmkesenianunsoed/",
+  },
+  {
+    name: "Himpunan Mahasiswa Jogja Istimewa",
+    logo: "https://i.ibb.co/4Pw3Bv3/kesenian.png",
+    category: "Jogja",
+    description:
+      "UKM Kesenian merupakan wadah bagi mahasiswa yang memiliki minat dan bakat di bidang kesenian. UKM Kesenian memiliki beberapa divisi seperti musik, tari, teater, dan seni rupa.",
+    activity: ["Latihan", "Pentas", "Workshop"],
+    galery: [
+      "https://i.ibb.co/0cX3rQH/kesenian1.jpg",
+      "https://i.ibb.co/6w3J7b5/kesenian2.jpg",
+      "https://i.ibb.co/7W1gXzr/kesenian3.jpg",
+    ],
+    sosmed: "https://www.instagram.com/ukmkesenianunsoed/",
+  },
+];
 
-export { ukm };
+export { ukm, paguyuban };
