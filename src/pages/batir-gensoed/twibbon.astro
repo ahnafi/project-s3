@@ -1,0 +1,153 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Batir Gensoed">
+    <section class="pt-40 pb-24 w-full">
+        <div class="container max-w-7xl flex flex-col gap-8 lg:gap-12">
+            <h1 class="text-3xl lg:text-4xl text-gray-800 font-love">
+                TWIBBON PESERTA S3 2024
+            </h1>
+            <div
+                class="w-full flex flex-col items-center gap-8 lg:flex-row lg:gap-12 lg:items-start px-6"
+            >
+                <aside class="flex flex-col gap-6 flex-shrink-0">
+                    <img
+                        src="/images/dummy-twibbon.png"
+                        class="w-full max-w-[325px] aspect-square object-cover"
+                        alt="Twibbon"
+                    />
+                    <a
+                        href="/images/dummy-twibbon.png"
+                        download="/images/dummy-twibbon.png"
+                        class="px-6 py-3 lg:px-8 lg:py-4 bg-gray-800 text-white text-center rounded-md w-full max-w-[325px]"
+                        >Download
+                    </a>
+                </aside>
+                <aside class="flex-grow flex flex-col gap-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label
+                                for="name-field"
+                                class="text-base lg:text-lg text-gray-700"
+                                >Nama Lengkap</label
+                            >
+                            <input
+                                class="px-5 py-3 lg:px-6 lg:py-4 bg-white outline outline-1 outline-gray-300 rounded-md focus:outline-[3px] text-gray-700"
+                                placeholder="Masukan Nama Kamu"
+                                id="name-field"
+                                name="name"
+                            />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label
+                                for="faculty-field"
+                                class="text-base lg:text-lg text-gray-700"
+                                >Fakultas</label
+                            >
+                            <input
+                                class="px-5 py-3 lg:px-6 lg:py-4 bg-white outline outline-1 outline-gray-300 rounded-md focus:outline-[3px] text-gray-700"
+                                placeholder="Masukan Fakultas Kamu"
+                                id="faculty-field"
+                                name="faculty"
+                            />
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm md:text-base" id="caption">
+                        [Parampara Aji Satya Bina Adi Karya Negara]<br /><br
+                        />Selamat datang Brawijaya Muda di Kampus Biru, Kampus
+                        Perjuangan, Kampus Kebanggaan, Universitas Brawijaya.<br
+                        /><br />Bermula dari setitik harapan, kini berkumpul
+                        untuk meraih mimpi besar. Segala air mata perjuangan,
+                        kini menorehkan buah yang mampu menyuarakan semangat.<br
+                        /><br />Kini, nama "MAHASISWA" telah tersemat
+                        dipundakmu. Kata "MAHA" di atas kata "SISWA" dengan
+                        segala dedikasi nilai luhur sebagai pejuang harapan
+                        bangsa.<br /><br />Saya, <span id="name-text"
+                            >[Nama]</span
+                        >
+                        dari Fakultas <span id="faculty-text">[Fakultas]</span> Arkana
+                        61 dengan bangga siap bersinergi menjadi pembawa perubahan
+                        yang berprestasi dan siap mengikuti RAJA Brawijaya 2023.<br
+                        /><br />Brawijaya Muda! Gapai Prestasi, Indonesia Jaya!
+                        Kita Satu Brawijaya!<br /><br />___<br />For more
+                        information:<br /><br />Instagram: raja_brawijaya<br
+                        />Twitter: raja_brawijaya<br />Telegram: RAJA BRAWIJAYA<br
+                        />Tiktok: rajabrawijayaub<br />Line: RAJA BRAWIJAYA<br
+                        />Youtube: Raja Brawijaya<br />___<br
+                        />#KitaSatuBrawijaya<br />#RAJABrawijaya2023<br
+                        />#PKKMBUB2023<br />#Arkana61<br />#GALABRAWIJAYA<br
+                        />#[SingkatanFakultas]RB23
+                    </p>
+                    <button
+                        class="px-6 py-3 lg:px-8 lg:py-4 bg-gray-800 text-white text-center rounded-md hover:brightness-125 disabled:bg-gray-500 disabled:hover:brightness-100"
+                        id="copy-caption"
+                        disabled
+                    >
+                        Salin Caption
+                    </button>
+                </aside>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<script>
+    const nameInput = document.querySelector<HTMLInputElement>("#name-field");
+    const facultyInput =
+        document.querySelector<HTMLInputElement>("#faculty-field");
+    const nameText = document.querySelector<HTMLSpanElement>("#name-text");
+    const facultyText =
+        document.querySelector<HTMLSpanElement>("#faculty-text");
+
+    const copyButton = document.querySelector<HTMLButtonElement>(
+        "button#copy-caption",
+    );
+    const caption = document.querySelector<HTMLParagraphElement>("#caption");
+
+    if (
+        nameInput &&
+        facultyInput &&
+        nameText &&
+        facultyText &&
+        caption &&
+        copyButton
+    ) {
+        const watchButton = () => {
+            if (
+                nameText.innerText != "" &&
+                nameText.innerText != "[Nama]" &&
+                facultyText.innerText != "" &&
+                facultyText.innerText != "[Fakultas]"
+            ) {
+                copyButton.disabled = false;
+            } else {
+                copyButton.disabled = true;
+            }
+        };
+
+        nameInput.addEventListener("input", () => {
+            nameText.innerText = nameInput.value;
+            watchButton();
+        });
+        facultyInput.addEventListener("input", () => {
+            facultyText.innerText = facultyInput.value;
+            watchButton();
+        });
+
+        copyButton.addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(caption.innerText);
+
+                copyButton.innerText = "Caption Berhasil Disalin";
+                copyButton.disabled = true;
+                setTimeout(() => {
+                    copyButton.innerText = "Salin Caption";
+                    copyButton.disabled = false;
+                }, 1500);
+            } catch (error) {
+                console.log(error);
+            }
+        });
+    }
+</script>
