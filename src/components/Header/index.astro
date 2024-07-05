@@ -11,8 +11,51 @@ import NavLink from "./NavLink.astro";
     <div class="hidden lg:flex justify-evenly items-center w-full py-5">
       <div class="flex items-center gap-6">
         <NavLink href="/">Beranda</NavLink>
-        <NavLink href="/tentang-unsoed">Tentang Unsoed</NavLink>
-        <NavLink href="/batir-gensoed">Batir Gensoed</NavLink>
+        <div class="relative inline-block text-left">
+          <div class="group">
+            <!-- Dropdown Title -->
+            <button
+              id="dropdownButton"
+              type="button"
+              class="inline-flex justify-center items-center text-white-base text-sm font-jakarta hover:text-yellow-base transition-all duration-300 w-fit cursor-pointer"
+            >
+              Jelajahi Unsoed
+              <!-- Dropdown Arrow -->
+              <svg
+                class="w-4 h-4 ml-2 -mr-1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z"></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              id="dropdownMenu"
+              class="absolute left-0 w-40 mt-1 origin-top-left bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible transition duration-300"
+            >
+              <div class="py-1">
+                <a
+                  href="/tentang-unsoed"
+                  class="block px-4 py-2 text-dark-base text-sm font-jakarta hover:text-yellow-base transition-all duration-300 w-fit"
+                  >Tentang Unsoed</a
+                >
+                <a
+                  href="/ukm"
+                  class="block px-4 py-2 text-dark-base text-sm font-jakarta hover:text-yellow-base transition-all duration-300 w-fit"
+                  >UKM</a
+                >
+                <a
+                  href="/paguyuban"
+                  class="block px-4 py-2 text-dark-base text-sm font-jakarta hover:text-yellow-base transition-all duration-300 w-fit"
+                  >Paguyuban</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <NavLink href="/batir-gensoed">Info Gensoed</NavLink>
       </div>
       <img
         src="/butterfly_logo.png"
@@ -44,174 +87,270 @@ import NavLink from "./NavLink.astro";
         style="right:-100%"
       >
         <NavLink href="/">Beranda</NavLink>
-        <NavLink href="/tentang-unsoed">Tentang Unsoed</NavLink>
-        <NavLink href="/batir-gensoed">Batir Gensoed</NavLink>
+        <div class="flex flex-col gap-2">
+          <div class="group relative">
+            <button
+              type="button"
+              id="toggleButton"
+              class="flex items-center text-slate-100 text-sm hover:text-yellow-base transition-all duration-300 cursor-pointer"
+            >
+              <span>Jelajahi Unsoed</span>
+              <svg
+                class="w-5 h-5 text-white-base hover:text-yellow-base ml-2 transition-all duration-300 transform group-hover:rotate-90"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                >
+                </path>
+              </svg>
+            </button>
+            <div id="contentArea" class="mt-2 w-full hidden">
+              <ul
+                class="flex flex-col gap-1 text-right rtl-dir list-disc pr-4 marker:text-white-base"
+              >
+                <li>
+                  <NavLink href="/batir-gensoed">Tentang Unsoed</NavLink>
+                </li>
+                <li>
+                  <NavLink href="/ukm">UKM</NavLink>
+                </li>
+                <li>
+                  <NavLink href="/paguyuban">Paguyuban</NavLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <NavLink href="/batir-gensoed">Info Gensoed</NavLink>
         <NavLink href="/penugasan">Penugasan</NavLink>
         <NavLink href="/faq">FAQ</NavLink>
         <NavLink href="/hubungi-kami">Hubungi Kami</NavLink>
       </div>
     </div>
   </nav>
-</header>
 
-<style>
-  .hamburger {
-    padding: 0px 0px;
-    display: inline-block;
-    cursor: pointer;
-    transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    font: inherit;
-    color: inherit;
-    text-transform: none;
-    background-color: transparent;
-    border: 0;
-    margin: 0;
-    overflow: visible;
-  }
-  .hamburger:hover {
-    opacity: 0.7;
-  }
-  .hamburger.is-active:hover {
-    opacity: 0.7;
-  }
-  .hamburger.is-active .hamburger-inner,
-  .hamburger.is-active .hamburger-inner::before,
-  .hamburger.is-active .hamburger-inner::after {
-    background-color: #fff;
-  }
+  <style>
+    .rtl-dir {
+      direction: rtl;
+    }
 
-  .hamburger-box {
-    width: 21px;
-    height: 16.5px;
-    display: inline-block;
-    position: relative;
-  }
+    .hamburger {
+      padding: 0px 0px;
+      display: inline-block;
+      cursor: pointer;
+      transition-property: opacity, filter;
+      transition-duration: 0.15s;
+      transition-timing-function: linear;
+      font: inherit;
+      color: inherit;
+      text-transform: none;
+      background-color: transparent;
+      border: 0;
+      margin: 0;
+      overflow: visible;
+    }
+    .hamburger:hover {
+      opacity: 0.7;
+    }
+    .hamburger.is-active:hover {
+      opacity: 0.7;
+    }
+    .hamburger.is-active .hamburger-inner,
+    .hamburger.is-active .hamburger-inner::before,
+    .hamburger.is-active .hamburger-inner::after {
+      background-color: #fff;
+    }
 
-  .hamburger-inner {
-    display: block;
-    top: 50%;
-    margin-top: -1.25px;
-  }
-  .hamburger-inner,
-  .hamburger-inner::before,
-  .hamburger-inner::after {
-    width: 21px;
-    height: 2.5px;
-    background-color: #fff;
-    border-radius: 2.5px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-  }
-  .hamburger-inner::before,
-  .hamburger-inner::after {
-    content: "";
-    display: block;
-  }
-  .hamburger-inner::before {
-    top: -7px;
-  }
-  .hamburger-inner::after {
-    bottom: -7px;
-  }
+    .hamburger-box {
+      width: 21px;
+      height: 16.5px;
+      display: inline-block;
+      position: relative;
+    }
 
-  /*
+    .hamburger-inner {
+      display: block;
+      top: 50%;
+      margin-top: -1.25px;
+    }
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      width: 21px;
+      height: 2.5px;
+      background-color: #fff;
+      border-radius: 2.5px;
+      position: absolute;
+      transition-property: transform;
+      transition-duration: 0.15s;
+      transition-timing-function: ease;
+    }
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      content: "";
+      display: block;
+    }
+    .hamburger-inner::before {
+      top: -7px;
+    }
+    .hamburger-inner::after {
+      bottom: -7px;
+    }
+
+    /*
    * Collapse
    */
-  .hamburger--collapse .hamburger-inner {
-    top: auto;
-    bottom: 0;
-    transition-duration: 0.13s;
-    transition-delay: 0.13s;
-    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  .hamburger--collapse .hamburger-inner::after {
-    top: -14px;
-    transition:
-      top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-      opacity 0.1s linear;
-  }
-  .hamburger--collapse .hamburger-inner::before {
-    transition:
-      top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-      transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  .hamburger--collapse.is-active .hamburger-inner {
-    transform: translate3d(0, -7px, 0) rotate(-45deg);
-    transition-delay: 0.22s;
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  .hamburger--collapse.is-active .hamburger-inner::after {
-    top: 0;
-    opacity: 0;
-    transition:
-      top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-      opacity 0.1s 0.22s linear;
-  }
-  .hamburger--collapse.is-active .hamburger-inner::before {
-    top: 0;
-    transform: rotate(-90deg);
-    transition:
-      top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-      transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
+    .hamburger--collapse .hamburger-inner {
+      top: auto;
+      bottom: 0;
+      transition-duration: 0.13s;
+      transition-delay: 0.13s;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    .hamburger--collapse .hamburger-inner::after {
+      top: -14px;
+      transition:
+        top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+        opacity 0.1s linear;
+    }
+    .hamburger--collapse .hamburger-inner::before {
+      transition:
+        top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+        transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    .hamburger--collapse.is-active .hamburger-inner {
+      transform: translate3d(0, -7px, 0) rotate(-45deg);
+      transition-delay: 0.22s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    .hamburger--collapse.is-active .hamburger-inner::after {
+      top: 0;
+      opacity: 0;
+      transition:
+        top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+        opacity 0.1s 0.22s linear;
+    }
+    .hamburger--collapse.is-active .hamburger-inner::before {
+      top: 0;
+      transform: rotate(-90deg);
+      transition:
+        top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+        transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
 
-  /*
+    /*
    * Collapse Reverse
    */
-  .hamburger--collapse-r .hamburger-inner {
-    top: auto;
-    bottom: 0;
-    transition-duration: 0.13s;
-    transition-delay: 0.13s;
-    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  .hamburger--collapse-r .hamburger-inner::after {
-    top: -14px;
-    transition:
-      top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-      opacity 0.1s linear;
-  }
-  .hamburger--collapse-r .hamburger-inner::before {
-    transition:
-      top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-      transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  .hamburger--collapse-r.is-active .hamburger-inner {
-    transform: translate3d(0, -7px, 0) rotate(45deg);
-    transition-delay: 0.22s;
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  .hamburger--collapse-r.is-active .hamburger-inner::after {
-    top: 0;
-    opacity: 0;
-    transition:
-      top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-      opacity 0.1s 0.22s linear;
-  }
-  .hamburger--collapse-r.is-active .hamburger-inner::before {
-    top: 0;
-    transform: rotate(90deg);
-    transition:
-      top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-      transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-</style>
-<script>
-  const hamburgerButton = document.querySelector(".hamburger");
-  const sidebar = document.querySelector("#sidebar");
-  if (hamburgerButton && sidebar) {
-    hamburgerButton.addEventListener("click", (e) => {
-      if (hamburgerButton.classList.contains("is-active")) {
-        sidebar.setAttribute("style", "right: -100%");
-        hamburgerButton.classList.remove("is-active");
-      } else {
-        sidebar.setAttribute("style", "right: 0px");
-        hamburgerButton.classList.add("is-active");
-      }
+    .hamburger--collapse-r .hamburger-inner {
+      top: auto;
+      bottom: 0;
+      transition-duration: 0.13s;
+      transition-delay: 0.13s;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    .hamburger--collapse-r .hamburger-inner::after {
+      top: -14px;
+      transition:
+        top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+        opacity 0.1s linear;
+    }
+    .hamburger--collapse-r .hamburger-inner::before {
+      transition:
+        top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+        transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    .hamburger--collapse-r.is-active .hamburger-inner {
+      transform: translate3d(0, -7px, 0) rotate(45deg);
+      transition-delay: 0.22s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    .hamburger--collapse-r.is-active .hamburger-inner::after {
+      top: 0;
+      opacity: 0;
+      transition:
+        top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+        opacity 0.1s 0.22s linear;
+    }
+    .hamburger--collapse-r.is-active .hamburger-inner::before {
+      top: 0;
+      transform: rotate(90deg);
+      transition:
+        top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+        transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  </style>
+  <script>
+    const hamburgerButton = document.querySelector(".hamburger");
+    const sidebar = document.querySelector("#sidebar");
+    if (hamburgerButton && sidebar) {
+      hamburgerButton.addEventListener("click", (e) => {
+        if (hamburgerButton.classList.contains("is-active")) {
+          sidebar.setAttribute("style", "right: -100%");
+          hamburgerButton.classList.remove("is-active");
+        } else {
+          sidebar.setAttribute("style", "right: 0px");
+          hamburgerButton.classList.add("is-active");
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const button: HTMLButtonElement = document.getElementById(
+        "dropdownButton"
+      ) as HTMLButtonElement;
+      const menu: HTMLElement = document.getElementById(
+        "dropdownMenu"
+      ) as HTMLElement;
+
+      button.addEventListener("click", function (event: MouseEvent) {
+        const isVisible: boolean = menu.classList.contains("opacity-100");
+        if (!isVisible) {
+          menu.classList.remove("opacity-0", "invisible");
+          menu.classList.add("opacity-100", "visible");
+        } else {
+          menu.classList.remove("opacity-100", "visible");
+          menu.classList.add("opacity-0", "invisible");
+        }
+        event.stopPropagation();
+      });
+
+      document.addEventListener("click", function (event: MouseEvent) {
+        if (
+          event.target instanceof Node &&
+          !menu.contains(event.target) &&
+          !button.contains(event.target)
+        ) {
+          menu.classList.remove("opacity-100", "visible");
+          menu.classList.add("opacity-0", "invisible");
+        }
+      });
     });
-  }
-</script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton: HTMLElement = document.getElementById(
+        "toggleButton"
+      ) as HTMLElement;
+      const contentArea: HTMLElement = document.getElementById(
+        "contentArea"
+      ) as HTMLElement;
+      const svgIcon: SVGElement = toggleButton.querySelector(
+        "svg"
+      ) as SVGElement;
+
+      toggleButton.addEventListener("click", function () {
+        contentArea.classList.toggle("hidden");
+        if (contentArea.classList.contains("hidden")) {
+          svgIcon.style.transform = "rotate(0deg)";
+        } else {
+          svgIcon.style.transform = "rotate(90deg)";
+        }
+      });
+    });
+  </script>
+</header>

@@ -18,16 +18,18 @@ export default {
       colors: {
         "yellow-base": "#FFAA19",
         "red-base": "#961522",
-        "green-base": "#2F9D70",
+        "green-base": "#25542a",
         "yellow-light": "#E8DCA8",
         "red-light": "#FF907D",
-        "green-light": "#7CC782",
+        "green-light": "#00b855",
         "white-base": "#f1f5f9",
         "dark-base": "#0f172a",
+        "blue-base": "#316fe8",
       },
       dropShadow: {
         "3xl": "0 35px 35px rgba(0, 0, 0, 0.25)",
-        // heading: "drop-shadow-[0px_0px_2px] md:drop-shadow-[0px_0px_6px]",
+        green: "5px 3px 3px rgba(34, 197, 94, 0.5)",
+        yellow: "5px 3px 3px rgba(234, 179, 8, 0.5)",
       },
       animation: {
         marquee: "marquee 50s linear infinite",

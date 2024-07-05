@@ -1,4 +1,6 @@
 ---
+import Marque from "../Marque.astro";
+
 const visi =
   "UNSOED dalam pengembangannya akan mewujudkan visi yang telah dirumuskan untuk diwujudkan pada tahun 2034 yaitu “Diakui dunia sebagai pusat pengembangan sumberdaya perdesaan dan kearifan lokal”.";
 const misi = [
@@ -12,27 +14,17 @@ const misi = [
 
 <section
   id="visi-misi"
-  class="pt-16 pb-16 section-padding-x bg-dark-base text-white-base"
+  class="pt-8 pb-8 lg:pt-16 lg:pb-16 section-padding-x bg-dark-base text-white-base"
 >
   <div class="container max-w-screen-xl">
     <div class="flex flex-wrap gap-4 md:gap-8">
-      <div class="max-w-screen-md mx-auto text-center">
-        <h2 class="font-heading font-semibold capitalize header-font-size mb-2">
-          Visi & Misi
-        </h2>
-        <p class="small-font-size">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          odio, adipisci soluta esse ducimus praesentium expedita error est
-          quaerat cum.
-        </p>
-      </div>
       <div
         class="m-auto flex flex-wrap justify-center flex-col md:flex-row gap-4 md:gap-0"
       >
         <div class="w-full flex-1 flex flex-col gap-1 md:gap-2 items-center">
-          <h3 class="font-heading text-center sub-header-font-size max-w-md">
+          <h2 class="font-heading text-center sub-header-font-size max-w-md">
             Visi
-          </h3>
+          </h2>
           <p class="normal-font-size">
             {visi}
           </p>
@@ -42,10 +34,10 @@ const misi = [
         >
         </div>
         <div class="w-full flex-1 flex flex-col gap-1 md:gap-2 items-center">
-          <h3 class="font-heading text-center sub-header-font-size max-w-md">
+          <h2 class="font-heading text-center sub-header-font-size max-w-md">
             Misi
-          </h3>
-          <ol class="list-decimal normal-font-size list-inside">
+          </h2>
+          <ol class="list-decimal normal-font-size pl-4">
             {misi.map((data, index) => <li>{data}</li>)}
           </ol>
         </div>
@@ -53,3 +45,4 @@ const misi = [
     </div>
   </div>
 </section>
+<Marque img="/butterfly_logo.png" direction="left" />
