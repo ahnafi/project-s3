@@ -55,7 +55,7 @@ import NavLink from "./NavLink.astro";
             </div>
           </div>
         </div>
-        <NavLink href="/batir-gensoed">Info Gensoed</NavLink>
+        <NavLink href="/info-gensoed">Info Gensoed</NavLink>
       </div>
       <img
         src="/butterfly_logo.png"
@@ -87,41 +87,8 @@ import NavLink from "./NavLink.astro";
         style="right:-100%"
       >
         <NavLink href="/">Beranda</NavLink>
-        <div class="flex flex-col gap-2">
-          <div class="group relative">
-            <button
-              type="button"
-              id="toggleButton"
-              class="flex items-center text-slate-100 text-sm hover:text-yellow-base transition-all duration-300 cursor-pointer"
-            >
-              <span>Jelajahi Unsoed</span>
-              <svg
-                class="w-4 h-4 ml-2 -mr-1 rotate-90 transition-all duration-200"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z"></path>
-              </svg>
-            </button>
-            <div id="contentArea" class="mt-2 w-full hidden">
-              <ul
-                class="flex flex-col gap-1 text-right rtl-dir list-disc pr-4 marker:text-white-base"
-              >
-                <li>
-                  <NavLink href="/batir-gensoed">Tentang Unsoed</NavLink>
-                </li>
-                <li>
-                  <NavLink href="/ukm">UKM</NavLink>
-                </li>
-                <li>
-                  <NavLink href="/paguyuban">Paguyuban</NavLink>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <NavLink href="/batir-gensoed">Info Gensoed</NavLink>
+        <NavLink href="/tentang-unsoed">Tentang Unsoed</NavLink>
+        <NavLink href="/info-gensoed">Info Gensoed</NavLink>
         <NavLink href="/penugasan">Penugasan</NavLink>
         <NavLink href="/faq">FAQ</NavLink>
         <NavLink href="/hubungi-kami">Hubungi Kami</NavLink>

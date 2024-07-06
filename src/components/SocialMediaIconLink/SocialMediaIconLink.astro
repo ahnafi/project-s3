@@ -2,17 +2,17 @@
 const socialMedia = [
   {
     title: "Instagram",
-    link: "#",
+    link: "https://www.instagram.com/soedirmanstudentsummit",
     icon: "<i class='fa-brands fa-instagram'></i>",
   },
   {
     title: "TikTok",
-    link: "#",
+    link: "https://www.tiktok.com/@soedirmanstudentsummit",
     icon: "<i class='fa-brands fa-tiktok'></i>",
   },
   {
     title: "YouTube",
-    link: "#",
+    link: "https://www.youtube.com/@BEMUnsoed",
     icon: "<i class='fa-brands fa-youtube'></i>",
   },
   // {
@@ -59,6 +59,7 @@ const socialMedia = [
             class="text-dark-base text-6xl p-2 rounded-lg space-x-2 hover:text-yellow-base transition-colors duration-300 ease-in-out"
             href={data.link}
             set:html={data.icon}
+            target="_blank"
           />
         ))
       }
