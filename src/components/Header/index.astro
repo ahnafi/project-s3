@@ -22,7 +22,7 @@ import NavLink from "./NavLink.astro";
               Jelajahi Unsoed
               <!-- Dropdown Arrow -->
               <svg
-                class="w-4 h-4 ml-2 -mr-1"
+                class="w-4 h-4 ml-2 -mr-1 rotate-90 transition-all duration-200"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -96,18 +96,12 @@ import NavLink from "./NavLink.astro";
             >
               <span>Jelajahi Unsoed</span>
               <svg
-                class="w-5 h-5 text-white-base hover:text-yellow-base ml-2 transition-all duration-300 transform group-hover:rotate-90"
+                class="w-4 h-4 ml-2 -mr-1 rotate-90 transition-all duration-200"
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                viewBox="0 0 20 20"
                 fill="currentColor"
-                viewBox="0 0 16 16"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-                >
-                </path>
+                <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z"></path>
               </svg>
             </button>
             <div id="contentArea" class="mt-2 w-full hidden">
@@ -285,6 +279,7 @@ import NavLink from "./NavLink.astro";
         transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
     }
   </style>
+
   <script>
     const hamburgerButton = document.querySelector(".hamburger");
     const sidebar = document.querySelector("#sidebar");
@@ -307,15 +302,18 @@ import NavLink from "./NavLink.astro";
       const menu: HTMLElement = document.getElementById(
         "dropdownMenu"
       ) as HTMLElement;
+      const svgIcon: SVGElement = button.querySelector("svg") as SVGElement;
 
       button.addEventListener("click", function (event: MouseEvent) {
         const isVisible: boolean = menu.classList.contains("opacity-100");
         if (!isVisible) {
           menu.classList.remove("opacity-0", "invisible");
           menu.classList.add("opacity-100", "visible");
+          svgIcon.style.transform = "rotate(0deg)";
         } else {
           menu.classList.remove("opacity-100", "visible");
           menu.classList.add("opacity-0", "invisible");
+          svgIcon.style.transform = "rotate(90deg)";
         }
         event.stopPropagation();
       });
@@ -346,9 +344,9 @@ import NavLink from "./NavLink.astro";
       toggleButton.addEventListener("click", function () {
         contentArea.classList.toggle("hidden");
         if (contentArea.classList.contains("hidden")) {
-          svgIcon.style.transform = "rotate(0deg)";
-        } else {
           svgIcon.style.transform = "rotate(90deg)";
+        } else {
+          svgIcon.style.transform = "rotate(0deg)";
         }
       });
     });

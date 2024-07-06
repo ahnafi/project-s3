@@ -18,7 +18,7 @@ export default {
       colors: {
         "yellow-base": "#FFAA19",
         "red-base": "#961522",
-        "green-base": "#25542a",
+        "green-base": "#22c55e",
         "yellow-light": "#E8DCA8",
         "red-light": "#FF907D",
         "green-light": "#00b855",
@@ -36,6 +36,7 @@ export default {
         marqueeReverse: "marqueeReverse 50s linear infinite",
         downUp: "downUp 8s linear infinite",
         upDown: "upDown 8s linear infinite",
+        cloud: "cloud 30s linear infinite",
       },
       keyframes: {
         marquee: {
@@ -55,6 +56,11 @@ export default {
           "0%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-48px)" },
           "100%": { transform: "translateY(0px)" },
+        },
+        cloud: {
+          "0%": { transform: "translateX(0)", opacity: 0 },
+          "10%": { opacity: 0.8 },
+          "100%": { transform: "translateX(100vw)" },
         },
       },
     },
