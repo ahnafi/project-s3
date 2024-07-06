@@ -4,64 +4,71 @@ import DocumentationCard from "./DocumentationCard.astro";
 
 <section
   id="know-more"
-  class="pt-24 pb-16 section-padding-x text-dark-base max-w-screen-xl m-auto"
+  class="pt-24 pb-16 section-padding-x text-dark-base bg-gradient-to-b to-white-base from-cyan-500 m-auto"
 >
-  <div class="container">
-    <div class="w-full mb-8 sm:mb-12">
-      <div class="text-center flex flex-col">
-        <div class="flex items-center">
-          <div class="w-full md:w-3/5 lg:w-1/2">
-            <img
-              src="/images/mascots/cowok.png"
-              alt="gem"
-              class="inline-block rounded w-36 sm:w-32 md:w-40 lg:w-56"
-            />
+  <div class="container max-w-screen-xl">
+    <!-- Pengenalan Maskot -->
+    <div
+      class="w-full mb-8 sm:mb-12 text-center flex flex-col max-w-screen-md m-auto gap-8"
+    >
+      <div class="flex items-center">
+        <div class="w-full md:w-3/5 lg:w-1/2">
+          <img
+            src="/images/mascots/cowok.png"
+            alt="gem"
+            class="inline-block rounded w-36 sm:w-32 md:w-40 lg:w-56"
+          />
+        </div>
+        <div
+          class="w-full md:w-2/5 lg:w-1/2 text-center md:text-left border-4 border-yellow-base px-4 py-2 rounded-3xl relative"
+        >
+          <div class="absolute -left-8 top-3 w-8 overflow-hidden inline-block">
+            <div
+              class="h-16 border-4 border-yellow-base bg-transparent border-r-0 z-10 -rotate-45 transform origin-top-right"
+            >
+            </div>
+          </div>
+          <p class="small-font-size">
+            <span class="font-bold normal-font-size"
+              >Halloo saya adalah LocaleData</span
+            > Use the LocaleData gem to download translations directly into your
+            Ruby on Rails projects using the provided command line interface.
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center sm:flex-row-reverse">
+        <div class="w-full md:w-3/5 lg:w-1/2">
+          <img
+            src="/images/mascots/cewek.png"
+            alt="gem"
+            class="inline-block rounded w-36 sm:w-32 md:w-40 lg:w-56"
+          />
+        </div>
+        <div
+          class="w-full md:w-2/5 lg:w-1/2 text-center md:text-left border-4 border-yellow-base px-4 py-2 rounded-3xl relative"
+        >
+          <div
+            class="absolute -left-8 top-3 w-8 overflow-hidden inline-block md:hidden"
+          >
+            <div
+              class="h-16 border-4 border-yellow-base bg-transparent border-r-0 z-10 -rotate-45 transform origin-top-right"
+            >
+            </div>
           </div>
           <div
-            class="w-full md:w-2/5 lg:w-1/2 text-center md:text-left border-4 border-yellow-base px-4 py-2 rounded-3xl relative"
+            class="w-8 -right-8 top-3 absolute overflow-hidden md:inline-block hidden"
           >
-            <div class="absolute -left-8 top-3 w-8 overflow-hidden inline-block">
-              <div
-                class="h-16 border-4 border-yellow-base bg-white-base border-r-0 z-10 -rotate-45 transform origin-top-right"
-              >
-              </div>
+            <div
+              class="h-16 border-4 border-yellow-base bg-transparent rotate-45 border-l-0 z-10 transform origin-top-left"
+            >
             </div>
-            <p class="small-font-size">
-              <span class="font-bold normal-font-size"
-                >Halloo saya adalah LocaleData</span
-              > Use the LocaleData gem to download translations directly into your
-              Ruby on Rails projects using the provided command line interface.
-            </p>
           </div>
-        </div>
-        <div class="flex items-center sm:flex-row-reverse">
-          <div class="w-full md:w-3/5 lg:w-1/2">
-            <img
-              src="/images/mascots/cewek.png"
-              alt="gem"
-              class="inline-block rounded w-36 sm:w-32 md:w-40 lg:w-56"
-            />
-          </div>
-          <div class="w-full md:w-2/5 lg:w-1/2 text-center md:text-left border-4 border-yellow-base px-4 py-2 rounded-3xl relative">
-            <!-- mobile -->
-            <div class="absolute -left-8 top-3 w-8 overflow-hidden inline-block md:hidden">
-              <div
-                class="h-16 border-4 border-yellow-base bg-white-base border-r-0 z-10 -rotate-45  transform origin-top-right"
-              >
-              </div>
-            </div>
-            <!-- dekstop -->
-            <div class="w-8 -right-8 top-3 absolute overflow-hidden md:inline-block hidden">
-              <div class=" h-16 border-4 border-yellow-base bg-white-base rotate-45 border-l-0 z-10 transform origin-top-left"></div>
-             </div>
-            <!--  -->
-            <p class="small-font-size">
-              <span class="font-bold normal-font-size"
-                >Halloo saya adalah LocaleData</span
-              > Use the LocaleData gem to download translations directly into your
-              Ruby on Rails projects using the provided command line interface.
-            </p>
-          </div>
+          <p class="small-font-size">
+            <span class="font-bold normal-font-size"
+              >Halloo saya adalah LocaleData</span
+            > Use the LocaleData gem to download translations directly into your
+            Ruby on Rails projects using the provided command line interface.
+          </p>
         </div>
       </div>
     </div>
@@ -76,6 +83,7 @@ import DocumentationCard from "./DocumentationCard.astro";
         />
       </div>
     </div>
+    <!-- Mengenal Lebih Dekat dengan S3 -->
     <div class="w-full">
       <div class="max-w-screen-md mx-auto text-center mb-8">
         <h2
@@ -94,6 +102,7 @@ import DocumentationCard from "./DocumentationCard.astro";
         </p>
       </div>
     </div>
+    <!-- Foto Dokumentasi -->
     <div class="w-full">
       <DocumentationCard />
     </div>

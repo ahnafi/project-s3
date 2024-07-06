@@ -18,22 +18,25 @@ export default {
       colors: {
         "yellow-base": "#FFAA19",
         "red-base": "#961522",
-        "green-base": "#2F9D70",
+        "green-base": "#22c55e",
         "yellow-light": "#E8DCA8",
         "red-light": "#FF907D",
-        "green-light": "#7CC782",
+        "green-light": "#00b855",
         "white-base": "#f1f5f9",
         "dark-base": "#0f172a",
+        "blue-base": "#316fe8",
       },
       dropShadow: {
         "3xl": "0 35px 35px rgba(0, 0, 0, 0.25)",
-        // heading: "drop-shadow-[0px_0px_2px] md:drop-shadow-[0px_0px_6px]",
+        green: "5px 3px 3px rgba(34, 197, 94, 0.5)",
+        yellow: "5px 3px 3px rgba(234, 179, 8, 0.5)",
       },
       animation: {
         marquee: "marquee 50s linear infinite",
         marqueeReverse: "marqueeReverse 50s linear infinite",
         downUp: "downUp 8s linear infinite",
         upDown: "upDown 8s linear infinite",
+        cloud: "cloud 30s linear infinite",
       },
       keyframes: {
         marquee: {
@@ -53,6 +56,11 @@ export default {
           "0%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-48px)" },
           "100%": { transform: "translateY(0px)" },
+        },
+        cloud: {
+          "0%": { transform: "translateX(0)", opacity: 0 },
+          "10%": { opacity: 0.8 },
+          "100%": { transform: "translateX(100vw)" },
         },
       },
     },

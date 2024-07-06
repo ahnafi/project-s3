@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1682.64 851.76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+        filter: url(#outer-glow-1);
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="265.7" y1="65.91" x2="1415.08" y2="849.27" gradientUnits="userSpaceOnUse">
+      <stop offset=".17" stop-color="#e8dca8"/>
+      <stop offset=".78" stop-color="#f68f7f"/>
+    </linearGradient>
+    <filter id="outer-glow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="40"/>
+      <feFlood flood-color="#fff" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <path class="cls-1" d="m120.21,134.2c86.55-18.7,177.39-18.81,263.99-.32,29.54,6.31,59.28,15.07,83.47,32.56,24.18,17.49,42.11,45.18,40.48,74.22-1.35,24.12-15.37,49.66-3.62,71.01,5.96,10.82,17.42,17.72,28.85,23.13,47.58,22.52,98.45,25.47,150.34,26.97,55.97,1.61,111.84,7.37,166.77,17.84,27.71,5.28,55.44,11.84,80.77,23.87,24.1,11.44,45.46,27.56,65.45,44.83,65.88,56.91,119.44,127.83,194.05,173.72,71.39,43.92,156.4,61.45,239.36,78.18,44.1,8.9,88.2,17.79,132.3,26.69-127.62,18.3-256.1-20.4-377.17-63.32-19.98-7.08-40.01-14.34-58.46-24.57-29.17-16.17-53.46-39.2-77.38-61.98-31.21-29.7-53.15-64.69-91.05-88.08-54.06-33.36-118.99-43.26-182-46.82-64.56-3.65-126.6,7.61-191.95,1.35-62.31-5.97-203-25.09-186.19-114.68,7.77-41.43,57.78-76.82,41.1-115.74-8.8-20.54-32.97-30.17-55.07-36.68-84.5-24.89-173.81-34.59-261.96-28.43"/>
+  </g>
+</svg>

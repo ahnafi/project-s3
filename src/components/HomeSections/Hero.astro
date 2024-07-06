@@ -1,52 +1,51 @@
 <section
   id="hero"
-  class="w-full h-screen bg-transparent flex justify-center items-center px-6 lg:px-0 relative"
+  class="w-full h-screen bg-gradient-to-b to-cyan-500 from-blue-500 flex justify-center items-center section-padding-x relative"
 >
   <article
-    class="flex flex-col items-center gap-6 lg:gap-10 w-full max-w-4xl text-center z-[2]"
+    class="flex flex-col items-center gap-2 lg:gap-6 w-full max-w-4xl text-center z-[2]"
   >
     <div class="flex flex-col gap-1">
       <p
-        class="text-green-light text-base lg:text-xl font-heading drop-shadow-[0_0px_5px]"
+        class="text-green-base font-heading text-sm sm:text-base md:text-lg lg:text-xl"
       >
         From Vision to Reality: Creating a Brighter Tomorrow
       </p>
-      <h1
-        class="text-yellow-base font-heading text-5xl lg:text-7xl drop-shadow-[0_0px_5px]"
-      >
+      <h1 class="text-yellow-base font-heading header-font-size">
         Soedirman Student Summit
       </h1>
-      <p
-        class="text-dark-base font-heading text-3xl lg:text-4xl drop-shadow-[0_0px_5px]"
-      >
-        2024
-      </p>
+      <p class="text-white-base font-heading text-3xl lg:text-4xl">2024</p>
     </div>
-    <p
-      class="text-dark-base text-sm lg:text-base max-w-3xl drop-shadow-[0_0px_5px]"
-    >
+    <p class="text-white-base normal-font-size max-w-3xl">
       By fostering creativity and collaboration, we turn bold visions into
       tangible realities. Our dedication to sustainability, education, and
       community empowerment shapes a future where everyone can thrive.
     </p>
   </article>
-  <div
-    class="w-full flex justify-center overflow-hidden absolute top-full -translate-y-full"
-  >
-    <img
-      src="/images/flower.png"
-      alt="Flower"
-      class="w-[1440px] max-w-[unset] lg:w-full"
-    />
-  </div>
   <img
-    src="/images/left_cloud.png"
+    src="/images/elements/clouds.png"
     alt="Cloud"
-    class="absolute z-[1] h-[250px] md:h-[300px] -left-[200px] top-[5%] lg:-left-[140px] lg:top-[50%] lg:-translate-y-[40%] lg:h-[350px]"
+    class="absolute bottom-0 md:-bottom-10 lg:-bottom-20 w-[480px] md:w-full lg:w-[1440px] z-10 max-w-[unset] xl:w-full"
   />
   <img
-    src="/images/right_cloud.png"
+    src="images/elements/cloud-2.png"
     alt="Cloud"
-    class="absolute z-[1] h-[250px] md:h-[300px] -right-[200px] top-[65%] lg:-right-[140px] lg:top-[50%] lg:-translate-y-[40%] lg:h-[350px]"
+    class="absolute w-[480px] md:w-full lg:w-[720px] max-w-[unset] top-20 left-20 animate-cloud"
   />
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cloud = document.querySelector(".animate-cloud") as HTMLElement;
+
+    if (cloud) {
+      cloud.addEventListener("mouseover", () => {
+        cloud.style.animationPlayState = "paused";
+      });
+
+      cloud.addEventListener("mouseout", () => {
+        cloud.style.animationPlayState = "running";
+      });
+    }
+  });
+</script>
