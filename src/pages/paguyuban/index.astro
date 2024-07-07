@@ -7,7 +7,6 @@ import Card from "../../components/Card.astro";
 <Layout title="Paguyuban Mahasiswa Daerah">
   <section id="hero" class="pt-28 bg-slate-300">
     <div class="w-full px-6 text-center py-12">
-      <p class="text-sm md:text-base font-body">Lorem ipsum dolor sit amet.</p>
       <h1
         class="text-3xl lg:text-4xl font-heading font-normal text-dark-base drop-shadow-[0_0px_1px_rgba(0,0,0,0.6)] stroke-10 stroke-green-base"
       >
@@ -23,7 +22,7 @@ import Card from "../../components/Card.astro";
     </div>
   </section>
   <!--  -->
-  <section class="">
+  <section class="pb-16">
     <div class="flex justify-center w-full relative pt-12">
       <form
         method="get"
@@ -34,7 +33,7 @@ import Card from "../../components/Card.astro";
           type="text"
           name="searchName"
           id="searchName"
-          placeholder="Cari ukm"
+          placeholder="Cari Paguyuban"
           class="w-full block rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         />
         <select
@@ -44,27 +43,22 @@ import Card from "../../components/Card.astro";
         >
           <option selected value="" class="text-dark-base">kategori</option>
           <option value="sumatera" class="text-dark-base">Sumatera</option>
-          <option value="kalimantan" class="text-dark-base">Kalimantan</option>
           <option value="jawa" class="text-dark-base">Jawa</option>
-          <option value="sulawesi" class="text-dark-base">Sulawesi</option>
-          <option value="papua" class="text-dark-base">Papua</option>
+          <option value="kalimantan" class="text-dark-base">Kalimantan</option>
+          <option value="Sulawesi" class="text-dark-base">Sulawesi</option>
+          <option value="Papua" class="text-dark-base">Papua</option>
         </select>
       </form>
     </div>
     <!-- mapping cards-->
     <div
+      class="columns-2 md:columns-3 lg:columns-4 md:gap-6 py-2 md:py-4 sm:p-1 mt-2 px-6 sm:px-8 md:px-8 max-w-7xl mx-auto "
       id="cards"
-      class="flex flex-wrap flex-1 md:flex-auto justify-center gap-4 pt-8 pb-12 lg:px-32"
     >
       <!-- card -->
       {
         paguyuban.map((e) => (
-          <Card
-            body="abc"
-            href={`/paguyuban/` + e.name}
-            title={e.name}
-            img={e.logo}
-          />
+          <Card href={`/paguyuban/` + e.name} title={e.name} img={e.logo} />
         ))
       }
       <!--  -->
@@ -103,19 +97,21 @@ import Card from "../../components/Card.astro";
 
         newData.forEach((e) => {
           let cardText = `
-        <div class="rounded-xl border border-slate-400 drop-shadow-md shadow w-36 md:w-52 lg:w-64">
-          <a href="/ukm/${e.name}">
-            <div class="w-36 md:w-52 lg:w-64">
-              <img src=${e.logo} alt=${"logo ukm " + e.name}  class="w-full rounded-t-xl" />
+            <div
+            class="ring-1 rounded-lg flex flex-col space-y-2 p-4 break-inside-avoid mb-6 bg-white-base hover:ring-2 ring-gray-300 hover:ring-sky-400 transform duration-200 hover:shadow-sky-200 hover:shadow-md z-0 group relative">
+            <div class="flex flex-col break-inside-avoid-page z-0">
+              <img src=${e.logo} alt='logo paguyuban ${e.name}' class="w-full" />
             </div>
-            <h5 class="px-2 pt-2 text-xl tracking-tight text-dark-base font-heading">
+            <h5
+              class="whitespace-pre-line text-xl md:text-2xl tracking-tight text-dark-base font-heading text-center">
               ${e.name}
             </h5>
-            <p class="px-2 pb-2 text-base text-dark-base font-body font-normal">
-              ukm jenis ${e.category}
-            </p>
-          </a>
-        </div>`;
+            <a
+              href='${e.name}'
+              class=" group-hover:block lg:hidden lg:absolute backdrop-blur-md -top-2 right-0 left-0 bottom-0 rounded-lg text-center content-center transition-all ease-in-out duration-500">
+              <span class="inline-block mt-0 rounded-lg text-blue-base lg:bg-blue-100 px-1 italic font-jakarta font-bold md:text-sm lg:text-lg text-xs">Lihat Selengkapnya <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+          </div>`;
           cards.innerHTML += cardText;
         });
       });
