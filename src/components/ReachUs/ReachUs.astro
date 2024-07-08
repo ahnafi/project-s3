@@ -1,14 +1,17 @@
 ---
-const email = ["hello@loopple.com", "unsoed@mhs.unsoed.ac.id"];
-const phoneNumber = ["+516-486-5135", "+62 868-2343-1235"];
-const address = [
+const email: string[] = ["hello@loopple.com", "unsoed@mhs.unsoed.ac.id"];
+const instagram: { name: string; link: string }[] = [
   {
-    loc: "10924 Urna Convallis",
-    link: "https://goo.gl/maps/QcWzYETAh4FS3KTD7",
+    name: "@soedirmanstudentsummit",
+    link: "https://www.instagram.com/soedirmanstudentsummit",
   },
   {
-    loc: "Jl. Profesor DR. HR Boenyamin No.708",
-    link: "https://goo.gl/maps/QcWzYETAh4FS3KTD7",
+    name: "@batir_unsoed",
+    link: "https://www.instagram.com/batir_unsoed",
+  },
+  {
+    name: "@bem_unsoed",
+    link: "https://www.instagram.com/bem_unsoed",
   },
 ];
 ---
@@ -30,108 +33,84 @@ const address = [
     <div class="w-full px-4 flex gap-10">
       <div class="container flex flex-col mx-auto">
         <div
-          class="grid w-full grid-cols-1 content-center gap-5 md:grid-cols-2 lg:grid-cols-3"
+          class="grid w-full grid-cols-1 content-center gap-5 md:grid-cols-2 lg:grid-cols-2"
         >
           <div
-            class="flex flex-col items-center gap-3 px-4 py-10 bg-white justify-center rounded-xl"
+            class="flex gap-3 bg-white border border-gray-300 rounded-xl overflow-hidden items-center justify-start px-4 py-2 flex-col lg:flex-row"
           >
-            <i
-              class="fa-solid fa-envelope text-4xl md:text-5xl text-yellow-base"
-            ></i>
-            <p class="text-xl md:text-2xl font-extrabold">Email</p>
-            <p class="text-base leading-7">Contact us at</p>
-            <div class="flex flex-col items-center gap-1">
+            <div
+              class="w-32 h-32 flex-shrink-0 flex justify-center items-center"
+            >
+              <i class="fa-solid fa-envelope fa-8x text-yellow-base"></i>
+            </div>
+
+            <div class="flex flex-col gap-2 py-2">
+              <h5 class="text-xl font-bold">Email</h5>
+
+              <p class="text-gray-500">Hubungi kami lewat email</p>
+
               {
                 email.map((mail, index) => (
-                  <a
-                    class="text-base md:text-lg  font-bold text-center hover:text-yellow-base transition duration-200"
-                    href={`mailto: ${mail}`}
-                  >
-                    {mail}
-                  </a>
+                  <span class="flex items-center justify-start text-gray-500 hover:text-blue-base hover:underline transition-all ease-in-out duration-300">
+                    <svg
+                      class="w-4 h-4 mr-1 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <a href={`mailto: ${mail}`} target="_blank">
+                      {mail}
+                    </a>
+                  </span>
                 ))
               }
             </div>
           </div>
+          <!--  -->
           <div
-            class="flex flex-col items-center gap-3 px-4 justify-center bg-white py-10 rounded-xl"
+            class="flex gap-3 bg-white border border-gray-300 rounded-xl overflow-hidden items-center justify-start px-4  py-2 flex-col lg:flex-row"
           >
-            <i class="fa-solid fa-phone text-4xl md:text-5xl text-yellow-base"
-            ></i>
-            <p class="text-xl md:text-2xl font-extrabold">Phone</p>
-            <p class="text-base leading-7">Reach out to us by phone</p>
-            {
-              phoneNumber.map((number, index) => (
-                <a
-                  class="text-base md:text-lg  font-bold text-center hover:text-yellow-base transition duration-200"
-                  href={`tel:${number}`}
-                >
-                  {number}
-                </a>
-              ))
-            }
+            <div
+              class="w-32 h-32 flex-shrink-0 flex justify-center items-center"
+            >
+              <i class="fa-brands fa-instagram fa-8x text-yellow-base"></i>
+            </div>
+
+            <div class="flex flex-col gap-2 py-2">
+              <h5 class="text-xl font-bold">Instagram</h5>
+
+              <p class="text-gray-500">Hubungi kami lewat Instagram</p>
+
+              {
+                instagram.map((e, index) => (
+                  <span class="flex items-center justify-start text-gray-500 hover:text-blue-base hover:underline  transition-all ease-in-out duration-150">
+                    <svg
+                      class="w-4 h-4 mr-1 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <a href={e.link} target="_blank">
+                      {e.name}
+                    </a>
+                  </span>
+                ))
+              }
+            </div>
           </div>
-          <div
-            class="flex flex-col items-center gap-3 px-4 justify-center bg-white py-10 rounded-xl"
-          >
-            <i
-              class="fa-solid fa-map-location-dot text-4xl md:text-5xl text-yellow-base"
-            ></i>
-            <p class="text-xl md:text-2xl font-extrabold">Location</p>
-            <p class="text-base leading-7">Find us at our office</p>
-            {
-              address.map((data, index) => (
-                <a
-                  class="text-base md:text-lg  font-bold text-center hover:text-yellow-base transition duration-200"
-                  target="_blank"
-                  href={data.link}
-                >
-                  {data.loc}
-                </a>
-              ))
-            }
-          </div>
-          <!--  -->
-          <a href="https://www.instagram.com/batir_unsoed" target="_blank">
-            <div
-              class="flex flex-col items-center gap-3 px-4 justify-center bg-white py-10 rounded-xl"
-            >
-              <i
-                class="fa-brands fa-square-instagram text-4xl md:text-5xl text-yellow-base"
-              ></i>
-              <p class="text-xl md:text-2xl font-extrabold">Batir Unsoed</p>
-              <p class="text-base leading-7">Find us at our Instagram</p>
-              <p class="text-base leading-7">@batir_unsoed</p>
-            </div>
-          </a>
-          <!--  -->
-          <!--  -->
-          <a href="https://www.instagram.com/soedirmanstudentsummit" target="_blank">
-            <div
-              class="flex flex-col items-center gap-3 px-4 justify-center bg-white py-10 rounded-xl"
-            >
-              <i
-                class="fa-brands fa-square-instagram text-4xl md:text-5xl text-yellow-base"
-              ></i>
-              <p class="text-xl md:text-2xl font-extrabold uppercase">soedirmanstudentsummit</p>
-              <p class="text-base leading-7">Find us at our Instagram</p>
-              <p class="text-base leading-7">@soedirmanstudentsummit</p>
-            </div>
-          </a>
-          <!--  -->
-          <!--  -->
-          <a href="https://www.instagram.com/bem_unsoed" target="_blank">
-            <div
-              class="flex flex-col items-center gap-3 px-4 justify-center bg-white py-10 rounded-xl"
-            >
-              <i
-                class="fa-brands fa-square-instagram text-4xl md:text-5xl text-yellow-base"
-              ></i>
-              <p class="text-xl md:text-2xl font-extrabold">BEM Unsoed</p>
-              <p class="text-base leading-7">Find us at our Instagram</p>
-              <p class="text-base leading-7">@bem_unsoed</p>
-            </div>
-          </a>
+
           <!--  -->
         </div>
       </div>
