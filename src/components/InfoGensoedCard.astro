@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  href: string;
+  img: string;
+  extraClass?: string;
+}
+
+const { href, title, img, extraClass = "" } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`w-full max-w-[256px] py-8 md:py-10 lg:py-16 px-2 bg-white-base inline-block rounded-md h-fit ${extraClass}`}
+>
+  <img
+    src={img}
+    alt="Dummy image"
+    class="w-20 md:w-24 lg:w-28 object-cover rounded-md m-auto"
+  />
+  <h3
+    class="font-heading uppercase mt-8 text-xl sm:text-2xl lg:text-3xl text-dark-base text-center"
+  >
+    {title}
+  </h3>
+</a>

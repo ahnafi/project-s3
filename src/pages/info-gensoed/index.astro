@@ -1,81 +1,72 @@
 ---
-import BatirCard from "../../components/BatirCard.astro";
+import InfoGensoedCard from "../../components/InfoGensoedCard.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="Batir Gensoed">
-  <!-- <section
-        id="hero"
-        class="w-full bg-gray-300 py-[225px] flex flex-col items-center justify-center px-6"
-    >
-        <article class="w-full max-w-xl flex flex-col gap-4 text-center">
-            <h1 class="font-love text-4xl lg:text-6xl text-gray-900">
-                BATIR UNSOED
-            </h1>
-            <p class="text-base font-medium text-gray-600">
-                Lorem ipsum dolor sit amet consectetur. Pulvinar scelerisque
-                aliquam feugiat tincidunt pharetra tellus euismod curabitur.
-                Bibendum nunc eget in eget.
-            </p>
+<Layout title="Info Gensoed">
+  <section
+    id="hero"
+    class="pb-16 pt-28 section-padding-x text-white-base bg-blue-500 bg-[url('/images/patterns/batik.svg')] bg-size"
+  >
+    <div class="container max-w-screen-xl">
+      <div class="w-full flex flex-col gap-4">
+        <article class="text-center">
+          <h1 class="header-font-size font-heading">Info Gensoed</h1>
         </article>
-    </section> -->
-  <section class="w-full flex justify-center py-32 px-6">
-    <div class="container max-w-7xl flex flex-col gap-12">
-      <article class="text-center flex flex-col gap-4">
-        <h2 class="text-[28px] lg:text-4xl font-love text-gray-800">
-          BATIR UNSOED
-        </h2>
-        <p class="text-base text-gray-600">
-          Ini juga tambahin deskripsi apa kek biar tambah bagus aja
+        <div class="flex gap-4 md:gap-8 justify-center">
+          <div
+            class="flex flex-col gap-4 md:gap-8 w-full md:items-end lg:flex-row lg:items-start lg:justify-end"
+          >
+            <InfoGensoedCard
+              title="Twibbon"
+              img="/images/icons/general/twibbon.png"
+              href="/coming-soon"
+              extraClass="animate-downUp"
+            />
+            <InfoGensoedCard
+              title="Dresscode"
+              img="/images/icons/general/dresscode.png"
+              href="/coming-soon"
+              extraClass="animate-downUp lg:mt-12 lg:animate-upDown"
+            />
+          </div>
+          <div
+            class="flex flex-col gap-4 pt-12 md:gap-8 w-full lg:flex-row lg:pt-0"
+          >
+            <InfoGensoedCard
+              title="Perlengkapan"
+              img="/images/icons/general/equipment.png"
+              href="/coming-soon"
+              extraClass="animate-upDown lg:animate-downUp"
+            />
+            <InfoGensoedCard
+              title="Lainnya"
+              img="/images/icons/general/other.png"
+              href="/coming-soon"
+              extraClass="animate-upDown lg:mt-12"
+            />
+          </div>
+        </div>
+        <p class="text-center normal-font-size">
+          Dikasih tulisan apa kek, deskripsi atau mempersuasi sesuatu kek, biar
+          keliatan lebih rame aja. Terkadang, hanya sekadar teks polos itu
+          membosankan dan tidak menarik. Dengan menambahkan sedikit detail atau
+          bumbu kata, kita bisa membuat tulisan yang lebih hidup dan berwarna.
+          Misalnya, saat kita mendeskripsikan sesuatu, jangan hanya berfokus
+          pada fakta-fakta datar. Sertakan juga emosi, perasaan, dan bayangan
+          yang dapat membuat pembaca merasa terlibat dan tertarik. Ketika kita
+          mencoba mempersuasi seseorang, kita harus menggunakan bahasa yang kuat
+          dan memikat, memberikan alasan yang logis serta menyentuh hati
+          pembaca, sehingga mereka merasa tergerak dan mau mengikuti apa yang
+          kita sarankan.
         </p>
-      </article>
-      <div class="flex gap-4 md:gap-8 justify-center">
-        <div
-          class="flex flex-col gap-4 md:gap-8 w-full md:items-end lg:flex-row lg:items-start lg:justify-end"
-        >
-          <BatirCard
-            title="TWIBBON"
-            img="/images/cartoon/1.jpg"
-            href="/coming-soon"
-            extraClass="animate-downUp"
-          />
-          <BatirCard
-            title="DRESSCODE"
-            img="/images/cartoon/2.jpg"
-            href="/coming-soon"
-            extraClass="animate-downUp lg:mt-12 lg:animate-upDown"
-          />
-        </div>
-        <div
-          class="flex flex-col gap-4 pt-12 md:gap-8 w-full lg:flex-row lg:pt-0"
-        >
-          <BatirCard
-            title="ATTRIBUT"
-            img="/images/cartoon/3.jpg"
-            href="/coming-soon"
-            extraClass="animate-upDown lg:animate-downUp"
-          />
-          <BatirCard
-            title="LAINYA"
-            img="/images/cartoon/4.jpg"
-            href="/coming-soon"
-            extraClass="animate-upDown lg:mt-12"
-          />
-        </div>
       </div>
-      <p class="text-center text-base text-gray-600">
-        Dikasih tulisan apa kek, deskripsi atau mempersuasi sesuatu kek, biar
-        keliatan lebih rame aja. Terkadang, hanya sekadar teks polos itu
-        membosankan dan tidak menarik. Dengan menambahkan sedikit detail atau
-        bumbu kata, kita bisa membuat tulisan yang lebih hidup dan berwarna.
-        Misalnya, saat kita mendeskripsikan sesuatu, jangan hanya berfokus pada
-        fakta-fakta datar. Sertakan juga emosi, perasaan, dan bayangan yang
-        dapat membuat pembaca merasa terlibat dan tertarik. Ketika kita mencoba
-        mempersuasi seseorang, kita harus menggunakan bahasa yang kuat dan
-        memikat, memberikan alasan yang logis serta menyentuh hati pembaca,
-        sehingga mereka merasa tergerak dan mau mengikuti apa yang kita
-        sarankan.
-      </p>
     </div>
   </section>
 </Layout>
+
+<style>
+  .bg-size {
+    background-size: 128px;
+  }
+</style>
