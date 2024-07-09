@@ -6,6 +6,7 @@ import Logo from "../components/Logo/Logo.astro";
 import Timeline from "../components/Timeline/Timeline.astro";
 import Flashback from "../components/HomeSections/Flashback.astro";
 import SponsorsSection from "../components/HomeSections/SponsorsSection.astro";
+import Marque from "../components/Marque.astro";
 ---
 
 <Layout title="Selamat Datang">
@@ -13,7 +14,19 @@ import SponsorsSection from "../components/HomeSections/SponsorsSection.astro";
     <Hero />
     <KnowMore />
     <Logo />
+    <Marque
+      bgColor="bg-dark-base"
+      textColor="text-white-base"
+      direction="right"
+      img="/images/logo-parts/logo.webp"
+    />
     <Timeline />
+    <Marque
+      bgColor="bg-dark-base"
+      textColor="text-white-base"
+      direction="left"
+      img="/images/logo-parts/logo.webp"
+    />
     <Flashback />
     <SponsorsSection />
   </main>

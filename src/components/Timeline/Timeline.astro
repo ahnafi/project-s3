@@ -2,16 +2,21 @@
 import TimelineCard from "./TimelineCard.astro";
 ---
 
-<section id="timeline" class="pt-16 pb-16 section-padding-x m-auto">
+<section
+  id="timeline"
+  class="pt-16 pb-16 bg-yellow-200 text-dark-base section-padding-x m-auto bg-[url('images/patterns/soedirman-student-summit.webp')] bg-center"
+>
   <div class="container max-w-screen-xl flex flex-col">
-    <div class="w-full">
+    <div class="w-full mb-4">
       <div class="mx-auto text-center">
+        <!-- Title -->
         <h2 class="header-font-size font-semibold text-primary font-heading">
           Timeline
         </h2>
       </div>
     </div>
-    <div class="w-full">
+    <div class="w-full rounded-lg text-dark-base bg-white-base overflow-hidden">
+      <!-- Timeline Description -->
       <TimelineCard />
     </div>
   </div>

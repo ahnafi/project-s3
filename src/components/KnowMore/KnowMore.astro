@@ -4,71 +4,29 @@ import DocumentationCard from "./DocumentationCard.astro";
 
 <section
   id="know-more"
-  class="pt-24 pb-16 section-padding-x text-dark-base bg-gradient-to-b to-white-base from-cyan-500 m-auto"
+  class="pb-24 md:pt-24 section-padding-x text-white-base bg-cyan-500 bg-[url('images/elements/perbukitan.webp')] perbukitan-size bg-bottom bg-no-repeat m-auto"
 >
   <div class="container max-w-screen-xl">
-    <!-- Pengenalan Maskot -->
+    <!-- Mascots Description -->
     <div
-      class="w-full mb-8 sm:mb-12 text-center flex flex-col max-w-screen-md m-auto gap-8"
+      class="w-full mb-8 sm:mb-12 text-center flex flex-col max-w-screen-md m-auto"
     >
       <div class="flex items-center">
-        <div class="w-full md:w-3/5 lg:w-1/2">
+        <div class="w-full lg:w-[768px]">
           <img
-            src="/images/mascots/cowok.png"
-            alt="gem"
-            class="inline-block rounded w-36 sm:w-32 md:w-40 lg:w-56"
+            src="/images/mascots/perkenalan-cowok.webp"
+            alt="Perkenalan Chibi Maskot S3 Cowok"
+            class="inline-block rounded"
           />
-        </div>
-        <div
-          class="w-full md:w-2/5 lg:w-1/2 text-center md:text-left border-4 border-yellow-base px-4 py-2 rounded-3xl relative"
-        >
-          <div class="absolute -left-8 top-3 w-8 overflow-hidden inline-block">
-            <div
-              class="h-16 border-4 border-yellow-base bg-transparent border-r-0 z-10 -rotate-45 transform origin-top-right"
-            >
-            </div>
-          </div>
-          <p class="small-font-size">
-            <span class="font-bold normal-font-size"
-              >Halloo saya adalah LocaleData</span
-            > Use the LocaleData gem to download translations directly into your
-            Ruby on Rails projects using the provided command line interface.
-          </p>
         </div>
       </div>
       <div class="flex items-center sm:flex-row-reverse">
-        <div class="w-full md:w-3/5 lg:w-1/2">
+        <div class="w-full lg:w-[768px]">
           <img
-            src="/images/mascots/cewek.png"
-            alt="gem"
-            class="inline-block rounded w-36 sm:w-32 md:w-40 lg:w-56"
+            src="/images/mascots/perkenalan-cewek.webp"
+            alt="Perkenalan Chibi Maskot S3 Cewek"
+            class="inline-block rounded"
           />
-        </div>
-        <div
-          class="w-full md:w-2/5 lg:w-1/2 text-center md:text-left border-4 border-yellow-base px-4 py-2 rounded-3xl relative"
-        >
-          <div
-            class="absolute -left-8 top-3 w-8 overflow-hidden inline-block md:hidden"
-          >
-            <div
-              class="h-16 border-4 border-yellow-base bg-transparent border-r-0 z-10 -rotate-45 transform origin-top-right"
-            >
-            </div>
-          </div>
-          <div
-            class="w-8 -right-8 top-3 absolute overflow-hidden md:inline-block hidden"
-          >
-            <div
-              class="h-16 border-4 border-yellow-base bg-transparent rotate-45 border-l-0 z-10 transform origin-top-left"
-            >
-            </div>
-          </div>
-          <p class="small-font-size">
-            <span class="font-bold normal-font-size"
-              >Halloo saya adalah LocaleData</span
-            > Use the LocaleData gem to download translations directly into your
-            Ruby on Rails projects using the provided command line interface.
-          </p>
         </div>
       </div>
     </div>
@@ -78,7 +36,7 @@ import DocumentationCard from "./DocumentationCard.astro";
       >
         <img
           class="m-auto"
-          src="/images/maskot.png"
+          src="/images/mascots/chibi-cewek-cowok.webp"
           alt="Maskot Soedirman Student Summit"
         />
       </div>
@@ -87,11 +45,13 @@ import DocumentationCard from "./DocumentationCard.astro";
     <div class="w-full">
       <div class="max-w-screen-md mx-auto text-center mb-8">
         <h2
-          class="font-semibold capitalize text-dark-base header-font-size mb-4 font-heading"
+          class="font-semibold capitalize header-font-size mb-4 font-heading p-2 text-dark-base backdrop-blur-sm bg-white-base bg-opacity-25 rounded-md"
         >
-          Mengenal Lebih Dekat dengan S3!
+          Mengenal Lebih Dekat dengan S3!!
         </h2>
-        <p class="normal-font-size text-secondary">
+        <p
+          class="normal-font-size text-secondary text-dark-base backdrop-blur-sm bg-white-base bg-opacity-25 rounded-md"
+        >
           Soedirman Student Summit (S3) merupakan kegiatan tahunan yang
           diselenggarakan sebagai wadah untuk pengenalan kehidupan perkuliahan
           dan untuk menyambut mahasiswa baru Universitas Jenderal Soedirman.
@@ -102,9 +62,21 @@ import DocumentationCard from "./DocumentationCard.astro";
         </p>
       </div>
     </div>
-    <!-- Foto Dokumentasi -->
+    <!-- Documentation Photos -->
     <div class="w-full">
       <DocumentationCard />
     </div>
   </div>
 </section>
+
+<!-- Fixing Style Background Perbukitan -->
+<style>
+  .perbukitan-size {
+    background-size: 800px;
+  }
+  @media screen and (min-width: 768px) {
+    .perbukitan-size {
+      background-size: cover;
+    }
+  }
+</style>

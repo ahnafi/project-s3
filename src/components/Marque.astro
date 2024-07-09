@@ -4,12 +4,14 @@ const data = "Soedirman Student Summit";
 interface Props {
   img: string;
   direction: "left" | "right";
+  bgColor: string;
+  textColor: string;
 }
 
-const { img, direction } = Astro.props;
+const { img, direction, bgColor, textColor } = Astro.props;
 ---
 
-<div class="flex overflow-x-hidden bg-dark-base text-white-base">
+<div class=`flex overflow-x-hidden ${bgColor} ${textColor}`>
   <!--  -->
   <div
     class=`py-4 whitespace-nowrap flex min-w-max ${direction == "left" ? "animate-marquee" : "animate-marqueeReverse"}`

@@ -6,7 +6,7 @@ const socialMedia = [
     icon: `<svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
-          class="hover:text-yellow-base hover:font-medium transition-all duration-300 inline-block w-10 h-10 md:w-14 md:h-14"
+          class="hover:text-yellow-base hover:font-medium transition-all duration-300 inline-block w-6 md:w-9"
           fill="currentColor"
           ><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
           <path
@@ -20,7 +20,7 @@ const socialMedia = [
     icon: `<svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
-          class="hover:text-yellow-base hover:font-medium transition-all duration-300 inline-block w-10 h-10 md:w-14 md:h-14"
+          class="hover:text-yellow-base hover:font-medium transition-all duration-300 inline-block w-6 md:w-9"
           fill="currentColor"
           ><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
           <path
@@ -34,7 +34,7 @@ const socialMedia = [
     icon: `<svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 576 512"
-          class="hover:text-yellow-base hover:font-medium transition-all duration-300 inline-block w-10 h-10 md:w-14 md:h-14"
+          class="hover:text-yellow-base hover:font-medium transition-all duration-300 inline-block w-6 md:w-9"
           fill="currentColor"
           ><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
           <path
@@ -45,35 +45,4 @@ const socialMedia = [
 ];
 ---
 
-<section
-  id="reach-us"
-  class="pt-24 pb-16 section-padding-x text-dark-base max-w-screen-xl m-auto"
->
-  <div class="container">
-    <div class="w-full">
-      <div class="max-w-xl mx-auto text-center mb-8">
-        <h2
-          class="font-bold capitalize text-dark text-3xl mb-4 m:text-4xl lg:text-5xl font-heading"
-        >
-          Ikuti Kami di Sosial Media
-        </h2>
-        <p class="font-medium text-sm text-secondary md:text-base">
-          Jangan lewatkan kabar terbaru dan konten menarik lainnya dari kami!
-          Ikuti kami di berbagai platform sosial media untuk tetap terhubung dan
-          menjadi yang pertama tahu tentang informasi penting lainnya.
-        </p>
-      </div>
-    </div>
-    <div class="w-full px-4 flex flex-wrap justify-center gap-8">
-      {
-        socialMedia.map((data, index) => (
-          <a
-            class="text-dark-base text-6xl p-2 rounded-lg space-x-2 hover:text-yellow-base transition-colors duration-300 ease-in-out"
-            href={data.link}
-            set:html={data.icon}
-          />
-        ))
-      }
-    </div>
-  </div>
-</section>
+{socialMedia.map((data, index) => <a href={data.link} set:html={data.icon} />)}
