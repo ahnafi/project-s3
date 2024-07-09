@@ -1,24 +1,31 @@
 ---
 interface Props {
   title: string;
-  body: string;
   href: string;
   img: string;
 }
 
-const { href, title, body, img } = Astro.props;
+const { href, title, img } = Astro.props;
 ---
 
-<div class="rounded-xl border border-slate-400 drop-shadow-md shadow w-36 md:w-52 lg:w-64">
-  <a href={href}>
-    <div class="w-36 md:w-52 lg:w-64">
-      <img src={img} alt={`foto ${title}`}  class="w-full rounded-t-xl" />
-    </div>
-    <h5 class="px-2 pt-2 text-xl tracking-tight text-dark-base font-heading">
-      {title}
-    </h5>
-    <p class="px-2 pb-2 text-base text-dark-base font-body font-normal">
-      {body}
-    </p>
+<div
+  class="ring-1 rounded-lg flex flex-col space-y-2 p-4 break-inside-avoid mb-6 bg-white-base hover:ring-2 ring-gray-300 hover:ring-sky-400 transform duration-200 hover:shadow-sky-200 hover:shadow-md z-0 group relative"
+>
+  <div class="flex flex-col break-inside-avoid-page z-0">
+    <img src={img} alt=`logo ${title}` class="w-full" />
+  </div>
+  <h5
+    class="whitespace-pre-line text-xl md:text-2xl tracking-tight text-dark-base font-heading text-center"
+  >
+    {title}
+  </h5>
+  <a
+    href=`${href}`
+    class=" group-hover:block lg:hidden lg:absolute backdrop-blur-md -top-2 right-0 left-0 bottom-0 rounded-lg text-center content-center transition-all ease-in-out duration-500"
+  >
+    <span
+      class="inline-block mt-0 rounded-lg text-blue-base lg:bg-blue-100 px-1 italic font-jakarta font-bold md:text-sm lg:text-lg text-xs"
+      >Lihat Selengkapnya <i class="fa-solid fa-arrow-up-right-from-square"></i></span
+    >
   </a>
 </div>

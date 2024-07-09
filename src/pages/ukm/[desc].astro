@@ -21,16 +21,14 @@ export async function getStaticPaths() {
   );
 }
 
-const { desc } = Astro.params;
 const { name, activity, category, description, galery, sosmed, logo } =
   Astro.props;
-console.log(desc);
 ---
 
 <Layout title=`UKM ${name}`>
   <section id="description" class="py-32">
     <div
-      class="flex gap-4 px-6 flex-col lg:flex-row justify-around w-full lg:px-32"
+      class="flex gap-4 px-6 flex-col lg:flex-row items-center lg:justify-around w-full lg:px-32"
     >
       <div class="max-w-lg md:max-w-full">
         <div
@@ -46,7 +44,7 @@ console.log(desc);
                   <img
                     src={src}
                     alt="galery ukm"
-                    class="max-w-36 lg:w-fit rounded-lg"
+                    class="img-modal max-w-36 lg:w-fit rounded-lg hover:shadow-sm hover:translate-y-2 transition-all ease-in-out duration-300 ring-1 hover:ring-2 ring-gray-300 hover:ring-sky-400 transform  hover:shadow-sky-200 hover:blur-[1px]"
                   />
                 ))}
               </div>
@@ -57,7 +55,7 @@ console.log(desc);
         </div>
       </div>
       <!--  -->
-      <article class="py-8 max-w-md md:max-w-full lg:max-w-lg">
+      <article class="py-8 w-full md:max-w-full lg:max-w-lg">
         <!--  -->
         <div class="py-4">
           <h1
@@ -65,57 +63,114 @@ console.log(desc);
           >
             {name}
           </h1>
-          <p class="text-sm md:text-base font-body md:pe-16 lg:pe-0">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-            explicabo.
-          </p>
         </div>
         <!--  -->
         <div class="py-4">
           <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
             Deskripsi Ukm
           </h2>
-          <p class="text-sm md:text-base font-body md:pe-16 lg:pe-0">
+          <p
+            class="text-sm md:text-base font-body md:pe-16 lg:pe-0 text-pretty w-full"
+          >
             {description}
           </p>
         </div>
         <!--  -->
-        <div class="py-4">
-          <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
-            Kegiatan Ukm
-          </h2>
-          <ul>
-            {
-              activity.map((data) => (
-                <li class="text-sm md:text-base font-body md:pe-16 lg:pe-0">
-                  {data}
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-        <!--  -->
-        <div class="py-4">
-          <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
-            sosial media
-          </h2>
-          <a href={sosmed}>instagram</a>
-        </div>
-      </article>
-      <div class="md:hidden">
-        <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">Galery</h2>
         {
-          galery ? (
-            <div class="md:hidden flex flex-wrap gap-2 justify-center py-2">
-              {galery.map((src) => (
-                <img src={src} alt="galery ukm" class="max-w-36  rounded-lg" />
-              ))}
+          activity.length > 0 ? (
+            <div class="py-4">
+              <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
+                Kegiatan Ukm
+              </h2>
+              <ul>
+                {activity.map((data) => (
+                  <li class="text-sm md:text-base font-body md:pe-16 lg:pe-0 list-disc ms-6">
+                    {data}
+                  </li>
+                ))}
+              </ul>
             </div>
           ) : (
-            "-"
+            ""
+          )
+        }
+        {
+          sosmed ? (
+            <div class="py-4">
+              <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
+                sosial media
+              </h2>
+              <a href={sosmed} target="_blank">
+                instagram
+              </a>
+            </div>
+          ) : (
+            ""
+          )
+        }
+      </article>
+      <div class="md:hidden">
+        {
+          galery ? (
+            <>
+              <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
+                Galery
+              </h2>
+              <div class="md:hidden flex flex-wrap gap-2 justify-center py-2">
+                {galery.map((src) => (
+                  <img
+                    src={src}
+                    alt="galery ukm"
+                    class="img-modal max-w-36 lg:w-fit rounded-lg hover:shadow-sm hover:translate-y-2 transition-all ease-in-out duration-300 ring-1 hover:ring-2 ring-gray-300 hover:ring-sky-400 transform  hover:shadow-sky-200 hover:blur-[1px]"
+                  />
+                ))}
+              </div>
+            </>
+          ) : (
+            ""
           )
         }
       </div>
     </div>
+    <!-- modal -->
+    <div class="hidden fixed inset-0 backdrop-blur-sm z-50" id="modal"></div>
   </section>
 </Layout>
+
+<script>
+  const modalContainer = document.getElementById("modal") as HTMLDivElement;
+  const modalImages = document.querySelectorAll<HTMLImageElement>(".img-modal");
+
+  function removeModal() {
+    modalContainer.innerHTML = "";
+    modalContainer.classList.toggle("hidden");
+  }
+
+  function modalPopup(src: string): void {
+    const modalCard = `
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <img src="${src}" alt="gallery" class="max-w-xs md:max-w-lg lg:max-w-2xl rounded-md ring-4 ring-sky-400 outline-none" />
+    <button
+      class="absolute -top-12 md:-top-3 -right-6 md:-right-14 px-4 py-2 text-red-600 "
+      id="removeModal"
+    >
+      <i class="fa-regular fa-circle-xmark fa-2x"></i>
+    </button>
+  </div>`;
+    modalContainer.innerHTML += modalCard;
+    modalContainer.classList.toggle("hidden");
+
+    const btnModal = document.getElementById(
+      "removeModal"
+    ) as HTMLButtonElement;
+    if (btnModal) {
+      btnModal.addEventListener("click", () => removeModal());
+    }
+  }
+
+  if (modalContainer && modalImages) {
+    modalImages.forEach((e) => {
+      e.addEventListener("click", () => modalPopup(e.src));
+    });
+  }
+</script>
