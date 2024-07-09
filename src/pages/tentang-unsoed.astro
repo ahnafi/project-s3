@@ -5,11 +5,18 @@ import VisiMisi from "../components/About/VisiMisi.astro";
 import Fakultas from "../components/TentangUnsoedSections/Fakultas.astro";
 import Music from "../components/TentangUnsoedSections/Music.astro";
 import Video from "../components/Video/Video.astro";
+import Marque from "../components/Marque.astro";
 ---
 
 <Layout title="Tentang Unsoed">
   <HeroAbout />
   <VisiMisi />
+  <Marque
+    bgColor="bg-dark-base"
+    textColor="text-white-base"
+    direction="right"
+    img="/images/logo-parts/logo.webp"
+  />
   <Fakultas />
   <Music />
   <Video

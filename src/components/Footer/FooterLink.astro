@@ -6,9 +6,6 @@ interface Props {
 const { href } = Astro.props;
 ---
 
-<a
-  href={href}
-  class="text-sm hover:text-yellow-base hover:font-medium transition-all duration-300 inline-block"
->
+<a href={href}>
   <slot />
 </a>
