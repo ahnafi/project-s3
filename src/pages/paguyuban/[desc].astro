@@ -48,7 +48,7 @@ const { name, activity, category, description, galery, sosmed, logo } =
                   <img
                     src={src}
                     alt="galery Paguyuban"
-                    class="img-modal max-w-36 lg:w-fit rounded-lg hover:shadow-sm hover:translate-y-2 transition-all ease-in-out duration-300 ring-1 hover:ring-2 ring-gray-300 hover:ring-sky-400 transform  hover:shadow-sky-200 hover:blur-[1px]"
+                    class="img-modal max-w-36 lg:w-fit rounded-lg hover:shadow-sm hover:translate-y-2 transition-all ease-in-out duration-300 ring-1 hover:ring-2 ring-gray-300 hover:ring-sky-400 transform  hover:shadow-sky-200 "
                   />
                 ))}
               </div>
@@ -104,7 +104,7 @@ const { name, activity, category, description, galery, sosmed, logo } =
               <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
                 sosial media
               </h2>
-              <a href={sosmed} target="_blank">
+              <a href={sosmed} target="_blank" class="hover:text-blue-base hover:underline  transition-all ease-in-out duration-150">
                 instagram
               </a>
             </div>
@@ -125,7 +125,7 @@ const { name, activity, category, description, galery, sosmed, logo } =
                   <img
                     src={src}
                     alt="galery Paguyuban"
-                    class="img-modal max-w-36 lg:w-fit rounded-lg hover:shadow-sm hover:translate-y-2 transition-all ease-in-out duration-300 ring-1 hover:ring-2 ring-gray-300 hover:ring-sky-400 transform  hover:shadow-sky-200 hover:blur-[1px]"
+                    class="img-modal max-w-36 lg:w-fit rounded-lg hover:shadow-sm hover:translate-y-2 transition-all ease-in-out duration-300 ring-1 hover:ring-2 ring-gray-300 hover:ring-sky-400 transform  hover:shadow-sky-200 "
                   />
                 ))}
               </div>
@@ -151,15 +151,23 @@ const { name, activity, category, description, galery, sosmed, logo } =
 
   function modalPopup(src: string): void {
     const modalCard = `
-  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-    <img src="${src}" alt="gallery" class="max-w-xs md:max-w-lg lg:max-w-2xl rounded-md ring-4 ring-sky-400 outline-none" />
-    <button
-      class="absolute -top-10 md:-top-3 -right-5 md:-right-12 px-4 py-2 text-red-600 "
-      id="removeModal"
-    >
-      <i class="fa-regular fa-circle-xmark fa-2x"></i>
-    </button>
-  </div>`;
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <img src="${src}" alt="gallery" class="max-w-xs md:max-w-lg lg:max-w-2xl rounded-md ring-4 ring-sky-400 outline-none" />
+        <button
+          class="absolute -top-12 md:-top-3 -right-6 md:-right-14 px-4 py-2 "
+          id="removeModal"
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="25" viewBox="0 0 256 256" xml:space="preserve">
+          <defs>
+          </defs>
+          <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+            <path d="M 25.914 69.086 c -1.28 0 -2.559 -0.488 -3.536 -1.465 c -1.953 -1.952 -1.953 -5.118 0 -7.07 l 38.172 -38.172 c 1.951 -1.952 5.119 -1.952 7.07 0 c 1.953 1.953 1.953 5.119 0 7.071 L 29.45 67.621 C 28.473 68.598 27.194 69.086 25.914 69.086 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            <path d="M 64.086 69.086 c -1.279 0 -2.56 -0.488 -3.535 -1.465 L 22.378 29.45 c -1.953 -1.953 -1.953 -5.119 0 -7.071 c 1.953 -1.952 5.118 -1.952 7.071 0 l 38.171 38.172 c 1.953 1.952 1.953 5.118 0 7.07 C 66.646 68.598 65.365 69.086 64.086 69.086 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            <path d="M 85 90 H 5 c -2.761 0 -5 -2.238 -5 -5 V 5 c 0 -2.761 2.239 -5 5 -5 h 80 c 2.762 0 5 2.239 5 5 v 80 C 90 87.762 87.762 90 85 90 z M 10 80 h 70 V 10 H 10 V 80 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          </g>
+          </svg>
+        </button>
+      </div>`;
     modalContainer.innerHTML += modalCard;
     modalContainer.classList.toggle("hidden");
 
