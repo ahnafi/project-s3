@@ -12,7 +12,7 @@ const ukm: Data[] = [
   {
     name: "AIESEC",
     logo: "/images/logo/ukm/AIESEC-Logo.png",
-    category: "",
+    category: "organisasi",
     description:
       "AIESEC adalah organisasi Internasional untuk pemuda yang ingin mengeksplorasi dan mengembangkan potensi kepemimpinan. AIESEC adalah organisasi non-partisan, independen, nirlaba yang dijalankan oleh pemuda di lebih dari 120 negara di seluruh dunia. AIESEC sudah bermitra dengan lebih dari 8.178 mitra organisasi dan memiliki lebih dari 35.550 anggota di seluruh dunia dan memiliki lebih dari 1.000.000 alumni sejak AIESEC berdiri pada tahun 1948.",
     activity: [
@@ -34,7 +34,7 @@ const ukm: Data[] = [
   {
     name: "Student English Forum",
     logo: "/images/logo/ukm/sef.JPG",
-    category: "",
+    category: "keilmuan",
     description:
       "Student English Forum (SEF) Unsoed adalah organisasi berbasis Bahasa Inggris terbesar di Universitas Jenderal Soedirman yang berdiri pada tahun 1979. SEF menjadi wadah bagi organizer dan member untuk mengembangkan kemampuan Bahasa Inggris dan interpersonal. Mahasiswa dari berbagai disiplin ilmu di Unsoed berkolaborasi dalam SEF untuk menjangkau dunia melalui Bahasa Inggris.  “Be One Step Forward” menjadi motto organisasi ini karena kami selalu berusaha memberikan dampak terhadap lingkungan sekitar dengan membuat kemajuan dalam perjalanan SEF.",
     activity: [
@@ -55,7 +55,7 @@ const ukm: Data[] = [
   {
     name: "UKM Bola Basket",
     logo: "/images/logo/ukm/LOGO-UBB.png",
-    category: "Olahraga",
+    category: "olahraga",
     description:
       "Unsoed basketball merupakan Unit Kegiatan Mahasiswa (UKM) Basket Universitas Jendral Soedirman adalah wadah bagi para mahasiswa yang memiliki minat dan bakat dalam olahraga basket. UKM ini didirikan untuk mengembangkan keterampilan, semangat mahasiswa, dan integritas atletik, terutama dalam bidang olahraga basket. Adanya UKM Basket unsoed secara resmi merupakan bentuk komitmen Unsoed untuk mewujudkan prestasi yang membanggakan bagi Universitas Jendral Soedirman serta mendukung kesehatan jasmani mahasiswa Unsoed. Mahasiswa yang ingin menjadi anggota UKM Basket Unsoed dapat melihat akun Instagram @soedirman_basketball tersebut untuk informasi lebih lanjut.",
     activity: [
@@ -69,12 +69,12 @@ const ukm: Data[] = [
       "/images/documentations/ukm/ubb/docs-2.jpg",
       "/images/documentations/ukm/ubb/docs-3.jpg",
     ],
-    sosmed: "",
+    sosmed: "https://www.instagram.com/soedirman_basketball",
   },
   {
     name: "UKM Tenis Meja",
     logo: "/images/logo/ukm/tenis-meja.jpg",
-    category: "Olahraga",
+    category: "olahraga",
     description:
       "UKM Tenis Meja Unsoed, atau Unit Kegiatan Mahasiswa Tenis Meja Unsoed, adalah sebuah organisasi mahasiswa yang berfokus pada pengembangan minat dan bakat di bidang olahraga tenis meja. UKM ini terbuka bagi mahasiswa yang memiliki minat dengan olahraga tenis meja, tidak harus memiliki pengalaman dalam olahraga tenis meja. UKM ini menawarkan berbagai kegiatan yang meliputi latihan rutin, kompetisi internal, serta partisipasi dalam turnamen tingkat lokal, regional, dan nasional. UKM ini menyediakan fasilitas yang lengkap seperti meja tenis, bola, dan raket, serta dilatih oleh pelatih profesional yang berkompeten.",
     activity: [],
@@ -83,12 +83,12 @@ const ukm: Data[] = [
       "/images/documentations/ukm/tenis-meja/docs-2.jpg",
       "/images/documentations/ukm/tenis-meja/docs-3.jpg",
     ],
-    sosmed: "",
+    sosmed: "https://www.instagram.com/tenismejaunsoed_",
   },
   {
     name: "Foreign Policy Community of Indonesia",
     logo: "/images/logo/ukm/Logo_FPCI.png",
-    category: "",
+    category: "organisasi",
     description:
       "FPCI Chapter Universitas Jenderal Soedirman (FPCI Chapter Unsoed) adalah organisasi berbasis think tank yang didirikan secara de facto pada 20 Desember 2020 dan terbuka bagi seluruh mahasiswa aktif Unsoed dari seluruh jurusan. Sebagai organisasi berbasis think tank, kami berkomitmen untuk menjadi wadah diskusi yang dapat mendorong mahasiswa, dosen, serta masyarakat secara umum untuk mengenal dan memahami berbagai isu multidisiplin yang berkaitan dengan kebijakan luar negeri dan fenomena internasional kontemporer. Kami juga berkomitmen menjadi agen perubahan yang dapat memperkaya pemahaman masyarakat terhadap isu-isu global. Selain itu, kami menghadirkan berbagai perspektif dan pendekatan multidisiplin melalui proyek-proyek kami, menyelenggarakan acara-acara menarik bagi para peminat kebijakan luar negeri dan hubungan internasional, menjalin kerja sama dengan pihak lain, dan menciptakan lingkungan yang positif antar anggota, baik dalam aspek pribadi maupun profesional.",
     activity: [],
@@ -102,7 +102,7 @@ const ukm: Data[] = [
   {
     name: "HIMABISI",
     logo: "/images/logo/ukm/Logo-Himabisi.png",
-    category: "",
+    category: "organisasi",
     description:
       "Himpunan Mahasiswa Bidikmisi dan KIP-K Universitas Jenderal Soedirman (Himabisi KIP-K Unsoed) adalah organisasi yang mewadahi mahasiswa penerima beasiswa KIP-K di Universitas Jenderal Soedirman dalam rangka memberdayakan sumber daya mahasiswa melalui berbagai kegiatan dan kompetisi, pelatihan softskill dan pengembangan minat bakat, serta berkontribusi positif dalam menyebarkan manfaat kepada masyarakat melalui pengabdian masyarakat. Himabisi KIP-K Unsoed terdiri atas 9 Departemen yang memiliki berbagai aktivitas dan program kerna menarik. Himabisi KIP-K terbuka bagi kamu mahasiswa KIP-K yang ingin mengembangkan diri ^^.",
     activity: [
@@ -126,7 +126,7 @@ const ukm: Data[] = [
   {
     name: "Karate Gokasi",
     logo: "/images/logo/ukm/Logo_Karate-Gokasi.png",
-    category: "olahraga",
+    category: "beladiri",
     description:
       "UKM Karate GOKASI UNSOED adalah organisasi mahasiswa di Universitas Jenderal Soedirman yang berfokus pada seni bela diri karate serta berperan penting dalam membentuk karakter dan keterampilan anggotanya. Selain mengajarkan disiplin dan tanggung jawab, UKM ini bertujuan mempererat silaturahmi di lingkungan UNSOED dan dojo karate se-Jawa Tengah yang berada di bawah FORKI. Melalui berbagai kegiatan seperti latihan rutin dan kompetisi, UKM Karate GOKASI UNSOED tidak hanya menghasilkan karateka handal tetapi juga mahasiswa yang mampu mengembangkan diri, berelasi, dan menjadi bagian dari komunitas karate yang penuh semangat dan prestasi.",
     activity: [],
@@ -136,7 +136,7 @@ const ukm: Data[] = [
   {
     name: "Korea Center Unsoed",
     logo: "/images/logo/ukm/Logo_KCU.jpg",
-    category: "",
+    category: "organisasi",
     description: "",
     activity: [],
     galery: ["/images/documentations/ukm//docs-1.jpg"],
@@ -158,13 +158,13 @@ const ukm: Data[] = [
     description: "",
     activity: [],
     galery: ["/images/documentations/ukm//docs-1.jpg"],
-    sosmed: "",
+    sosmed: "https://www.instagram.com/climbing_unsoed",
   },
   {
     name: "USMAN",
     logo: "/images/logo/ukm/logo-usman.png",
-    category: "agama",
-    description: "",
+    category: "keagamaan",
+    description: "UKM Seni Islam dan Al-Quran (USMAN) merupakan sebuah organisasi kemahasiswaan tingkat Universitas yang berfungsi untuk mewadahi dan membentuk mahasiswa Universitas Jenderal Soedirman yang memiliki semangat, keterampilan dan kompetensi di bidang seni Islam dan Al Quran dengan berlandaskan paham Ahlussunnah Wal jamaah dan Islam yang rahmatalil ‘alamin. USMAN Sendiri memiliki 5 bidang seni yaitu kaligrafi, sholawat, tahfidz tafsir, tilawah, dan tari saman",
     activity: [],
     galery: ["/images/documentations/ukm/usman/docs-1.jpg"],
     sosmed: "",
@@ -198,7 +198,7 @@ const ukm: Data[] = [
   {
     name: "UMAKA",
     logo: "/images/logo/ukm/Logo-umaka.png",
-    category: "agama",
+    category: "keagamaan",
     description:
       "Unit Kegiatan Mahasiswa Katolik (UMAKA) merupakan unit kegiatan mahasiswa yang bertujuan untuk mewadahi seluruh mahasiswa Katolik di Universitas Jenderal Soedirman. UMAKA resmi berdiri pada 10 Juni 2001. ",
     activity: [
@@ -219,7 +219,7 @@ const ukm: Data[] = [
   {
     name: "UKM Penalaran dan Riset",
     logo: "/images/logo/ukm/Logo-UKMPR.png",
-    category: "",
+    category: "keilmuan",
     description:
       "UKMPR (Unit Kegiatan Mahasiswa Penalaran dan Riset) merupakan UKM yang bergerak di bidang keilmiahan. UKMPR didirikan pada tanggal 23 Januari 2008 atas dasar belum adanya suatu perkumpulan yang mewadahi mahasiswa Unsoed yang memiliki minat di bidang kepenulisan dan keilmiahan. Bersama UKMPR dapat mendukung pengembangan softskill, penalaran, riset, kewirausahaan, dan pengabdian masyarakat.",
     activity: [
@@ -238,23 +238,23 @@ const ukm: Data[] = [
       "/images/documentations/ukm/ukmpr/docs-3.jpg",
       "/images/documentations/ukm/ukmpr/docs-4.jpg",
     ],
-    sosmed: "",
+    sosmed: "https://www.instagram.com/ukmprunsoed",
   },
   {
     name: "Taekwondo",
     logo: "/images/logo/ukm/Logo_Taekwondo.png",
-    category: "olahraga",
+    category: "beladiri",
     description: `Taekwondo adalah seni bela diri yang berasal dari Korea dengan fokus pada Gerakan tendangan, pukulan, serangan dan tangkisan menggunakan kombinasi kelenturan, kekuatan dan kecepatan serta keseimbangan. UKM Taekwondo UNSOED akan membantu dalam mendorong perkembangan karakter, disiplin, tanggung jawab, jujur serta saling menghargai dan menghormati satu sama lain.
 	  UKM Taekwondo UNSOED menjadi wadah untuk semua mahasiswa/i UNSOED secara inklusif untuk belajar bersama, baik untuk yang pemula yang baru ikut taekwondo maupun yang sudah berpengalaman ikut taekwondo. Selain berlatih bersama juga akan mengikuti berbagai kompetisi/kejuaraan baik ditingkat lokal maupun nasional dan internasional.
 `,
     activity: [],
     galery: ["/images/documentations/ukm/taekwondo/docs-1.png"],
-    sosmed: "",
+    sosmed: "https://www.instagram.com/taekwondounsoed",
   },
   {
     name: "UKM PSHT",
     logo: "/images/logo/ukm/ukm-psht.jpg",
-    category: "olahraga",
+    category: "beladiri",
     description:
       "Persaudaraan Setia Hati Terate (PSHT) di Universitas Jenderal Soedirman merupakan salah satu unit kegiatan mahasiswa yang berfokus pada pengembangan bela diri pencak silat, karakter, serta jiwa persaudaraan. PSHT mengajarkan berbagai teknik bela diri tradisional yang tidak hanya memperkuat fisik, tetapi juga mental anggotanya. Selain itu, PSHT juga mendorong anggotanya untuk berprestasi baik di tingkat nasional, dengan banyaknya kegiatan kompetisi yang diikuti setiap tahunnya.",
     activity: [
@@ -268,7 +268,7 @@ const ukm: Data[] = [
       "/images/documentations/ukm/psht/docs-3.jpg",
       "/images/documentations/ukm/psht/docs-4.jpg",
     ],
-    sosmed: "",
+    sosmed: "https://www.instagram.com/psht_unsoed",
   },
   {
     name: "UKM Futsal UNSOED",
@@ -304,7 +304,7 @@ membawa dan mengharumkan nama baik Universitas Jenderal Soedirman.`,
       "dan rutin mengadakan turnamen catur nasional ditiap tahun mulai dari FRC 2022- SOCT 2024",
     ],
     galery: ["/images/documentations/ukm/catur/docs-1.jpg"],
-    sosmed: "",
+    sosmed: "https://www.instagram.com/ukm.catur.unsoed",
   },
   {
     name: "UKM Bulu Tangkis",
@@ -319,7 +319,7 @@ membawa dan mengharumkan nama baik Universitas Jenderal Soedirman.`,
     Medkom, Internal, Eksternal.`,
     activity: [],
     galery: ["/images/documentations/ukm/bulu-tangkis/docs-1.jpeg"],
-    sosmed: "",
+    sosmed: "https://www.instagram.com/bulutangkisunsoed",
   },
   {
     name: "UKM Bola Voli",
@@ -332,7 +332,7 @@ membawa dan mengharumkan nama baik Universitas Jenderal Soedirman.`,
       "latihan rutin setiap hari Selasa dan Kamis yang diadakan secara bergantian di Fakultas - Fakultas yang ada di Universitas Jenderal Soedirman.",
     ],
     galery: ["/images/documentations/ukm/voli/docs-1.jpg"],
-    sosmed: "",
+    sosmed: "https://www.instagram.com/ukmbolavoliunsoed",
   },
   {
     name: "Bandung Karate Club UNSOED",
@@ -358,7 +358,7 @@ Secara umum UKM BKC UNSOED bertujuan untuk membentuk karakter insan karateka yan
   {
     name: "UKKI Unsoed",
     logo: "/images/logo/ukm/Logo_UKKI_Unsoed.png",
-    category: "agama",
+    category: "keagamaan",
     description:
       "UKKI Unsoed merupakan Unit Kegiatan Mahasiswa yang bergerak dalam bidang dakwah di tingkatan Universitas Jenderal Soedirman. UKKI Unsoed didirikan pada tahun 1988 di Purwokerto. Organisasi dakwah di kampus UNSOED ini mencoba memberikan kontribusi bagi peningkatan kualitas keimanan dan juga skill bagi para personil – personil dakwah di kampus. UKKI juga mencoba menjadi sebuah wadah ajang bagi para aktivis dakwah untuk bisa berapresiasi melakukan amal islami. ",
     activity: [],
@@ -373,13 +373,13 @@ Secara umum UKM BKC UNSOED bertujuan untuk membentuk karakter insan karateka yan
   {
     name: "Soedirman Robotic Team (SRT)",
     logo: "/images/logo/ukm/Logo_UKM-Soedirman-Robotic-Team.png",
-    category: "",
+    category: "keilmuan",
     description: `Soedirman Robotic Team (SRT) adalah salah satu Unit Kegiatan Mahasiswa (UKM) di Universitas Jenderal Soedirman yang bergerak dalam bidang pengembangan ilmu robotika dan keorganisasian.  UKM SRT diresmikan pada tanggal 9 Juni tahun 2021 dan saat ini memiliki 5 Divisi Tim Robot yaitu Tim Blakasutha (KRAI), Tim Satria (KRSRI), Tim Yudishtira (KRTMI) dan Tim Biantara (KRTI - RP dan KRTI - FW). Selain Divisi Tim Robot, UKM SRT juga memiliki divisi manajemen, yaitu Secretary, Financial Manager, Human Resource Development (HRD), Public Relations (PR), Sponsorship, Creative Media, dan Team Manager.
     UKM Soedirman Robotic Team berfokus pada Kontes Robot Indonesia (KRI) dan Kontes Robot Terbang Indonesia (KRTI) sebagai ajang tahunan yang diikuti oleh perguruan tinggi di seluruh Indonesia. Ajang ini sangat bergengsi dan menjadi prioritas utama kami untuk selalu berkontribusi dan meraih prestasi, demi membawa nama baik UKM Soedirman Robotic Team serta almamater Universitas Jenderal Soedirman.
 `,
     activity: [],
     galery: ["/images/documentations/ukm/srt/docs-1.jpg"],
-    sosmed: "",
+    sosmed: "https://www.instagram.com/srtunsoed",
   },
   {
     name: "SHORINJI KEMPO",
@@ -435,7 +435,7 @@ Secara umum UKM BKC UNSOED bertujuan untuk membentuk karakter insan karateka yan
   {
     name: "Paduan Suara Mahasiswa Gita Buana Soedirman",
     logo: "/images/logo/ukm/LOGO-PSM-GBS.png",
-    category: "musik",
+    category: "seni",
     description: `Unit Kegiatan Mahasiswa Paduan Suara Mahasiswa Gita Buana Soedirman dibentuk pada tahun 1976 dengan nama Unit Paduan Suara Mahasiswa Jenderal Soedirman (UPSM UNSOED) di bawah bimbingan Bapak Dr. Anarno. Pada tahun 1979, terjadi reorganisasi dan pembinaannya diambil alih oleh Bapak Ir. Yohanes Soebagjo, MP. Selanjutnya pada tahun 2024 ini sudah diambil alih oleh Dra. Sotyana Wardhianna, M. Kes. Berdasarkan hasil musyawarah anggota pada tanggal 18 Oktober 2005, nama UPSM UNSOED resmi diubah menjadi Paduan Suara Mahasiswa Gita Buana Soedirman (PSM GBS).
 
     Paduan Suara Mahasiswa Gita Buana Soedirman juga aktif dalam melestarikan lagu-lagu daerah dan nasional karya seniman besar Indonesia dengan menyanyikannya di berbagai acara, baik acara resmi di lingkungan universitas maupun di luar universitas melalui berbagai kompetisi paduan suara.`,
@@ -482,7 +482,7 @@ Secara umum UKM BKC UNSOED bertujuan untuk membentuk karakter insan karateka yan
   {
     name: "Marching Band Bahana Soedirman",
     logo: "/images/logo/ukm/logo-MBBPS.png",
-    category: "musik",
+    category: "seni",
     description:
       "Unit kegiatan Mahasiswa Marching Band Bahana Soedirman (UKM MBBPS) adalah salah satu UKM yang bergerak dibidang seni musik dan tari. UKM MB BPS didirikan pada tahun 1972, yang di mana tahun ini menginjak usia 51 tahun. MB BPS bertujuan menampung kreativitas dan agresivitas pecinta seni musik dan tari. UKM ini terbuka bagi mahasiswa yang belum memiliki pengalaman sama sekali. Di MB BPS, kita dapat belajar bersama dari awal, dengan bimbingan dan arahan dari pelatih serta rekan-rekan di MB BPS.",
     activity: [],
@@ -492,12 +492,12 @@ Secara umum UKM BKC UNSOED bertujuan untuk membentuk karakter insan karateka yan
       "/images/documentations/ukm/mbbps/docs-3.jpg",
       "/images/documentations/ukm/mbbps/docs-4.jpg",
     ],
-    sosmed: "",
+    sosmed: "https://www.instagram.com/mbbps_unsoed",
   },
   {
     name: "LPM Sketsa",
     logo: "/images/logo/ukm/Logo_LPM-Sketsa.png",
-    category: "",
+    category: "seni",
     description:
       "UKM Lembaga Pers Mahasiswa Sketsa merupakan UKM yang bergerak di bidang jurnalistik dan media. LPM Sketsa didirikan pada tahun 1988 oleh para pegiat organisasi di kampus. Sebagai lembaga pers yang berada di tingkat Universitas, berita yang dipublikasikan meliputi isu hangat mengenai kampus maupun isu di sekitar Banyumas Raya. Tidak hanya berita, LPM Sketsa juga menyediakan informasi-informasi penting tentang kampus dan sekitarnya, sehingga memiliki tagline 'Pemandu Wawasan Almamater'.",
     activity: [
@@ -515,7 +515,7 @@ Secara umum UKM BKC UNSOED bertujuan untuk membentuk karakter insan karateka yan
       "/images/documentations/ukm/sketsa/docs-2.jpg",
       "/images/documentations/ukm/sketsa/docs-3.jpg",
     ],
-    sosmed: "",
+    sosmed: "https://www.instagram.com/beritaunsoed",
   },
   {
     name: "KSR PMI UNIT UNSOED",
@@ -542,7 +542,7 @@ Secara umum UKM BKC UNSOED bertujuan untuk membentuk karakter insan karateka yan
 
 const paguyuban: Data[] = [
   {
-    name: "KM PARASOED",
+    name: "KM PHARASOED",
     logo: "/images/logo/paguyuban/km-parasoed.png",
     category: "jawa",
     description:
@@ -585,7 +585,7 @@ const paguyuban: Data[] = [
     name: "HIMALA",
     logo: "/images/logo/paguyuban/",
     category: "",
-    description: "",
+    description: "Di Universitas Jenderal Soedirman mahasiswa yang berasal dari Lampung juga membentuk suatu perkumpulan atau himpunan yang disebut dengan Himpunan Mahasiswa Lampung (HIMALA). Himpunan ini juga berfungsi sebagai wadah para mahasiswa mengapresiasikan kreatifitas dan juga kebanggaannya terhadap tanah kelahirannya yakni Lampung dengan mengadakan berbagai kegiatan baik dalam bentuk kesenian dan kebudayaan sampai dialog-dialog atau diskusi ilmiah.",
     activity: [],
     galery: [
       "",
