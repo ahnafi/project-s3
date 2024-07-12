@@ -919,4 +919,4 @@ tahun ini terdapat 9 bidang dan 36 pengurus Himakasi periode 2023/2024.`,
   },
 ];
 
-export { ukm, paguyuban };
+export { ukm, paguyuban, dataUkmKosong, dataPaguyubanKosong };

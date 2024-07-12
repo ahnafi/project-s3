@@ -36,7 +36,7 @@ const logos = [
 <div class="swiper logo-swiper overflow-visible">
   <div class="swiper-wrapper">
     {
-      logos.map((logo, index) => (
+      logos.map((logo) => (
         <div class="swiper-slide">
           <img src={logo.img} alt={logo.title} />
         </div>
@@ -81,8 +81,9 @@ const logos = [
   }
 </style>
 
-<script type="module">
-  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+<script>
+  import Swiper from "swiper/bundle";
+  import "swiper/swiper-bundle.css";
 
   const logos = [
     {
@@ -157,23 +158,28 @@ const logos = [
       prevEl: ".swiper-button-prev",
     },
     on: {
-      click(event) {
-        this.slideTo(this.clickedIndex);
+      click(params) {
+        logoSwiper.slideTo(params.clickedIndex);
       },
-      slideChange() {
-        const activeIndex = this.realIndex;
-        const logoTitle = document.querySelector(".logo-title");
-        const logoDescription = document.querySelector(".logo-description");
+      slideChange(params) {
+        // const activeIndex = logoSwiper.realIndex;
+        const activeIndex = params.realIndex;
+        // console.log(activeIndex)
+        const logoTitle =
+          document.querySelector<HTMLHeadingElement>(".logo-title");
+        const logoDescription =
+          document.querySelector<HTMLParagraphElement>(".logo-description");
+        if (logoTitle && logoDescription) {
+          logoTitle.style.display = "block";
+          logoDescription.style.display = "block";
 
-        logoTitle.style.display = "block";
-        logoDescription.style.display = "block";
+          logoTitle.innerText = logos[activeIndex].title;
+          logoDescription.innerText = logos[activeIndex].desc;
 
-        logoTitle.innerText = logos[activeIndex].title;
-        logoDescription.innerText = logos[activeIndex].desc;
-
-        // Add fade-in animation
-        logoTitle.style.opacity = "1";
-        logoDescription.style.opacity = "1";
+          // Add fade-in animation
+          logoTitle.style.opacity = "1";
+          logoDescription.style.opacity = "1";
+        }
       },
     },
   });
