@@ -1,35 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/HeroSection.astro";
 import ReachUs from "../components/ReachUs/ReachUs.astro";
 import SocialMediaIconLink from "../components/SocialMediaIconLink/SocialMediaIconLink.astro";
 import Marque from "../components/Marque.astro";
 ---
 
 <Layout title="Hubungi Kami">
-  <Hero
-    src="/images/contact-us.png"
-    alt="Foto Mahasiswa Mengajak"
-    addClass="lg:h-screen"
-    reverse="reverse"
-  >
-    <h1
-      class="header-font-size font-heading font-normal text-dark-base drop-shadow-[0_0px_1px_rgba(0,0,0,0.1)] stroke-10 stroke-green-base"
-    >
-      Ngobrol Yuks! Kami Selalu Ada Buat Kamu!
-    </h1>
-    <p class="normal-font-size font-body">
-      Tersedia 24/7, kami siap mendengarkan cerita dan curhatanmu. Nikmati
-      suasana santai dan penuh keakraban, karena di sini, kamu akan merasa
-      seperti berbicara dengan sahabat dekat yang selalu siap mendukung.
-    </p>
-  </Hero>
+  <ReachUs />
   <Marque
+    img="/images/logo-parts/logo.webp"
+    direction="left"
     bgColor="bg-dark-base"
     textColor="text-white-base"
-    direction="left"
-    img="/images/logo-parts/logo.webp"
   />
-  <ReachUs />
   <SocialMediaIconLink />
 </Layout>
