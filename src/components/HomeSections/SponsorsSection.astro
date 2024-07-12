@@ -23,16 +23,9 @@ const sponsors = [
       >
         {
           sponsors.map((sponsor) => (
-            <a
-              href="#"
-              class="max-w-36 sm:max-w-40 flex justify-center items-center"
-            >
-              <img
-                src={sponsor.img}
-                alt={sponsor.name}
-                class="hover:drop-shadow-[0_0px_6px_#FFAA19] transition-all duration-300"
-              />
-            </a>
+            <span class="max-w-36 sm:max-w-40 flex justify-center items-center">
+              <img src={sponsor.img} alt={sponsor.name} />
+            </span>
           ))
         }
       </div>

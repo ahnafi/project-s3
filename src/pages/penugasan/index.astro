@@ -3,102 +3,89 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Penugasan">
-  <section class="pt-32">
-    <div class="flex justify-center items-center">
-        <h1 class="text-[28px] lg:text-4xl font-love text-gray-800">
-            INFO PENUGASAN 
+  <section id="hero" class="pt-32 section-padding-x text-dark-base">
+    <div class="container max-w-screen-xl">
+      <div class="flex justify-center items-center">
+        <h1 class="font-heading header-font-size text-center">
+          INFO PENUGASAN
         </h1>
-    </div>
-  </section>
-  <section
-    class="my-8 sm:my-10 flex flex-col md:flex-row justify-center items-center gap-x-8 gap-y-4 p-6 "
-  >
-    <div class="flex flex-col justify-center max-w-md">
+      </div>
       <div
-        class="flex flex-col h-full shadow justify-between rounded-lg pb-8 p-6 xl:p-8 mt-3 bg-gray-50"
+        class="my-8 sm:my-10 flex flex-col md:flex-row justify-center items-center md:gap-8 gap-4 p-6"
       >
-        <div>
-          <h4 class="font-bold text-2xl leading-tight">SNBP & SNBT</h4>
-          <div class="my-4">
-            <p>
-              Info terkait penugasan bagi gensoed jalur SNBP dan SNBT
-            </p>
+        <div class="flex flex-col justify-center md:max-w-md">
+          <div
+            class="flex flex-col h-full shadow justify-between rounded-lg pb-8 p-6 xl:p-8 mt-3 bg-white"
+          >
+            <div>
+              <h4
+                class="font-bold text-2xl md:text-3xl lg:text-4xl font-heading"
+              >
+                SNBP & SNBT
+              </h4>
+              <div class="my-4">
+                <p>Info terkait penugasan bagi gensoed jalur SNBP dan SNBT</p>
+              </div>
+            </div>
+            <div>
+              <a
+                class="text-dark-base font-semibold rounded-md inline-flex items-center md:mb-2 lg:mb-0 text-xs sm:text-sm md:text-base hover:before:bg-redborder-red-500 relative overflow-hidden border border-dark-base bg-white px-4 py-1 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-base before:transition-all before:duration-500 hover:border-blue-base hover:text-white-base hover:before:left-0 hover:before:w-full"
+                href="/penugasan/snbp-snbt/#hero"
+              >
+                <span class="relative z-10">Cek Penugasan</span>
+                <svg
+                  class="w-4 h-4 ml-2 relative z-10"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
-        <div>
-          <a
-            class="mt-1 inline-flex font-bold items-center border-2 border-transparent outline-none focus:ring-1 focus:ring-offset-2 focus:ring-link active:bg-link active:text-gray-700 active:ring-0 active:ring-offset-0 leading-normal bg-link text-gray-700 hover:bg-opacity-80 text-base rounded-lg py-1.5"
-            aria-label="Quick Start"
-            target="_self"
-            href="/penugasan/snbpsnbt/#hero"
-            >Cek Penugasan<svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              class="duration-100 ease-in transition -rotate-90 inline ml-1"
-              style="min-width:20px;min-height:20px"
-            >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                transform="translate(-446 -398)"
+        <div class="flex flex-col justify-center md:max-w-md">
+          <div
+            class="flex flex-col h-full shadow justify-between rounded-lg pb-8 p-6 xl:p-8 mt-3 bg-white"
+          >
+            <div>
+              <h4
+                class="font-bold text-2xl md:text-3xl lg:text-4xl font-heading"
               >
-                <path
-                  fill="currentColor"
-                  fill-rule="nonzero"
-                  d="M95.8838835,240.366117 C95.3957281,239.877961 94.6042719,239.877961 94.1161165,240.366117 C93.6279612,240.854272 93.6279612,241.645728 94.1161165,242.133883 L98.6161165,246.633883 C99.1042719,247.122039 99.8957281,247.122039 100.383883,246.633883 L104.883883,242.133883 C105.372039,241.645728 105.372039,240.854272 104.883883,240.366117 C104.395728,239.877961 103.604272,239.877961 103.116117,240.366117 L99.5,243.982233 L95.8838835,240.366117 Z"
-                  transform="translate(356.5 164.5)"></path>
-                <polygon points="446 418 466 418 466 398 446 398"></polygon>
-              </g>
-            </svg>
-          </a>
+                MANDIRI
+              </h4>
+              <div class="my-4">
+                <p>Info terkait penugasan bagi gensoed jalur MANDIRI</p>
+              </div>
+            </div>
+            <div>
+              <a
+                class="text-dark-base font-semibold rounded-md inline-flex items-center md:mb-2 lg:mb-0 text-xs sm:text-sm md:text-base hover:before:bg-redborder-red-500 relative overflow-hidden border border-dark-base bg-white px-4 py-1 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-base before:transition-all before:duration-500 hover:border-blue-base hover:text-white-base hover:before:left-0 hover:before:w-full"
+                href="/penugasan/mandiri/#hero"
+              >
+                <span class="relative z-10">Cek Penugasan</span>
+                <svg
+                  class="w-4 h-4 ml-2 relative z-10"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="flex flex-col justify-center max-w-md">
-      <div
-        class="flex flex-col h-full shadow justify-between rounded-lg pb-8 p-6 xl:p-8 mt-3 bg-gray-50"
-      >
-        <div>
-          <h4 class="font-bold text-2xl leading-tight">MANDIRI</h4>
-          <div class="my-4">
-            <p>
-              Info terkait penugasan bagi gensoed jalur MANDIRI
-            </p>
-          </div>
-        </div>
-        <div>
-          <a
-            class="mt-1 inline-flex font-bold items-center border-2 border-transparent outline-none focus:ring-1 focus:ring-offset-2 focus:ring-link active:bg-link active:text-gray-700 active:ring-0 active:ring-offset-0 leading-normal bg-link text-gray-700 hover:bg-opacity-80 text-base rounded-lg py-1.5"
-            aria-label="Quick Start"
-            target="_self"
-            href="/penugasan/mandiri/#hero"
-            >Cek Penugasan<svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              class="duration-100 ease-in transition -rotate-90 inline ml-1"
-              style="min-width:20px;min-height:20px"
-            >
-              <g
-                fill="none"
-                fill-rule="evenodd"
-                transform="translate(-446 -398)"
-              >
-                <path
-                  fill="currentColor"
-                  fill-rule="nonzero"
-                  d="M95.8838835,240.366117 C95.3957281,239.877961 94.6042719,239.877961 94.1161165,240.366117 C93.6279612,240.854272 93.6279612,241.645728 94.1161165,242.133883 L98.6161165,246.633883 C99.1042719,247.122039 99.8957281,247.122039 100.383883,246.633883 L104.883883,242.133883 C105.372039,241.645728 105.372039,240.854272 104.883883,240.366117 C104.395728,239.877961 103.604272,239.877961 103.116117,240.366117 L99.5,243.982233 L95.8838835,240.366117 Z"
-                  transform="translate(356.5 164.5)"></path>
-                <polygon points="446 418 466 418 466 398 446 398"></polygon>
-              </g>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-
   </section>
 </Layout>
