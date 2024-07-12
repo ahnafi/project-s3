@@ -50,10 +50,15 @@ const timelines = [
   <div class="swiper-button-next text-yellow-base"></div>
   <div class="swiper-button-prev text-yellow-base"></div>
 </div>
-
-<script type="module">
-  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
-
+<style>
+  .swiper-button-next,.swiper-button-prev {
+    color: #facc15;
+  }
+</style>
+<script>
+  import Swiper from "swiper";
+  import "swiper/swiper-bundle.css";
+  
   const timelineSwiper = new Swiper(".timeline-swiper", {
     grabCursor: true,
     centeredSlides: true,
@@ -70,4 +75,5 @@ const timelines = [
       prevEl: ".swiper-button-prev",
     },
   });
+  console.log(timelineSwiper.realIndex)
 </script>

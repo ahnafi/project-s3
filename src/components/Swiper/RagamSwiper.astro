@@ -15,18 +15,20 @@ const { ragamInfo } = Astro.props as Props;
 <div class="swiper mySwiper bg-transparent md:flex w-full relative">
   <div class="swiper-wrapper">
     {
-      ragamInfo.map((data, index) => (
-        <div class="swiper-slide flex justify-between items-center flex-col md:flex-row">
+      ragamInfo.map((data) => (
+        <div class="swiper-slide">
+          <div class="flex justify-between items-center flex-col md:flex-row gap-2">
           <div class="flex justify-center items-center">
-            <div class="aspect-square flex items-center w-1/2 sm:w-1/3 md:w-3/5 rounded-full justify-center bg-dark-base">
-              <img src={data.img} alt={data.title} class="w-4/5 md:w-4/5" />
+            <div class="aspect-square flex items-center w-32 md:w-48 lg:w-64 rounded-full justify-center bg-dark-base">
+              <img src={data.img} alt={data.title} class="w-full" />
             </div>
           </div>
-          <div class=" text-center md:text-left overflow-visible">
+          <div class=" text-center md:text-left md:max-w-lg lg:max-w-2xl overflow-visible">
             <h3 class="font-heading sub-header-font-size mb-2 ">
               {data.title}
             </h3>
             <p class="small-font-size ">{data.desc}</p>
+          </div>
           </div>
         </div>
       ))
@@ -51,14 +53,22 @@ const { ragamInfo } = Astro.props as Props;
 </div>
 
 <style>
+  @media (min-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+
   .swiper-button-prev::after,
   .swiper-button-next::after {
     font-size: 2rem;
   }
 </style>
 
-<script type="module">
-  import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+<script>
+  import Swiper from "swiper/bundle";
+  import "swiper/swiper-bundle.css";
 
   const swiper = new Swiper(".mySwiper", {
     direction: window.innerWidth > 768 ? "vertical" : "horizontal",
@@ -68,16 +78,20 @@ const { ragamInfo } = Astro.props as Props;
       prevEl: ".swiper-button-prev",
     },
     on: {
-      slideChange: function () {
-        updateActiveTitle(swiper.activeIndex);
+      slideChange: function (params) {
+        updateActiveTitle(params.activeIndex);
       },
-      resize: function () {
-        swiper.changeDirection(getDirection());
+      resize: function (params) {
+        params.changeDirection(getdir());
       },
     },
   });
 
-  function updateActiveTitle(activeIndex) {
+  function getdir() {
+    return window.innerWidth > 768 ? "vertical" : "horizontal";
+  }
+
+  function updateActiveTitle(activeIndex: number) {
     const titles = document.querySelectorAll(".ragam-title");
     titles.forEach((title, index) => {
       if (index === activeIndex) {
