@@ -1,20 +1,12 @@
 ---
 const sponsors = [
   {
-    img: "/images/sponsors/gojek.png",
-    name: "",
+    name: "Bank Mandiri",
+    img: "/images/sponsors/bank-mandiri.png",
   },
   {
-    img: "/images/sponsors/google.png",
-    name: "",
-  },
-  {
-    img: "/images/sponsors/mie-gacoan.png",
-    name: "",
-  },
-  {
-    img: "/images/sponsors/coca-cola.png",
-    name: "",
+    name: "Wardah",
+    img: "/images/sponsors/wardah.png",
   },
 ];
 ---
@@ -31,16 +23,9 @@ const sponsors = [
       >
         {
           sponsors.map((sponsor) => (
-            <a
-              href="#"
-              class="max-w-36 sm:max-w-40 flex justify-center items-center"
-            >
-              <img
-                src={sponsor.img}
-                alt={sponsor.name}
-                class="hover:drop-shadow-[0_0px_6px_#FFAA19] transition-all duration-300"
-              />
-            </a>
+            <span class="max-w-36 sm:max-w-40 flex justify-center items-center">
+              <img src={sponsor.img} alt={sponsor.name} />
+            </span>
           ))
         }
       </div>

@@ -44,43 +44,28 @@ const faqs = [
 ---
 
 <Layout title="FAQ">
-  <!-- <HeroSection
-    src="/images/faq.png"
-    alt="Foto Mahasiswa Unsoed Kebingungan"
-    addClass=""
-    reverse="noReverse"
-  >
-    <h1
-      class="header-font-size font-heading font-normal drop-shadow-[0_0px_1px_rgba(0,0,0,0.1)] stroke-10 stroke-green-base"
-    >
-      Yuk, Cari Tahu Jawaban Atas Pertanyaan Kamu!
-    </h1>
-    <p class="normal-font-size font-body">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit
-      veniam aperiam ab velit dolores molestias consequuntur explicabo at est
-      magni ea dolorum molestiae sunt sequi voluptatem ut, amet fuga alias.
-    </p>
-  </HeroSection> -->
-  <!-- <Marque img="/butterfly_logo.png" direction="left" /> -->
-  <section id="hero" class="">
-    <div
-      class="text-center text-dark-base container max-w-screen-lg w-full pt-32 section-padding-x"
-    >
-      <h1
-        class="header-font-size font-heading font-normal drop-shadow-[0_0px_1px_rgba(0,0,0,0.1)] stroke-10 stroke-green-base"
-      >
-        Yuk, Cari Tahu Jawaban Atas Pertanyaan Kamu!
-      </h1>
-      <p class="normal-font-size font-body">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit
-        veniam aperiam ab velit dolores molestias consequuntur explicabo at est
-        magni ea dolorum molestiae sunt sequi voluptatem ut, amet fuga alias.
-      </p>
+  <section id="hero" class="pt-32 section-padding-x">
+    <div class="container max-w-screen-xl">
+      <div class="w-full">
+        <div class="max-w-2xl mx-auto text-center mb-8">
+          <h2
+            class="font-bold capitalize text-dark header-font-size mb-4 font-heading"
+          >
+            Yuk, Cari Jawabanmu di Sini!
+          </h2>
+          <p class="font-medium normal-font-size text-secondary">
+            Kami telah mengumpulkan beberapa pertanyaan yang sering diajukan
+            oleh para Gensoed dengan informatif dan jelas. Jika Gensoed masih
+            memiliki pertanyaan tambahan atau membutuhkan bantuan lebih lanjut,
+            jangan ragu untuk menghubungi kami ya.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
   <section
-    id="faqList"
-    class="container max-w-screen-xl py-24 section-padding-x"
+    id="faq-list"
+    class="container max-w-screen-xl pt-16 pb-16 section-padding-x"
   >
     {faqs.map((faq) => <FaqList title={faq.title} faqs={faq.qa} />)}
   </section>

@@ -1,25 +1,32 @@
 ---
-const email = ["hello@loopple.com", "unsoed@mhs.unsoed.ac.id"];
-const phoneNumber = ["+516-486-5135", "+62 868-2343-1235"];
-const address = [
+const email: string[] = [
+  "hello@loopple.com",
+  "unsoed@mhs.unsoed.ac.id",
+  "unsoed@mhs.unsoed.ac.id",
+];
+const instagram: { name: string; link: string }[] = [
   {
-    loc: "10924 Urna Convallis",
-    link: "https://goo.gl/maps/QcWzYETAh4FS3KTD7",
+    name: "@soedirmanstudentsummit",
+    link: "https://www.instagram.com/soedirmanstudentsummit",
   },
   {
-    loc: "Jl. Profesor DR. HR Boenyamin No.708",
-    link: "https://goo.gl/maps/QcWzYETAh4FS3KTD7",
+    name: "@batir_unsoed",
+    link: "https://www.instagram.com/batir_unsoed",
+  },
+  {
+    name: "@bem_unsoed",
+    link: "https://www.instagram.com/bem_unsoed",
   },
 ];
 ---
 
 <section
   id="reach-us"
-  class="pt-24 pb-16 section-padding-x text-dark-base m-auto"
+  class="pt-32 pb-16 section-padding-x text-dark-base m-auto"
 >
   <div class="container max-w-screen-xl">
-    <div class="w-full px-4">
-      <div class="max-w-xl mx-auto text-center mb-16">
+    <div class="w-full">
+      <div class="max-w-2xl mx-auto text-center mb-8">
         <h2
           class="font-bold capitalize text-dark header-font-size mb-4 font-heading"
         >
@@ -32,91 +39,78 @@ const address = [
         </p>
       </div>
     </div>
-    <div class="w-full px-4 flex gap-10">
-      <div class="container flex flex-col mx-auto">
+    <div class="w-full flex gap-10">
+      <div class="flex flex-col mx-auto">
         <div
-          class="grid w-full grid-cols-1 content-center gap-5 md:grid-cols-2 lg:grid-cols-3"
+          class="flex flex-col md:flex-row justify-center gap-5 max-w-xl mx-auto"
         >
           <div
-            class="flex flex-col items-center gap-3 px-4 py-10 bg-white justify-center rounded-xl"
+            class="flex flex-col items-center px-4 py-6 md:py-10 bg-white justify-center rounded-xl"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
-              class="w-10 md:w-12 text-yellow-base"
+              class="text-yellow-base w-10 md:w-12 mb-3"
               fill="currentColor"
               ><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
               <path
                 d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
               ></path></svg
             >
-            <p class="text-xl md:text-2xl font-extrabold">Email</p>
-            <p class="text-base leading-7">Contact us at</p>
-            <div class="flex flex-col items-center gap-1">
-              {
-                email.map((mail, index) => (
-                  <a
-                    class="text-base md:text-lg  font-bold text-center hover:text-yellow-base transition duration-200"
-                    href={`mailto: ${mail}`}
-                  >
-                    {mail}
-                  </a>
-                ))
-              }
+              <p class="text-xl md:text-2xl font-extrabold">Email</p>
+              <p class="text-base mb-2">Hubungi kami lewat</p>
+              <div class="flex flex-col gap-1">
+                {
+                  email.map((mail, index) => (
+                    <span class="flex items-center font-semibold justify-start text-slate-700 normal-font-size hover:text-yellow-base hover:underline transition-all duration-300">
+                      <svg
+                        class="w-4 h-4 mr-1 mt-1"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <a href=`{mailto: ${mail}}` target="_blank">
+                        {mail}
+                      </a>
+                    </span>
+                  ))
+                }
             </div>
           </div>
           <div
-            class="flex flex-col items-center gap-3 px-4 justify-center bg-white py-10 rounded-xl"
+            class="flex items-center flex-col px-4 py-6 md:py-4 bg-white justify-center rounded-xl"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              class="w-10 md:w-12 text-yellow-base"
+              viewBox="0 0 448 512"
+              class="text-yellow-base w-10 md:w-12 mb-3 md:mb-0"
               fill="currentColor"
               ><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
               <path
-                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
               ></path></svg
             >
-            <p class="text-xl md:text-2xl font-extrabold">Phone</p>
-            <p class="text-base leading-7">Reach out to us by phone</p>
-            {
-              phoneNumber.map((number, index) => (
-                <a
-                  class="text-base md:text-lg  font-bold text-center hover:text-yellow-base transition duration-200"
-                  href={`tel:${number}`}
-                >
-                  {number}
-                </a>
-              ))
-            }
-          </div>
-          <div
-            class="flex flex-col items-center gap-3 px-4 justify-center bg-white py-10 rounded-xl"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 576 512"
-              class="w-10 md:w-12 text-yellow-base"
-              fill="currentColor"
-              ><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
-              <path
-                d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152V422.8c0 9.8-6 18.6-15.1 22.3L416 503V200.4zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6V451.8L32.9 502.7C17.1 509 0 497.4 0 480.4V209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77V504.3L192 449.4V255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
-              ></path></svg
-            >
-            <p class="text-xl md:text-2xl font-extrabold">Location</p>
-            <p class="text-base leading-7">Find us at our office</p>
-            {
-              address.map((data, index) => (
-                <a
-                  class="text-base md:text-lg  font-bold text-center hover:text-yellow-base transition duration-200"
-                  target="_blank"
-                  href={data.link}
-                >
-                  {data.loc}
-                </a>
-              ))
-            }
+              <p class="text-xl md:text-2xl font-extrabold">Instagram</p>
+              <p class="text-base mb-2">Temui kami lewat</p>
+              <div class="flex flex-col gap-1">
+                {
+                  instagram.map((user, index) => (
+                    <a
+                      href=`{mailto: ${user.link}}`
+                      target="_blank"
+                      class="text-slate-700 normal-font-size font-semibold hover:text-yellow-base hover:underline transition-all duration-300"
+                    >
+                      {user.name}
+                    </a>
+                  ))
+                }
+            </div>
           </div>
         </div>
       </div>
