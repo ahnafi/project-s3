@@ -137,7 +137,7 @@ const { name, activity, category, description, galery, sosmed, logo } =
       </div>
     </div>
     <!-- modal -->
-    <div class="hidden fixed inset-0 backdrop-blur-sm z-50" id="modal"></div>
+    <div class="hidden fixed inset-0 backdrop-blur-sm z-50 " id="modal"></div>
   </section>
 </Layout>
 <script>
@@ -152,7 +152,7 @@ const { name, activity, category, description, galery, sosmed, logo } =
   function modalPopup(src: string): void {
     const modalCard = `
       <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <img src="${src}" alt="gallery" class="max-w-xs md:max-w-lg lg:max-w-2xl rounded-md ring-4 ring-sky-400 outline-none" />
+        <img src="${src}" alt="gallery" class="max-w-xs md:max-w-lg lg:max-w-2xl rounded-md ring-4 ring-sky-400 outline-none max-h-[70vh]" />
         <button
           class="absolute -top-12 md:-top-3 -right-6 md:-right-14 px-4 py-2 "
           id="removeModal"
