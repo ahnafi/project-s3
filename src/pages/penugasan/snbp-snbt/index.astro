@@ -1,0 +1,56 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import BackToBack from "../../../components/FloatingWidget/BackToBack.astro";
+import Tugas from "./tugas.astro";
+---
+
+<Layout title="Penugasan SNBT">
+  <Tugas />
+  <img
+    src="/images/waves/white-wave.svg"
+    alt="Blue wave"
+    class="bg-blue-base rotate-180"
+  />
+  <section
+    id="hero"
+    class="py-32 section-padding-x bg-blue-base text-white-base bg-[url('/images/patterns/batik.svg')] bg-size"
+  >
+    <div class="container max-w-screen-xl">
+      <div class="flex justify-center items-center flex-col text-center">
+        <h1 class="font-bold capitalize header-font-size font-heading mb-2">
+          PENUGASAN SNBP & SNBT
+        </h1>
+        <p class="font-medium normal-font-size text-secondary max-w-3xl">
+          Penugasan ini terinspirasi dari metamorfosis kupu-kupu, yang
+          melambangkan transformasi, pertumbuhan, dan pencapaian. Setiap tahap
+          penugasan akan mewakili fase evolusi kupu-kupu, dengan kegiatan dan
+          tantangan yang dirancang untuk mendorong pengembangan diri dan
+          karakter para Generasi Soedirman (Gensoed).
+        </p>
+        <a
+          class="bg-yellow-base px-6 py-2 rounded-lg my-6 inline-block drop-shadow-sm font-semibold hover:text-yellow-base hover:bg-dark-base transition-all duration-200 text-sm sm:text-base md:text-lg"
+          href="#penugasan-pertama"
+        >
+          Yuk mari kita lihat
+          <svg
+            class="w-4 inline-block ml-2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+            fill="currentColor"
+            ><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
+            <path
+              d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+            ></path></svg
+          >
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- <BackToBack href="/penugasan" addClass="text-white" /> -->
+</Layout>
+
+<style>
+  .bg-size {
+    background-size: 128px;
+  }
+</style>
