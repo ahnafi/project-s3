@@ -21,7 +21,7 @@ const dataUkmKosong: Data[] = [
   {
     name: "PMKP",
     logo: "",
-    category: "",
+    category: "keagamaan",
     description: "",
     activity: [],
     galery: [""],
@@ -30,7 +30,7 @@ const dataUkmKosong: Data[] = [
   {
     name: "UKM Panjat Tebing",
     logo: "",
-    category: "",
+    category: "olahraga",
     description: "",
     activity: [],
     galery: [""],
@@ -42,7 +42,7 @@ const dataPaguyubanKosong: Data[] = [
   {
     name: "Bandung",
     logo: "",
-    category: "Kesenian",
+    category: "jawa",
     description: "",
     activity: [],
     galery: [],
@@ -69,7 +69,7 @@ const dataPaguyubanKosong: Data[] = [
   {
     name: "Paguyuban Ciamis",
     logo: "",
-    category: "",
+    category: "jawa",
     description: "",
     activity: [],
     galery: [],
@@ -87,7 +87,7 @@ const dataPaguyubanKosong: Data[] = [
   {
     name: "KMKP Magelang",
     logo: "",
-    category: "",
+    category: "jawa",
     description: "",
     activity: [],
     galery: [],
@@ -465,7 +465,7 @@ Secara umum UKM BKC UNSOED bertujuan untuk membentuk karakter insan karateka yan
   {
     name: "Resimen Mahasiswa",
     logo: "/images/organizations/ukm/menwa/logo.webp",
-    category: "",
+    category: "organisasi",
     description: `Wadah Pembinaan Generasi Muda Bangsa Resimen Mahasiswa Batalyon 904/Kalayudha (Menwa
     Unsoed) adalah organisasi kemahasiswaan di Universitas Jenderal Soedirman yang fokus pada
     pembinaan bela negara dan wawasan kebangsaan. Menwa Unsoed menjadi wadah bagi mahasiswa
@@ -520,7 +520,7 @@ Secara umum UKM BKC UNSOED bertujuan untuk membentuk karakter insan karateka yan
   {
     name: "Muda Bersinar",
     logo: "/images/organizations/ukm/muda-bersinar/logo.webp",
-    category: "",
+    category: "organisasi",
     description:
       'UKM Anti Narkoba "Muda Bersinar" atau Muda Bersih Anti Narkoba merupakan Unit Kegiatan Mahasiswa Universitas Jenderal Soedirman yang memiliki visi untuk mewujudkan garda utama mahasiswa unsoed bebas dari penyalahgunaan dan peredaran gelap narkotika, serta menginspirasi perubahan yang positif. Bersama-sama, kita dapat menciptakan perubahan positif, membantu generasi muda untuk tumbuh dan bersinar tanpa terpengaruh oleh narkoba. Mari bersama-sama menjadi bagian dari perubahan dan membantu menciptakan masa depan yang bebas dari narkoba.',
     activity: [],
@@ -586,7 +586,7 @@ Secara umum UKM BKC UNSOED bertujuan untuk membentuk karakter insan karateka yan
   {
     name: "KSR PMI UNIT UNSOED",
     logo: "/images/organizations/ukm/ksr-pmi/logo.webp",
-    category: "",
+    category: "organisasi",
     description: `KSR PMI Unit Universitas Jenderal Soedirman merupakan organisasi yang berdiri sejak tahun 2000 dan bergerak dalam bidang kepalangmerahan dan kemanusiaan. KSR PMI Unsoed berada di bawah naungan birokrasi Universitas Jenderal Soedirman dan Palang Merah Indonesia. UKM ini bertujuan memberikan pemahaman kepada mahasiswa mengenai pertolongan pertama pada kecelakaan, bencana, serta kegiatan kemanusiaan lainnya.
     
     Melalui berbagai pendidikan, pelatihan, dan kegiatan tersebut, KSR PMI Unit Unsoed tidak hanya menghasilkan anggota-anggota yang handal, namun juga berkarakter kuat, berjiwa penolong, peduli terhadap kesehatan dan kemanusiaan serta dapat memberikan kontribusi positif bagi masyarakat sekitar.`,
@@ -805,7 +805,7 @@ Maju Bersama
   {
     name: "HMP",
     logo: "/images/organizations/paguyuban/hmp/logo.webp",
-    category: "",
+    category: "jawa",
     description: `HMP adalah salah satu paguyuban mahasiswa UNSOED yang berasal dari Kabupaten
 Pangandaran. Harapannya dengan adanya HMP dapat menjadi wadah silaturahmi dan
 pengembangan jati diri bagi anggotanya. HMP Unsoed ini juga merupakan organisasi
