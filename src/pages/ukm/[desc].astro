@@ -23,16 +23,21 @@ export async function getStaticPaths() {
 
 const { name, activity, description, galery, sosmed, logo } =
   Astro.props;
+
+function extractNameFromLink(sosmed: string): string {
+  const parts = sosmed.split('/').filter(Boolean);
+  return parts[parts.length - 1];
+}
 ---
 
-<Layout title=`UKM ${name}`>
+<Layout title=`UKM ${name}` addClass="bg-[url('/images/patterns/batik.svg')] bg-size">
   <section id="description" class="pt-24 pb-24 md:pt-36 section-padding-x">
     <div class="container max-w-screen-xl">
       <div
         class="flex gap-4 flex-col lg:flex-row justify-between lg:justify-around"
       >
         <div
-          class="flex justify-center gap-4 max-w-lg items-center md:max-w-full lg:max-w-lg md:flex-row lg:flex-col"
+          class="flex justify-start gap-4 max-w-lg items-center md:max-w-full lg:max-w-lg md:flex-row lg:flex-col"
         >
           <div class="max-w-md md:w-1/2 lg:w-full">
             <img
@@ -98,19 +103,12 @@ const { name, activity, description, galery, sosmed, logo } =
             sosmed ? (
               <div class="mb-2">
                 <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl">Sosial Media</h2>
-                <a class="text-dark-base text-6xl rounded-lg" href={sosmed}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    class="hover:text-yellow-base hover:font-medium transition-all duration-300 inline-block w-10 h-10 md:w-14 md:h-14"
-                    fill="currentColor"
-                  >
-                    <!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
-                    <path
-                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                    ></path>
-                  </svg>
-                </a>
+                <a
+                      href={sosmed}
+                      target="_blank"
+                      class="text-dark-base normal-font-size hover:text-blue-base transition-all duration-300"
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 inline-block mr-2" fill="currentColor"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg> @{extractNameFromLink(sosmed)}</a>
+                    </a>
               </div>
             ) : (
               ""

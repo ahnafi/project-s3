@@ -18,17 +18,17 @@ const { ragamInfo } = Astro.props as Props;
       ragamInfo.map((data) => (
         <div class="swiper-slide">
           <div class="flex justify-between items-center flex-col md:flex-row gap-2">
-          <div class="flex justify-center items-center">
-            <div class="aspect-square flex items-center w-32 md:w-48 lg:w-64 rounded-full justify-center bg-dark-base">
-              <img src={data.img} alt={data.title} class="w-full" />
+            <div class="flex justify-center items-center">
+              <div class="aspect-square flex items-center w-32 md:w-48 lg:w-64 rounded-full justify-center bg-dark-base">
+                <img src={data.img} alt={data.title} class="w-5/6" />
+              </div>
             </div>
-          </div>
-          <div class=" text-center md:text-left md:max-w-lg lg:max-w-2xl overflow-visible px-2">
-            <h3 class="font-heading text-xl md:text-3xl lg:text-4xl mb-2 ">
-              {data.title}
-            </h3>
-            <p class="small-font-size ">{data.desc}</p>
-          </div>
+            <div class="md:max-w-lg lg:max-w-2xl overflow-visible px-2">
+              <h3 class="text-center md:text-left font-heading text-xl md:text-3xl ld:text-4xl mb-2 ">
+                {data.title}
+              </h3>
+              <p class="small-font-size text-justify">{data.desc}</p>
+            </div>
           </div>
         </div>
       ))

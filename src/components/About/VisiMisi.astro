@@ -23,11 +23,6 @@ const misi = [
       data-aos-offset="100"
       data-aos-once="true"
     >
-      <div class="max-w-screen-md mx-auto text-center">
-        <h2 class="font-heading capitalize header-font-size mb-2">
-          Visi & Misi
-        </h2>
-      </div>
       <div
         class="m-auto flex flex-wrap justify-center flex-col md:flex-row gap-4 md:gap-0"
       >
@@ -43,7 +38,7 @@ const misi = [
           <h2 class="font-heading text-center sub-header-font-size max-w-md">
             Visi
           </h2>
-          <p class="normal-font-size">
+          <p class="normal-font-size text-justify">
             {visi}
           </p>
         </div>
@@ -63,7 +58,7 @@ const misi = [
           <h2 class="font-heading text-center sub-header-font-size max-w-md">
             Misi
           </h2>
-          <ol class="list-decimal normal-font-size pl-4">
+          <ol class="list-decimal text-justify normal-font-size pl-4">
             {misi.map((data) => <li>{data}</li>)}
           </ol>
         </div>
