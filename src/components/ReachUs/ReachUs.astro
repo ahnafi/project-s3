@@ -75,7 +75,7 @@ const instagram: { name: string; link: string }[] = [
                           clip-rule="evenodd"
                         />
                       </svg>
-                      <a href=`{mailto: ${mail}}` target="_blank">
+                      <a href=`mailto:${mail}` target="_blank">
                         {mail}
                       </a>
                     </span>
@@ -102,7 +102,7 @@ const instagram: { name: string; link: string }[] = [
                 {
                   instagram.map((user) => (
                     <a
-                      href=`{mailto: ${user.link}}`
+                      href={user.link}
                       target="_blank"
                       class="text-slate-700 normal-font-size font-semibold hover:text-yellow-base hover:underline transition-all duration-300"
                     >
