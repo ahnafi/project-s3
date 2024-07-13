@@ -23,8 +23,8 @@ const { ragamInfo } = Astro.props as Props;
               <img src={data.img} alt={data.title} class="w-full" />
             </div>
           </div>
-          <div class=" text-center md:text-left md:max-w-lg lg:max-w-2xl overflow-visible">
-            <h3 class="font-heading sub-header-font-size mb-2 ">
+          <div class=" text-center md:text-left md:max-w-lg lg:max-w-2xl overflow-visible px-2">
+            <h3 class="font-heading text-xl md:text-3xl lg:text-4xl mb-2 ">
               {data.title}
             </h3>
             <p class="small-font-size ">{data.desc}</p>
@@ -43,7 +43,7 @@ const { ragamInfo } = Astro.props as Props;
   data-aos-duration="600"
   data-aos-delay="200"
   data-aos-easing="ease-out"
-  data-aos-offset="300"
+  data-aos-offset="100"
   data-aos-once="true"
 >
   {
