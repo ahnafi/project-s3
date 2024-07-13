@@ -67,5 +67,6 @@ export default {
   plugins: [
     require("@designbycode/tailwindcss-text-stroke"),
     require("tailwind-scrollbar")({ nocompatible: true }),
+    require("tailwindcss-animated")
   ],
 };
