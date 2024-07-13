@@ -789,7 +789,7 @@ Maju Bersama
   },
   {
     name: "IKAMMI",
-    logo: "//images/organizations/paguyuban/ikammi/logo.webp",
+    logo: "/images/organizations/paguyuban/ikammi/logo.webp",
     category: "sumatera",
     description:
       "IKAMMI merupakan paguyuban mahasiswa yang berasal dari Sumatera Barat, sebagai wadah untuk mempererat hubungan mahasiswa yang berasal dari Sumatera Barat dan mahasiswa keturunan 'urang awak' (Minang) yang sedang menempuh pendidikan di Universitas Jenderal Soedirman. IKAMMI menjadi rumah bagi mahasiswa Minang di Purwokerto, karena berlandaskan pada adat dan budaya Minangkabau. Urang Awak Badunsanak, IKAMMI! Rancak Bana!!",
@@ -919,4 +919,4 @@ tahun ini terdapat 9 bidang dan 36 pengurus Himakasi periode 2023/2024.`,
   },
 ];
 
-export { ukm, paguyuban };
+export { ukm, paguyuban, dataUkmKosong, dataPaguyubanKosong };

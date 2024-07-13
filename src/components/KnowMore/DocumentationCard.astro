@@ -12,9 +12,9 @@ const docsImage = [
 <div class="swiper documentation-card overflow-visible">
   <div class="swiper-wrapper">
     {
-      docsImage.map((image, index) => (
-        <div class="swiper-slide w-[240px] sm:w-[360px] lg:w-[480px] shadow-md shadow-white-base">
-          <img src={image} alt="" />
+      docsImage.map((image) => (
+        <div class="swiper-slide max-w-[240px] sm:max-w-[360px] lg:max-w-[480px] shadow-md shadow-white-base">
+          <img src={image} alt="documentation s3" />
         </div>
       ))
     }
@@ -42,8 +42,9 @@ const docsImage = [
     }
   </style>
 
-  <script type="module">
-    import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+  <script>
+    import Swiper from "swiper/bundle";
+    import "swiper/swiper-bundle.css";
 
     let documentationSwiper = new Swiper(".documentation-card", {
       effect: "coverflow",
@@ -61,8 +62,8 @@ const docsImage = [
         slideShadows: true,
       },
       on: {
-        click(event) {
-          documentationSwiper.slideTo(this.clickedIndex);
+        click(params) {
+          documentationSwiper.slideTo(params.clickedIndex);
         },
       },
     });

@@ -1,6 +1,4 @@
 ---
-import Marque from "../Marque.astro";
-
 const visi =
   "UNSOED dalam pengembangannya akan mewujudkan visi yang telah dirumuskan untuk diwujudkan pada tahun 2034 yaitu “Diakui dunia sebagai pusat pengembangan sumberdaya perdesaan dan kearifan lokal”.";
 const misi = [
@@ -43,7 +41,7 @@ const misi = [
             Misi
           </h2>
           <ol class="list-decimal normal-font-size pl-4">
-            {misi.map((data, index) => <li>{data}</li>)}
+            {misi.map((data) => <li>{data}</li>)}
           </ol>
         </div>
       </div>
