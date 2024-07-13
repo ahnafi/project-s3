@@ -39,6 +39,12 @@ const { ragamInfo } = Astro.props as Props;
 </div>
 <div
   class="overflow-y-auto scrollbar-track-rounded-xl scrollbar-thumb-rounded-full scrollbar-track-white-base scrollbar-thumb-yellow-base scrollbar-thin bg-dark-base text-white-base w-1/4 px-6 py-4 rounded-md gap-1 flex-col ragam-pagination hidden md:flex"
+  data-aos="fade-up-left"
+  data-aos-duration="600"
+  data-aos-delay="200"
+  data-aos-easing="ease-out"
+  data-aos-offset="300"
+  data-aos-once="true"
 >
   {
     ragamInfo.map((data, index) => (
