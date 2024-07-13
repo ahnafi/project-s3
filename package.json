@@ -13,12 +13,15 @@
     "@astrojs/check": "^0.7.0",
     "@astrojs/tailwind": "^5.1.0",
     "@designbycode/tailwindcss-text-stroke": "^1.2.1",
+    "aos": "^2.3.4",
     "astro": "^4.10.2",
+    "swiper": "^11.1.4",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.5",
-    "swiper":"^11.1.4"
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "tailwind-scrollbar": "^3.1.0"
+    "@types/aos": "^3.0.7",
+    "tailwind-scrollbar": "^3.1.0",
+    "tailwindcss-animated": "^1.1.2"
   }
 }

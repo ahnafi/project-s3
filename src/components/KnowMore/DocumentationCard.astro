@@ -9,12 +9,20 @@ const docsImage = [
 ];
 ---
 
-<div class="swiper documentation-card overflow-visible">
+<div class="swiper documentation-card">
   <div class="swiper-wrapper">
     {
       docsImage.map((image) => (
         <div class="swiper-slide max-w-[240px] sm:max-w-[360px] lg:max-w-[480px] shadow-md shadow-white-base">
-          <img src={image} alt="documentation s3" />
+          <img
+            src={image}
+            alt="documentation s3"
+            data-aos="zoom-out"
+            data-aos-duration="300"
+            data-aos-easing="ease-out"
+            data-aos-offset="160"
+            data-aos-once="true"
+          />
         </div>
       ))
     }
@@ -24,6 +32,10 @@ const docsImage = [
     .swipper {
       width: 100%;
       padding: 50px 0;
+    }
+
+    .documentation-card {
+      overflow: visible;
     }
 
     .swiper-slide {
