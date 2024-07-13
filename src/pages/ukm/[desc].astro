@@ -47,7 +47,7 @@ const { name, activity, description, galery, sosmed, logo } =
                 {galery.map((src, index) => (
                   <img
                     src={src}
-                    alt=`Galery UKM ${name} ke-${index + 1}`
+                    alt={`Galery UKM ${name} ke-${index + 1}`}
                     class="img-modal mb-4 rounded-lg hover:shadow-sm transition-all duration-300 ring-1 hover:ring-2 ring-gray-400 hover:ring-blue-base transform hover:scale-105  hover:shadow-blue-base"
                   />
                 ))}
@@ -126,13 +126,13 @@ const { name, activity, description, galery, sosmed, logo } =
                   Galery
                 </h2>
                 <div class="md:hidden columns-1 w-full">
-                  {galery.map((src) => (
-                    <img
-                      src={src}
-                      alt="galery Paguyuban"
-                      class="img-modal mb-6 lg:w-fit cursor-pointer rounded-lg hover:shadow-sm hover:translate-y-2 transition-all duration-300 ring-1 hover:ring-2 ring-gray-400 hover:ring-blue-base  hover:shadow-blue-base mg-modal transform hover:scale-105"
-                    />
-                  ))}
+                  {galery.map((src, index) => (
+                  <img
+                    src={src}
+                    alt={`Galery UKM ${name} ke-${index + 1}`}
+                    class="img-modal mb-4 rounded-lg hover:shadow-sm transition-all duration-300 ring-1 hover:ring-2 ring-gray-400 hover:ring-blue-base transform hover:scale-105  hover:shadow-blue-base"
+                  />
+                ))}
                 </div>
               </>
             ) : (
@@ -159,7 +159,7 @@ const { name, activity, description, galery, sosmed, logo } =
   function modalPopup(src: string): void {
     const modalCard = `
       <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <img src="${src}" alt="Gallery UKM ${name}" class="max-w-xs md:max-w-lg lg:max-w-2xl rounded-xl max-h-[70vh]" />
+        <img src="${src}" alt="Gallery UKM" class="max-w-xs md:max-w-lg lg:max-w-2xl rounded-xl max-h-[70vh]" />
         <button
           class="absolute -top-2 md:-top-4 -right-2 md:-right-4"
           id="removeModal"
