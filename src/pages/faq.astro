@@ -41,7 +41,10 @@ const faqs = [
 ];
 ---
 
-<Layout title="FAQ">
+<Layout
+  title="FAQ"
+  addClass="bg-[url('/images/patterns/batik.svg')] bg-size text-dark-base"
+>
   <section id="hero" class="pt-32 section-padding-x">
     <div class="container max-w-screen-xl">
       <div class="w-full">
@@ -68,3 +71,9 @@ const faqs = [
     {faqs.map((faq) => <FaqList title={faq.title} faqs={faq.qa} />)}
   </section>
 </Layout>
+
+<style>
+  .bg-size {
+    background-size: 128px;
+  }
+</style>

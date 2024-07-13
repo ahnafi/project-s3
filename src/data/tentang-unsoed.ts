@@ -608,16 +608,16 @@ Secara umum UKM BKC UNSOED bertujuan untuk membentuk karakter insan karateka yan
 
 const paguyuban: Data[] = [
   {
-    name: "KM PHARASOED",
-    logo: "/images/organizations/paguyuban/km-pharasoed/logo.webp",
+    name: "KM PARASOED",
+    logo: "/images/organizations/paguyuban/km-parasoed/logo.webp",
     category: "jawa",
     description:
       "KM PARASOED atau Keluarga Mahasiswa Jepara Unsoed adalah paguyuban Mahasiswa Jepara yang menempuh pendidikan di Universitas Jenderal Soedirman. KM Parasoed dibentuk untuk menjalin komunikasi dan mempererat silaturahmi antar Keluarga Mahasiswa sesama Jepara Unsoed.",
     activity: [],
     galery: [
-      "/images/organizations/paguyuban/km-pharasoed/documentation-1.webp",
-      "/images/organizations/paguyuban/km-pharasoed/documentation-2.webp",
-      "/images/organizations/paguyuban/km-pharasoed/documentation-3.webp",
+      "/images/organizations/paguyuban/km-parasoed/documentation-1.webp",
+      "/images/organizations/paguyuban/km-parasoed/documentation-2.webp",
+      "/images/organizations/paguyuban/km-parasoed/documentation-3.webp",
     ],
     sosmed: "https://www.instagram.com/km_parasoed",
   },
