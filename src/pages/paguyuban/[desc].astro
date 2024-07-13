@@ -21,34 +21,36 @@ export async function getStaticPaths() {
   );
 }
 
-const { name, activity, description, galery, sosmed, logo } =
-  Astro.props;
+const { name, activity, description, galery, sosmed, logo } = Astro.props;
 ---
 
-<Layout title=`Paguyuban ${name}`>
-  <section id="description" class="py-32">
-    <div
-      class="flex gap-4 px-6 flex-col lg:flex-row items-center lg:justify-around w-full lg:px-32"
-    >
-      <div class="max-w-lg md:max-w-full">
+<Layout
+  title=`Paguyuban ${name}`
+  addClass="bg-[url('/images/patterns/batik.svg')] bg-size"
+>
+  <section id="description" class="pt-24 pb-24 md:pt-36 section-padding-x">
+    <div class="container max-w-screen-xl">
+      <div
+        class="flex gap-4 flex-col lg:flex-row justify-between lg:justify-around"
+      >
         <div
-          class="flex justify-center gap-4 max-w-lg items-center md:max-w-full lg:max-w-lg md:py-8 px-6 md:flex-row lg:flex-col"
+          class="flex justify-center gap-4 max-w-lg items-center md:max-w-full lg:max-w-lg md:flex-row lg:flex-col"
         >
           <div class="max-w-md md:w-1/2 lg:w-full">
             <img
               src={logo}
-              alt=`foto profile Paguyuban ${name}`
+              alt=`Logo Paguyuban ${name}`
               class="w-full"
             />
           </div>
           {
             galery ? (
-              <div class="hidden md:py-4 md:flex flex-wrap gap-4 justify-center md:w-1/2 lg:w-auto">
-                {galery.map((src) => (
+              <div class="hidden md:block gap-4 md:w-1/2 lg:w-auto md:columns-2 lg:columns-3">
+                {galery.map((src, index) => (
                   <img
                     src={src}
-                    alt="galery Paguyuban"
-                    class="img-modal max-w-36 lg:w-fit rounded-lg hover:shadow-sm hover:translate-y-2 transition-all ease-in-out duration-300 ring-1 hover:ring-2 ring-gray-300 hover:ring-sky-400 transform  hover:shadow-sky-200 "
+                    alt=`Galery Paguyuban ${name} ke-${index + 1}`
+                    class="img-modal mb-4 rounded-lg hover:shadow-sm transition-all duration-300 ring-1 hover:ring-2 ring-gray-400 hover:ring-blue-base transform hover:scale-105  hover:shadow-blue-base"
                   />
                 ))}
               </div>
@@ -57,87 +59,93 @@ const { name, activity, description, galery, sosmed, logo } =
             )
           }
         </div>
-      </div>
-      <!--  -->
-      <article class="py-8 w-full md:max-w-full lg:max-w-lg">
         <!--  -->
-        <div class="py-4">
-          <h1
-            class="font-heading font-bold capitalize text-3xl sm:text-4xl lg:text-5xl mb-2"
-          >
+        <article class="w-full md:max-w-full lg:max-w-lg">
+          <!-- Organization Title -->
+          <h1 class="font-heading font-bold capitalize sub-header-font-size mb-4">
             {name}
           </h1>
-        </div>
-        <!--  -->
-        <div class="py-4">
-          <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
-            Deskripsi Paguyuban
-          </h2>
-          <p
-            class="text-sm md:text-base font-body md:pe-16 lg:pe-0 text-pretty w-full"
-          >
-            {description}
-          </p>
-        </div>
-        <!--  -->
-        {
-          activity.length > 0 ? (
-            <div class="py-4">
-              <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
-                Kegiatan Paguyuban
-              </h2>
-              <ul>
-                {activity.map((data) => (
-                  <li class="text-sm md:text-base font-body md:pe-16 lg:pe-0 list-disc ms-6">
-                    {data}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : (
-            ""
-          )
-        }
-        {
-          sosmed ? (
-            <div class="py-4">
-              <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
-                sosial media
-              </h2>
-              <a href={sosmed} target="_blank" class="hover:text-blue-base hover:underline  transition-all ease-in-out duration-150">
-                instagram
-              </a>
-            </div>
-          ) : (
-            ""
-          )
-        }
-      </article>
-      <div class="md:hidden">
-        {
-          galery ? (
-            <>
-              <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl">
-                Galery
-              </h2>
-              <div class="md:hidden flex flex-wrap gap-2 justify-center py-2">
-                {galery.map((src) => (
-                  <img
-                    src={src}
-                    alt="galery Paguyuban"
-                    class="img-modal max-w-36 lg:w-fit rounded-lg hover:shadow-sm hover:translate-y-2 transition-all ease-in-out duration-300 ring-1 hover:ring-2 ring-gray-300 hover:ring-sky-400 transform  hover:shadow-sky-200 "
-                  />
-                ))}
+          <!-- Description -->
+          <div class="text-justify mb-2">
+            <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl">
+              Deskripsi
+            </h2>
+            <p
+              class="normal-font-size font-body md:pe-16 lg:pe-0 text-pretty w-full"
+            >
+              {description}
+            </p>
+          </div>
+          <!-- Activity Of Organization If It Exist -->
+          {
+            activity.length > 0 ? (
+              <div class="mb-2">
+                <h2 class="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+                  Kegiatan
+                </h2>
+                <ul>
+                  {activity.map((data) => (
+                    <li class="normal-font-size font-body md:pe-16 lg:pe-0 list-disc ms-6">
+                      {data}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </>
-          ) : (
-            ""
-          )
-        }
+            ) : (
+              ""
+            )
+          }
+          <!-- Social Media -->
+          {
+            sosmed ? (
+              <div class="mb-2">
+                <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl">Sosial Media</h2>
+                <a class="text-dark-base text-6xl rounded-lg" href={sosmed}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    class="hover:text-yellow-base hover:font-medium transition-all duration-300 inline-block w-10 h-10 md:w-14 md:h-14"
+                    fill="currentColor"
+                  >
+                    <!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            ) : (
+              ""
+            )
+          }
+          
+        </article>
+        <div class="md:hidden">
+          {
+            galery ? (
+              <>
+                <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl">
+                  Galery
+                </h2>
+                <div class="md:hidden columns-1 w-full">
+                  {galery.map((src) => (
+                    <img
+                      src={src}
+                      alt="galery Paguyuban"
+                      class="img-modal mb-6 lg:w-fit cursor-pointer rounded-lg hover:shadow-sm hover:translate-y-2 transition-all duration-300 ring-1 hover:ring-2 ring-gray-400 hover:ring-blue-base  hover:shadow-blue-base mg-modal transform hover:scale-105"
+                    />
+                  ))}
+                </div>
+              </>
+            ) : (
+              ""
+            )
+          }
+        </div>
       </div>
     </div>
-    <!-- modal -->
-    <div class="hidden fixed inset-0 backdrop-blur-sm z-50 " id="modal"></div>
+    <!-- Modal -->
+    <div class="hidden fixed inset-0 backdrop-blur-sm z-50" id="modal"></div>
   </section>
 </Layout>
 <script>
@@ -152,20 +160,16 @@ const { name, activity, description, galery, sosmed, logo } =
   function modalPopup(src: string): void {
     const modalCard = `
       <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <img src="${src}" alt="gallery" class="max-w-xs md:max-w-lg lg:max-w-2xl rounded-md ring-4 ring-sky-400 outline-none max-h-[70vh]" />
+        <img src="${src}" alt="Gallery Paguyuban ${name}" class="max-w-xs md:max-w-lg lg:max-w-2xl rounded-xl max-h-[70vh]" />
         <button
-          class="absolute -top-12 md:-top-3 -right-6 md:-right-14 px-4 py-2 "
+          class="absolute -top-2 md:-top-4 -right-2 md:-right-4"
           id="removeModal"
         >
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="25" viewBox="0 0 256 256" xml:space="preserve">
-          <defs>
-          </defs>
-          <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-            <path d="M 25.914 69.086 c -1.28 0 -2.559 -0.488 -3.536 -1.465 c -1.953 -1.952 -1.953 -5.118 0 -7.07 l 38.172 -38.172 c 1.951 -1.952 5.119 -1.952 7.07 0 c 1.953 1.953 1.953 5.119 0 7.071 L 29.45 67.621 C 28.473 68.598 27.194 69.086 25.914 69.086 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-            <path d="M 64.086 69.086 c -1.279 0 -2.56 -0.488 -3.535 -1.465 L 22.378 29.45 c -1.953 -1.953 -1.953 -5.119 0 -7.071 c 1.953 -1.952 5.118 -1.952 7.071 0 l 38.171 38.172 c 1.953 1.952 1.953 5.118 0 7.07 C 66.646 68.598 65.365 69.086 64.086 69.086 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-            <path d="M 85 90 H 5 c -2.761 0 -5 -2.238 -5 -5 V 5 c 0 -2.761 2.239 -5 5 -5 h 80 c 2.762 0 5 2.239 5 5 v 80 C 90 87.762 87.762 90 85 90 z M 10 80 h 70 V 10 H 10 V 80 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-          </g>
-          </svg>
+        <svg class="w-8 h-8 md:w-10 md:h-10 text-gray-900 bg-gray-400 hover:bg-gray-900 hover:text-gray-400 rounded-xl transition-all duration-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
         </button>
       </div>`;
     modalContainer.innerHTML += modalCard;
