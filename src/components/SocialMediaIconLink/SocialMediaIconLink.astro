@@ -54,10 +54,24 @@ const socialMedia = [
       <div class="max-w-2xl mx-auto text-center mb-8">
         <h2
           class="font-bold capitalize text-dark text-3xl mb-4 m:text-4xl lg:text-5xl font-heading"
+          data-aos="slide-down"
+          data-aos-duration="300"
+          data-aos-delay=""
+          data-aos-easing="ease-in-out"
+          data-aos-offset="160"
+          data-aos-once="true"
         >
           Ikuti Kami di Sosial Media
         </h2>
-        <p class="font-medium text-sm text-secondary md:text-base">
+        <p
+          class="font-medium text-sm text-secondary md:text-base"
+          data-aos="slide-up"
+          data-aos-duration="300"
+          data-aos-delay=""
+          data-aos-easing="ease-in-out"
+          data-aos-offset="160"
+          data-aos-once="true"
+        >
           Jangan lewatkan kabar terbaru dan konten menarik lainnya dari kami!
           Ikuti kami di berbagai platform sosial media untuk tetap terhubung dan
           menjadi yang pertama tahu tentang informasi penting lainnya.
@@ -71,6 +85,12 @@ const socialMedia = [
             class="text-dark-base text-6xl mx-2 rounded-lg"
             href={data.link}
             set:html={data.icon}
+            data-aos="slide-up"
+            data-aos-duration="300"
+            data-aos-delay=""
+            data-aos-easing="ease-in-out"
+            data-aos-offset="160"
+            data-aos-once="true"
           />
         ))
       }

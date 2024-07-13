@@ -71,3 +71,10 @@ const { title, addClass } = Astro.props;
     src: url("/fonts/Love Craft.ttf");
   }
 </style>
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css";
+  document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({});
+  });
+</script>

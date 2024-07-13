@@ -33,12 +33,20 @@ const logos = [
 ];
 ---
 
-<div class="swiper logo-swiper overflow-visible">
+<div class="swiper logo-swiper">
   <div class="swiper-wrapper">
     {
       logos.map((logo) => (
         <div class="swiper-slide">
-          <img src={logo.img} alt={logo.title} />
+          <img
+            src={logo.img}
+            alt={logo.title}
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-easing="ease-out"
+            data-aos-offset="200"
+            data-aos-once="true"
+          />
         </div>
       ))
     }
@@ -62,6 +70,10 @@ const logos = [
   .swipper {
     width: 100%;
     /* padding: 50px 0; */
+  }
+
+  .logo-swiper {
+    overflow: visible;
   }
 
   .swiper-slide {
