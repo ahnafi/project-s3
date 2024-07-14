@@ -10,7 +10,7 @@ interface QuestionsAnswer {
 
 const faqs: Faq[] = [
   {
-    title: "FAQ REGISTRASI ONLINE SPMB",
+    title: "FAQ Registrasi Online SPMB",
     qa: [
       {
         question: "Bagaimana Alur registrasi online SPMB?",
@@ -26,7 +26,7 @@ const faqs: Faq[] = [
     ],
   },
   {
-    title: "FAQ REGISTRASI FISIK SPMB",
+    title: "FAQ Registrasi Fisik SPMB",
     qa: [
       {
         question:
