@@ -1,7 +1,7 @@
 ---
 interface Props {
   title: string;
-  faqs: { question: string; answer: string }[];
+  faqs: { question: string; answer: string[] }[];
 }
 
 const { title, faqs } = Astro.props;
@@ -42,7 +42,7 @@ const { title, faqs } = Astro.props;
 <div
   class="flex flex-col md:flex-row gap-4 sm:gap-8 md:gap-12 mb-6 md:mb-8 lg:mb-12"
 >
-  <div class="flex flex-col text-left basis-1/2"
+  <div class="flex flex-col text-left basis-1/2 md:basis-1/5 lg:basis-1/2"
   data-aos="fade-right"
   data-aos-duration="400"
   data-aos-delay="100"
@@ -56,7 +56,7 @@ const { title, faqs } = Astro.props;
       {title}
     </h2>
   </div>
-  <ul class="basis-1/2"
+  <ul class="basis-1/2 md:basis-4/5 lg:basis-1/2"
   data-aos="fade-left"
   data-aos-duration="400"
   data-aos-delay="100"
@@ -76,7 +76,16 @@ const { title, faqs } = Astro.props;
           </button>
           <div class="faq-answer transition-all duration-300 ease-in-out max-h-0 overflow-hidden ">
             <div class="pb-5 leading-relaxed">
-              <div class="space-y-2 leading-relaxed">{faq.answer}</div>
+              <div class="space-y-2 leading-relaxed">
+                
+                {faq.answer.length > 1 ? (
+                  <ul class="list-disc ps-6">
+                    {faq.answer.map((ans)=>(
+                      <li class="">{ans}</li>
+                    ))}
+                  </ul>
+                ): (faq.answer) }
+                </div>
             </div>
           </div>
         </li>

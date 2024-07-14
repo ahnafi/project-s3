@@ -29,7 +29,7 @@ const instagram: { name: string; link: string }[] = [
       <div class="max-w-2xl mx-auto mb-8">
         <h1
           class="font-bold capitalize text-center sub-header-font-size mb-4 font-heading"
-          data-aos="slide-down"
+          data-aos="fade-down"
           data-aos-duration="500"
           data-aos-delay=""
           data-aos-easing="ease-in-out"
@@ -40,16 +40,16 @@ const instagram: { name: string; link: string }[] = [
         </h1>
         <p
           class="font-medium normal-font-size text-justify md:text-center"
-          data-aos="slide-up"
+          data-aos="fade-up"
           data-aos-duration="500"
           data-aos-delay=""
           data-aos-easing="ease-in-out"
           data-aos-offset="0"
           data-aos-once="true"
         >
-          Jangan ragu untuk chat dengan kami! Tim kami siap membantu kamu kapan
-          saja melalui telepon, email, atau chat langsung. Yuk, hubungi kami dan
-          rasakan layanan terbaik dari kami.
+          Jangan ragu untuk chatingan dengan kami! Kami siap membantu Gensoed
+          kapan saja melalui baik lewat email maupun chat langsung. Yuk, hubungi
+          kami dan dapatkan jawaban terbaik atas pertanyaan Gensoed.
         </p>
       </div>
     </div>
@@ -77,30 +77,30 @@ const instagram: { name: string; link: string }[] = [
                 d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
               ></path></svg
             >
-              <p class="text-xl md:text-2xl font-extrabold">Email</p>
-              <p class="text-base mb-2">Hubungi kami lewat</p>
-              <div class="flex flex-col gap-1">
-                {
-                  email.map((mail) => (
-                    <span class="flex items-center font-semibold justify-start text-slate-700 normal-font-size hover:text-yellow-base hover:underline transition-all duration-300">
-                      <svg
-                        class="w-4 h-4 mr-1 mt-1"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      <a href={`mailto:${mail}`} target="_blank">
-                        {mail}
-                      </a>
-                    </span>
-                  ))
-                }
+            <p class="text-xl md:text-2xl font-extrabold">Email</p>
+            <p class="text-base mb-2">Hubungi kami lewat</p>
+            <div class="flex flex-col gap-1">
+              {
+                email.map((mail) => (
+                  <span class="flex items-center font-semibold justify-start text-slate-700 normal-font-size hover:text-yellow-base hover:underline transition-all duration-300">
+                    <svg
+                      class="w-4 h-4 mr-1 mt-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <a href={`mailto:${mail}`} target="_blank">
+                      {mail}
+                    </a>
+                  </span>
+                ))
+              }
             </div>
           </div>
           <div
@@ -122,20 +122,20 @@ const instagram: { name: string; link: string }[] = [
                 d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
               ></path></svg
             >
-              <p class="text-xl md:text-2xl font-extrabold">Instagram</p>
-              <p class="text-base mb-2">Temui kami lewat</p>
-              <div class="flex flex-col gap-1">
-                {
-                  instagram.map((user) => (
-                    <a
-                      href={user.link}
-                      target="_blank"
-                      class="text-slate-700 normal-font-size font-semibold hover:text-yellow-base hover:underline transition-all duration-300"
-                    >
-                      {user.name}
-                    </a>
-                  ))
-                }
+            <p class="text-xl md:text-2xl font-extrabold">Instagram</p>
+            <p class="text-base mb-2">Temui kami lewat</p>
+            <div class="flex flex-col gap-1">
+              {
+                instagram.map((user) => (
+                  <a
+                    href={user.link}
+                    target="_blank"
+                    class="text-slate-700 normal-font-size font-semibold hover:text-yellow-base hover:underline transition-all duration-300"
+                  >
+                    {user.name}
+                  </a>
+                ))
+              }
             </div>
           </div>
         </div>

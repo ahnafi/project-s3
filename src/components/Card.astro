@@ -11,6 +11,10 @@ const { href, title, img } = Astro.props;
 <a
   href={href}
   class="ring-1 rounded-lg flex flex-col space-y-2 p-4 break-inside-avoid mb-6 bg-white-base hover:ring-2 ring-gray-300 hover:ring-sky-600 transform duration-200 hover:shadow-sky-200 hover:shadow-md group relative overflow-hidden"
+  data-aos="zoom-in"
+  data-aos-duration="600"
+  data-aos-easing="ease-out"
+  data-aos-once="true"
 >
   <span
     class="absolute -top-20 -left-20 -z-10 h-20 w-20 rounded-full bg-sky-400 transition-all duration-300 group-hover:scale-[15]"

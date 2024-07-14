@@ -12,22 +12,42 @@ import Card from "../../components/Card.astro";
     <div class="container max-w-screen-xl">
       <div class="flex flex-col items-center">
         <div class="lg:flex justify-center items-center flex-col mb-5 sm:mb-10">
-          <h1 class="header-font-size text-center font-heading">
+          <h1
+            class="header-font-size text-center font-heading"
+            data-aos="fade-down"
+            data-aos-duration="500"
+            data-aos-delay=""
+            data-aos-easing="ease-in-out"
+            data-aos-offset="0"
+            data-aos-once="true"
+          >
             <span class="text-blue-base">Paguyuban</span>
             Mahasiswa Daerah
           </h1>
           <p
             class="mt-5 sm:mt-10 lg:w-10/12 text-gray-500 dark:text-gray-300 font-normal text-justify md:text-center normal-font-size max-w-3xl"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay=""
+            data-aos-easing="ease-in-out"
+            data-aos-offset="0"
+            data-aos-once="true"
           >
-            Paguyuban Mahasiswa Daerah merupakan wadah bagi mahasiswa
-            Universitas Jenderal Soedirman yang berasal dari daerah tertentu
-            untuk berkumpul, berbagi informasi, dan saling membantu.
+            Paguyuban Mahasiswa Daerah merupakan wadah bagi para Gensoed yang
+            berasal dari daerah tertentu untuk berkumpul, berbagi informasi, dan
+            saling membantu untuk mempererat silaturahmi antar-Gensoed sesama
+            daerah.
           </p>
         </div>
         <form
-          method="get"
           id="search"
           class="rounded-lg flex justify-center gap-2 lg:w-1/2"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="200"
+          data-aos-easing="ease-in-out"
+          data-aos-offset="0"
+          data-aos-once="true"
         >
           <div class="relative basis-7/12 md:basis-3/5">
             <input
@@ -95,6 +115,7 @@ import Card from "../../components/Card.astro";
 
     document.addEventListener("DOMContentLoaded", () => {
       if (search) {
+        search.addEventListener("submit", (e) => e.preventDefault());
         search.addEventListener("input", (e) => {
           e.preventDefault();
           let data = new FormData(search);
@@ -122,7 +143,7 @@ import Card from "../../components/Card.astro";
             let cardText = `
             <a
             href='/paguyuban/${e.name}'
-            class="ring-1 rounded-lg flex flex-col space-y-2 p-4 break-inside-avoid mb-6 bg-white-base hover:ring-2 ring-gray-300 hover:ring-sky-600 transform duration-200 hover:shadow-sky-200 hover:shadow-md group relative overflow-hidden"
+            class="ring-1 rounded-lg flex flex-col space-y-2 p-4 break-inside-avoid mb-6 bg-white-base hover:ring-2 ring-gray-300 hover:ring-sky-600 transform duration-200 hover:shadow-sky-200 hover:shadow-md group relative overflow-hidden animate-fade-up animate-once animate-duration-[600ms] animate-ease-out"
             >
               <span
                 class="absolute -top-20 -left-20 -z-10 h-20 w-20 rounded-full bg-sky-400 transition-all duration-300 group-hover:scale-[15]"

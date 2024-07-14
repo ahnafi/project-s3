@@ -44,6 +44,12 @@ function extractNameFromLink(sosmed: string): string {
               src={logo}
               alt=`Logo UKM ${name}`
               class="w-full"
+              data-aos="fade-right"
+              data-aos-duration="500"
+              data-aos-delay="0"
+              data-aos-easing="ease-in-out"
+              data-aos-offset="0"
+              data-aos-once="true"
             />
           </div>
           {
@@ -54,6 +60,12 @@ function extractNameFromLink(sosmed: string): string {
                     src={src}
                     alt={`Galery UKM ${name} ke-${index + 1}`}
                     class="img-modal mb-4 rounded-lg hover:shadow-sm transition-all duration-300 ring-1 hover:ring-2 ring-gray-400 hover:ring-blue-base transform hover:scale-105  hover:shadow-blue-base"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="200"
+                    data-aos-easing="ease-in-out"
+                    data-aos-offset="0"
+                    data-aos-once="true"
                   />
                 ))}
               </div>
@@ -63,7 +75,14 @@ function extractNameFromLink(sosmed: string): string {
           }
         </div>
         <!--  -->
-        <article class="w-full md:max-w-full lg:max-w-lg">
+        <article class="w-full md:max-w-full lg:max-w-lg"
+        data-aos="fade-left"
+        data-aos-duration="500"
+        data-aos-delay="0"
+        data-aos-easing="ease-in-out"
+        data-aos-offset="0"
+        data-aos-once="true"
+        >
           <!-- Organization Title -->
           <h1 class="font-heading font-bold capitalize sub-header-font-size mb-4">
             {name}
@@ -129,6 +148,12 @@ function extractNameFromLink(sosmed: string): string {
                     src={src}
                     alt={`Galery UKM ${name} ke-${index + 1}`}
                     class="img-modal mb-4 rounded-lg hover:shadow-sm transition-all duration-300 ring-1 hover:ring-2 ring-gray-400 hover:ring-blue-base transform hover:scale-105  hover:shadow-blue-base"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                    data-aos-easing="ease-in-out"
+                    data-aos-offset="50"
+                    data-aos-once="true"
                   />
                 ))}
                 </div>
@@ -156,7 +181,7 @@ function extractNameFromLink(sosmed: string): string {
 
   function modalPopup(src: string): void {
     const modalCard = `
-      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-fade animate-once animate-duration-[600ms] animate-delay-0 animate-ease-out">
         <img src="${src}" alt="Gallery UKM" class="max-w-xs md:max-w-lg lg:max-w-2xl rounded-xl max-h-[70vh]" />
         <button
           class="absolute -top-2 md:-top-4 -right-2 md:-right-4"

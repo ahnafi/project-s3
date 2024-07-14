@@ -49,7 +49,7 @@ const dataPaguyubanKosong: Data[] = [
     sosmed: "",
   },
   {
-    name: "Fokomaba",
+    name: "Forkomaba",
     logo: "/images/organizations/paguyuban/forkomaba/logo.webp",
     category: "jawa",
     description: "",
@@ -67,7 +67,7 @@ const dataPaguyubanKosong: Data[] = [
     sosmed: "",
   },
   {
-    name: "Paguyuban Ciamis",
+    name: "KMP-GP Ciamis",
     logo: "",
     category: "jawa",
     description: "",
@@ -85,7 +85,7 @@ const dataPaguyubanKosong: Data[] = [
     sosmed: "",
   },
   {
-    name: "KMKP Magelang",
+    name: "KMPJ Magelang",
     logo: "",
     category: "jawa",
     description: "",
