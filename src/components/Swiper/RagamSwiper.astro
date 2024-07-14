@@ -2,7 +2,7 @@
 export interface RagamInfoItem {
   title: string;
   desc: string;
-  img: string;
+  facultyColor: string;
 }
 
 interface Props {
@@ -19,8 +19,14 @@ const { ragamInfo } = Astro.props as Props;
         <div class="swiper-slide">
           <div class="flex justify-between items-center flex-col md:flex-row gap-2">
             <div class="flex justify-center items-center">
-              <div class="aspect-square flex items-center w-32 md:w-48 lg:w-64 rounded-full justify-center bg-dark-base">
-                <img src={data.img} alt={data.title} class="w-5/6" />
+              <div
+                class={`aspect-square flex items-center w-32 md:w-48 lg:w-64 rounded-full justify-center ${data.facultyColor}`}
+              >
+                <img
+                  src="/images/logos/unsoed.webp"
+                  alt={data.title}
+                  class="w-5/6"
+                />
               </div>
             </div>
             <div class="md:max-w-lg lg:max-w-2xl overflow-visible px-2">
