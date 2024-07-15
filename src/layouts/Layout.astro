@@ -14,11 +14,44 @@ const { title, addClass } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="soedirman student summit" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/images/logo-parts/logo.webp" />
+    <meta
+      name="description"
+      content="Soedirman Student Summit (S3) adalah acara tahunan Universitas Jenderal Soedirman(Unsoed) yang menyambut mahasiswa baru (Gensoed), memperkenalkan kehidupan kampus, dan menanamkan nilai-nilai penting bagi pengembangan diri mereka."
+    />
+    <meta
+      name="keywords"
+      content="Soedirman Student Summit, S3, Unsoed, Gensoed, mahasiswa, mahasiswa baru, maba, kehidupan kampus, pengembangan diri, kuliah, PKKMB, ospek"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/webp" href="/images/logo-parts/logo.webp" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | Soedirman Student Summit</title>
+    <title>{title} | Soedirman Student Summit (S3)</title>
+    <!-- Meta tag for social media share -->
+    <meta property="og:title" content="Soedirman Student Summit (S3)" />
+    <meta
+      property="og:description"
+      content="Soedirman Student Summit (S3) adalah acara tahunan Universitas Jenderal Soedirman (Unsoed) yang menyambut mahasiswa baru (Gensoed), memperkenalkan kehidupan kampus, dan menanamkan nilai-nilai penting bagi pengembangan diri mereka."
+    />
+    <meta property="og:image" content="/images/banner.jpg" />
+    <meta
+      property="og:url"
+      content="https://soedirmanstudentsummit.unsoed.ac.id/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Soedirman Student Summit (S3)" />
+    <meta property="og:locale" content="id_ID" />
+    <!-- Shortcut url -->
+    <link rel="canonical" href="https://soedirmanstudentsummit.unsoed.ac.id/" />
+    <!-- Twitter share optimazation -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Soedirman Student Summit (S3)" />
+    <meta
+      name="twitter:description"
+      content="Soedirman Student Summit (S3) adalah acara tahunan Universitas Jenderal Soedirman (Unsoed) yang menyambut mahasiswa baru (Gensoed), memperkenalkan kehidupan kampus, dan menanamkan nilai-nilai penting bagi pengembangan diri mereka."
+    />
+    <meta name="twitter:image" content="/images/banner.jpg" />
+    <!-- Other tag -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
