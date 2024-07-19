@@ -1,0 +1,199 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+interface Ketentuan {
+  img: { src: string; title?: string; list?: string[] }[];
+  article: { title: string; list: string[] }[];
+}
+
+const male: Ketentuan = {
+  img: [
+    {
+      src: "/images/documentations/documentation-7.webp",
+    },
+  ],
+  article: [
+    {
+      title: "blablabla",
+      list: ["asasa", "Aaaaaa", "ssssss"],
+    },
+
+  ],
+};
+const female: Ketentuan = {
+  img: [
+    {
+      src: "/images/documentations/documentation-7.webp",
+      title: "berkerudung",
+      list: ["blablbalba", "blbalalabala"],
+    },
+    {
+      src: "/images/documentations/documentation-8.webp",
+      title: "Tidak Berkerudung",
+      list: ["blabalbal"],
+    },
+  ],
+  article: [
+    {
+      title: "blablabla",
+      list: ["asasa", "Aaaaaa", "ssssss"],
+    },
+    {
+      title: "blablabla",
+      list: ["asasa", "Aaaaaa", "ssssss"],
+    },
+  ],
+};
+---
+
+<Layout title="dresscode">
+  <section class="py-32 section-padding-x">
+    <div class="text-center md:text-left">
+      <h1 class="sub-header-font-size font-heading">
+        Aturan Cara Berpakaian <br />
+        Gensoed 2024
+      </h1>
+    </div>
+    <div
+      class="w-full py-4 flex justify-center items-center text-center normal-font-size"
+    >
+      <button class="bg-green-base w-1/2 py-2 rounded-l-md font-bold" id="btnMale">
+        Laki Laki
+      </button>
+      <button
+        class="bg-slate-200 w-1/2 py-2 font-bold rounded-r-md"
+        id="btnFemale"
+      >
+        Perempuan
+      </button>
+    </div>
+    <!-- laki laki -->
+    <div class="" id="male">
+      <div class="flex w-full flex-col md:flex-row lg:justify-around gap-2">
+        {
+          male.img.map((data) => (
+            <div class="">
+              <div class="max-w-md">
+                <img
+                  src={data.src}
+                  alt="photo dresscode"
+                  class="w-full rounded-md"
+                />
+              </div>
+              <div class="max-w-md">
+                <h2 class="font-heading text-base md:text-xl lg:text-2xl text-center">
+                  {data.title}
+                </h2>
+                <ul class="">
+                  {data.list?.map((e) => (
+                    <li class="small-font-size list-inside list-disc">{e}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <article class="py-12 md:ps-6">
+        <h2 class="font-heading sub-header-font-size pb-4">Ketentuan</h2>
+        <div>
+          <!-- loop -->
+          {
+            male.article.map((data) => (
+              <div>
+                <h3>{data.title}</h3>
+                <ul>
+                  {data.list.map((list) => (
+                    <li class="small-font-size list-inside list-disc">
+                      {list}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
+          <!--  -->
+        </div>
+      </article>
+    </div>
+    <!--  -->
+    <!-- perempuan -->
+    <div class="hidden" id="female">
+      <div class="flex w-full flex-col md:flex-row lg:justify-around gap-2">
+        {
+          female.img.map((data) => (
+            <div class="">
+              <div class="max-w-md">
+                <img
+                  src={data.src}
+                  alt={"photo dresscode " + data.title}
+                  class="w-full rounded-md"
+                />
+              </div>
+              <div class="max-w-md">
+                <h2 class="font-heading text-base md:text-xl lg:text-2xl text-center">
+                  {data.title}
+                </h2>
+                <ul class="">
+                  {data.list?.map((e) => (
+                    <li class="small-font-size list-inside list-disc">{e}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <article class="py-12 md:ps-6">
+        <h2 class="font-heading sub-header-font-size pb-4">Ketentuan</h2>
+        <div>
+          <!-- loop -->
+          {
+            female.article.map((data) => (
+              <div>
+                <h3>{data.title}</h3>
+                <ul>
+                  {data.list.map((list) => (
+                    <li class="small-font-size list-inside list-disc">
+                      {list}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
+          <!--  -->
+        </div>
+      </article>
+    </div>
+    <!--  -->
+  </section>
+</Layout>
+
+<script>
+  const btnMale = document.getElementById("btnMale") as HTMLButtonElement;
+  const btnFemale = document.getElementById("btnFemale") as HTMLButtonElement;
+
+  const male = document.getElementById("male") as HTMLDivElement;
+  const female = document.getElementById("female") as HTMLDivElement;
+
+  btnMale.addEventListener("click", () => {
+    btnMale.classList.add("bg-green-base");
+    btnMale.classList.remove("bg-slate-200");
+    btnFemale.classList.add("bg-slate-200");
+    btnFemale.classList.remove("bg-green-base");
+
+    male.classList.remove("hidden");
+    female.classList.add("hidden");
+  });
+
+  btnFemale.addEventListener("click", () => {
+    btnMale.classList.add("bg-slate-200");
+    btnMale.classList.remove("bg-green-base");
+    btnFemale.classList.remove("bg-slate-200");
+    btnFemale.classList.add("bg-green-base");
+
+    male.classList.add("hidden");
+    female.classList.remove("hidden");
+  });
+</script>
