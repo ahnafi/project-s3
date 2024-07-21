@@ -17,7 +17,6 @@ const male: Ketentuan = {
       title: "blablabla",
       list: ["asasa", "Aaaaaa", "ssssss"],
     },
-
   ],
 };
 const female: Ketentuan = {
@@ -57,7 +56,10 @@ const female: Ketentuan = {
     <div
       class="w-full py-4 flex justify-center items-center text-center normal-font-size"
     >
-      <button class="bg-green-base w-1/2 py-2 rounded-l-md font-bold" id="btnMale">
+      <button
+        class="bg-green-base w-1/2 py-2 rounded-l-md font-bold"
+        id="btnMale"
+      >
         Laki Laki
       </button>
       <button
@@ -69,7 +71,7 @@ const female: Ketentuan = {
     </div>
     <!-- laki laki -->
     <div class="" id="male">
-      <div class="flex w-full flex-col md:flex-row lg:justify-around gap-2">
+      <div class="flex w-full flex-col justify-center md:flex-row lg:justify-around gap-2">
         {
           male.img.map((data) => (
             <div class="">

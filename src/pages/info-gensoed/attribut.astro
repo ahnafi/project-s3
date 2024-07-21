@@ -76,7 +76,7 @@ const female: Ketentuan = {
       <div class="flex w-full flex-col lg:justify-around gap-6">
         {
           male.img.map((data) => (
-            <div class="grid grid-cols-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="max-w-md">
                 <img
                   src={data.src}
@@ -129,7 +129,7 @@ const female: Ketentuan = {
       <div class="flex w-full flex-col lg:justify-around gap-6">
         {
           female.img.map((data) => (
-            <div class="grid grid-cols-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="max-w-md">
                 <img
                   src={data.src}
