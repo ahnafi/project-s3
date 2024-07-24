@@ -10,45 +10,80 @@ const male: Ketentuan = {
   img: [
     {
       src: "/images/documentations/documentation-7.webp",
+      title: "Laki-Laki",
     },
   ],
   article: [
     {
-      title: "blablabla",
-      list: ["asasa", "Aaaaaa", "ssssss"],
+      title: "Pakaian yang Diperbolehkan",
+      list: [
+        "Memakai kemeja putih polos, lengan panjang.",
+        "Celana panjang bahan kain berwarna hitam.",
+        "Sepatu pantofel hitam.",
+        "Ikatan pinggang berwarna hitam.",
+      ],
+    },
+    {
+      title: "Aksesoris yang Diperbolehkan",
+      list: ["Menggunakan dasi hitam.", "Memakai jam tangan (tidak mencolok)."],
+    },
+    {
+      title: "Larangan",
+      list: [
+        "Tidak diperbolehkan memakai jeans.",
+        "Tidak memakai sandal.",
+        "Tidak memakai aksesoris berlebihan.",
+      ],
     },
   ],
 };
+
 const female: Ketentuan = {
   img: [
     {
       src: "/images/documentations/documentation-7.webp",
-      title: "berkerudung",
-      list: ["blablbalba", "blbalalabala"],
+      title: "Berkerudung",
+      list: [
+        "Menggunakan kerudung warna hitam atau putih.",
+        "Kemeja putih polos lengan panjang.",
+        "Rok panjang bahan kain berwarna hitam.",
+        "Sepatu pantofel hitam.",
+      ],
     },
     {
       src: "/images/documentations/documentation-8.webp",
       title: "Tidak Berkerudung",
-      list: ["blabalbal"],
+      list: [
+        "Kemeja putih polos lengan panjang.",
+        "Rok panjang bahan kain berwarna hitam.",
+        "Sepatu pantofel hitam.",
+      ],
     },
   ],
   article: [
     {
-      title: "blablabla",
-      list: ["asasa", "Aaaaaa", "ssssss"],
+      title: "Aksesoris yang Diperbolehkan",
+      list: ["Menggunakan dasi hitam.", "Memakai jam tangan (tidak mencolok)."],
     },
     {
-      title: "blablabla",
-      list: ["asasa", "Aaaaaa", "ssssss"],
+      title: "Larangan",
+      list: [
+        "Tidak diperbolehkan memakai jeans.",
+        "Tidak memakai sandal.",
+        "Tidak memakai aksesoris berlebihan.",
+      ],
     },
   ],
 };
 ---
 
-<Layout title="dresscode">
+<Layout
+  title="dresscode"
+  addClass="bg-[url('/images/patterns/batik.svg')] bg-size"
+>
   <section class="py-32 section-padding-x">
     <div class="text-center md:text-left">
-      <h1 class="sub-header-font-size font-heading">
+      <h1 class="text-3xl lg:text-4xl text-gray-800 font-love">
         Aturan Cara Berpakaian <br />
         Gensoed 2024
       </h1>
@@ -71,7 +106,9 @@ const female: Ketentuan = {
     </div>
     <!-- laki laki -->
     <div class="" id="male">
-      <div class="flex w-full flex-col justify-center md:flex-row lg:justify-around gap-2">
+      <div
+        class="flex w-full flex-col justify-center md:flex-row lg:justify-around gap-2"
+      >
         {
           male.img.map((data) => (
             <div class="">
