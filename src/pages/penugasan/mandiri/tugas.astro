@@ -230,33 +230,8 @@ const penugasanKetiga = {
           <img
             src="/images/butterfly-metamorphosis/telur.webp"
             alt="Telur"
-            class="md:block absolute -top-8 -right-6 max-w-20 md:max-w-[128px] lg:max-w-[196px] xl:max-w-[256px] md:mx-auto md:static z-10 md:z-0"
+            class="max-w-[196px] xl:max-w-[256px]"
           />
-          <div
-            class="py-2 px-4 border-[5px] border-blue-400 rounded-2xl bg-sky-50 md:mt-2"
-          >
-            <h2
-              class="font-semibold mb-2 font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl"
-            >
-              {penugasanPertama.title}
-            </h2>
-            <ul
-              class="list-decimal pl-2 sm:pl-3 md:pl-4 small-font-size text-justify"
-            >
-              {
-                penugasanPertama.description.map((item) => (
-                  <li>
-                    <strong>{item.type}</strong>
-                    <ul class="list-disc pl-4">
-                      {item.task.map((task) => (
-                        <li>{task}</li>
-                      ))}
-                    </ul>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -264,17 +239,17 @@ const penugasanKetiga = {
   <img
     src="/images/elements/saturnus.webp"
     alt="Planet Saturnus"
-    class="hidden opacity-90 md:block absolute md:top-[360px] lg:top-[240px] md:-left-[240px] lg:-left-[360px] md:max-w-[512px] lg:max-w-[768px] z-10"
+    class="hidden opacity-90 md:block absolute md:top-[480px] lg:top-[240px] md:-left-[240px] lg:-left-[360px] md:max-w-[512px] lg:max-w-[768px] z-10"
   />
   <img
     src="/images/elements/jupiter.webp"
     alt="Planet Yupiter"
-    class="hidden opacity-90 md:block absolute md:top-[1640px] lg:top-[1240px] md:-right-[240px] lg:-right-[360px] md:max-w-[512px] lg:max-w-[840px] z-10"
+    class="hidden opacity-90 md:block absolute md:top-[1560px] lg:top-[1440px] md:-right-[240px] lg:-right-[360px] md:max-w-[640px] lg:max-w-[840px] z-10"
   />
   <img
     src="/images/elements/awan-gaje.webp"
     alt="Awan Pokonya"
-    class="hidden opacity-90 md:block absolute md:bottom-[360px] lg:bottom-[64px] md:-left-[240px] lg:-left-[360px] md:max-w-[512px] lg:max-w-[840px] z-10"
+    class="hidden opacity-90 md:block absolute md:-bottom-[196px] lg:-bottom-[400px] md:-left-[240px] lg:-left-[360px] md:max-w-[512px] lg:max-w-[840px] z-10"
   />
 </section>
 

@@ -64,7 +64,7 @@ import NavLink from "./NavLink.astro";
         class="mr-20"
       />
       <div class="flex items-center gap-6">
-        <NavLink href="/coming-soon">Penugasan</NavLink>
+        <NavLink href="/penugasan">Penugasan</NavLink>
         <NavLink href="/faq">FAQ</NavLink>
         <NavLink href="/hubungi-kami">Hubungi Kami</NavLink>
       </div>
@@ -123,233 +123,231 @@ import NavLink from "./NavLink.astro";
           </div>
         </div>
         <NavLink href="/info-gensoed">Info Gensoed</NavLink>
-        <NavLink href="/coming-soon">Penugasan</NavLink>
+        <NavLink href="/penugasan">Penugasan</NavLink>
         <NavLink href="/faq">FAQ</NavLink>
         <NavLink href="/hubungi-kami">Hubungi Kami</NavLink>
       </div>
     </div>
   </nav>
-
-  <style>
-    .rtl-dir {
-      direction: rtl;
-    }
-
-    .hamburger {
-      padding: 0px 0px;
-      display: inline-block;
-      cursor: pointer;
-      transition-property: opacity, filter;
-      transition-duration: 0.15s;
-      transition-timing-function: linear;
-      font: inherit;
-      color: inherit;
-      text-transform: none;
-      background-color: transparent;
-      border: 0;
-      margin: 0;
-      overflow: visible;
-    }
-    .hamburger:hover {
-      opacity: 0.7;
-    }
-    .hamburger.is-active:hover {
-      opacity: 0.7;
-    }
-    .hamburger.is-active .hamburger-inner,
-    .hamburger.is-active .hamburger-inner::before,
-    .hamburger.is-active .hamburger-inner::after {
-      background-color: #fff;
-    }
-
-    .hamburger-box {
-      width: 21px;
-      height: 16.5px;
-      display: inline-block;
-      position: relative;
-    }
-
-    .hamburger-inner {
-      display: block;
-      top: 50%;
-      margin-top: -1.25px;
-    }
-    .hamburger-inner,
-    .hamburger-inner::before,
-    .hamburger-inner::after {
-      width: 21px;
-      height: 2.5px;
-      background-color: #fff;
-      border-radius: 2.5px;
-      position: absolute;
-      transition-property: transform;
-      transition-duration: 0.15s;
-      transition-timing-function: ease;
-    }
-    .hamburger-inner::before,
-    .hamburger-inner::after {
-      content: "";
-      display: block;
-    }
-    .hamburger-inner::before {
-      top: -7px;
-    }
-    .hamburger-inner::after {
-      bottom: -7px;
-    }
-
-    /*
-   * Collapse
-   */
-    .hamburger--collapse .hamburger-inner {
-      top: auto;
-      bottom: 0;
-      transition-duration: 0.13s;
-      transition-delay: 0.13s;
-      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    }
-    .hamburger--collapse .hamburger-inner::after {
-      top: -14px;
-      transition:
-        top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-        opacity 0.1s linear;
-    }
-    .hamburger--collapse .hamburger-inner::before {
-      transition:
-        top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-        transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    }
-    .hamburger--collapse.is-active .hamburger-inner {
-      transform: translate3d(0, -7px, 0) rotate(-45deg);
-      transition-delay: 0.22s;
-      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    .hamburger--collapse.is-active .hamburger-inner::after {
-      top: 0;
-      opacity: 0;
-      transition:
-        top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-        opacity 0.1s 0.22s linear;
-    }
-    .hamburger--collapse.is-active .hamburger-inner::before {
-      top: 0;
-      transform: rotate(-90deg);
-      transition:
-        top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-        transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-
-    /*
-   * Collapse Reverse
-   */
-    .hamburger--collapse-r .hamburger-inner {
-      top: auto;
-      bottom: 0;
-      transition-duration: 0.13s;
-      transition-delay: 0.13s;
-      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    }
-    .hamburger--collapse-r .hamburger-inner::after {
-      top: -14px;
-      transition:
-        top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-        opacity 0.1s linear;
-    }
-    .hamburger--collapse-r .hamburger-inner::before {
-      transition:
-        top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-        transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    }
-    .hamburger--collapse-r.is-active .hamburger-inner {
-      transform: translate3d(0, -7px, 0) rotate(45deg);
-      transition-delay: 0.22s;
-      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    .hamburger--collapse-r.is-active .hamburger-inner::after {
-      top: 0;
-      opacity: 0;
-      transition:
-        top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-        opacity 0.1s 0.22s linear;
-    }
-    .hamburger--collapse-r.is-active .hamburger-inner::before {
-      top: 0;
-      transform: rotate(90deg);
-      transition:
-        top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-        transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-  </style>
-
-  <script>
-    const hamburgerButton = document.querySelector(".hamburger");
-    const sidebar = document.querySelector("#sidebar");
-    if (hamburgerButton && sidebar) {
-      hamburgerButton.addEventListener("click", () => {
-        if (hamburgerButton.classList.contains("is-active")) {
-          sidebar.setAttribute("style", "right: -100%");
-          hamburgerButton.classList.remove("is-active");
-        } else {
-          sidebar.setAttribute("style", "right: 0px");
-          hamburgerButton.classList.add("is-active");
-        }
-      });
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const button: HTMLButtonElement = document.getElementById(
-        "dropdownButton"
-      ) as HTMLButtonElement;
-      const menu: HTMLElement = document.getElementById(
-        "dropdownMenu"
-      ) as HTMLElement;
-      const svgIcon: SVGElement = button.querySelector("svg") as SVGElement;
-
-      button.addEventListener("click", function (event: MouseEvent) {
-        const isVisible: boolean = menu.classList.contains("opacity-100");
-        if (!isVisible) {
-          menu.classList.remove("opacity-0", "invisible");
-          menu.classList.add("opacity-100", "visible");
-          svgIcon.style.transform = "rotate(0deg)";
-        } else {
-          menu.classList.remove("opacity-100", "visible");
-          menu.classList.add("opacity-0", "invisible");
-          svgIcon.style.transform = "rotate(90deg)";
-        }
-        event.stopPropagation();
-      });
-
-      document.addEventListener("click", function (event: MouseEvent) {
-        if (
-          event.target instanceof Node &&
-          !menu.contains(event.target) &&
-          !button.contains(event.target)
-        ) {
-          menu.classList.remove("opacity-100", "visible");
-          menu.classList.add("opacity-0", "invisible");
-        }
-      });
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleButton: HTMLElement = document.getElementById(
-        "toggleButton"
-      ) as HTMLElement;
-      const contentArea: HTMLElement = document.getElementById(
-        "contentArea"
-      ) as HTMLElement;
-      const svgIcon: SVGElement = toggleButton.querySelector(
-        "svg"
-      ) as SVGElement;
-
-      toggleButton.addEventListener("click", function () {
-        contentArea.classList.toggle("hidden");
-        if (contentArea.classList.contains("hidden")) {
-          svgIcon.style.transform = "rotate(90deg)";
-        } else {
-          svgIcon.style.transform = "rotate(0deg)";
-        }
-      });
-    });
-  </script>
 </header>
+
+<style>
+  .rtl-dir {
+    direction: rtl;
+  }
+
+  .hamburger {
+    padding: 0px 0px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+  }
+  .hamburger:hover {
+    opacity: 0.7;
+  }
+  .hamburger.is-active:hover {
+    opacity: 0.7;
+  }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #fff;
+  }
+
+  .hamburger-box {
+    width: 21px;
+    height: 16.5px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -1.25px;
+  }
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 21px;
+    height: 2.5px;
+    background-color: #fff;
+    border-radius: 2.5px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    content: "";
+    display: block;
+  }
+  .hamburger-inner::before {
+    top: -7px;
+  }
+  .hamburger-inner::after {
+    bottom: -7px;
+  }
+
+  /*
+ * Collapse
+ */
+  .hamburger--collapse .hamburger-inner {
+    top: auto;
+    bottom: 0;
+    transition-duration: 0.13s;
+    transition-delay: 0.13s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  .hamburger--collapse .hamburger-inner::after {
+    top: -14px;
+    transition:
+      top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+      opacity 0.1s linear;
+  }
+  .hamburger--collapse .hamburger-inner::before {
+    transition:
+      top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+      transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  .hamburger--collapse.is-active .hamburger-inner {
+    transform: translate3d(0, -7px, 0) rotate(-45deg);
+    transition-delay: 0.22s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .hamburger--collapse.is-active .hamburger-inner::after {
+    top: 0;
+    opacity: 0;
+    transition:
+      top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+      opacity 0.1s 0.22s linear;
+  }
+  .hamburger--collapse.is-active .hamburger-inner::before {
+    top: 0;
+    transform: rotate(-90deg);
+    transition:
+      top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+      transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  /*
+ * Collapse Reverse
+ */
+  .hamburger--collapse-r .hamburger-inner {
+    top: auto;
+    bottom: 0;
+    transition-duration: 0.13s;
+    transition-delay: 0.13s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  .hamburger--collapse-r .hamburger-inner::after {
+    top: -14px;
+    transition:
+      top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+      opacity 0.1s linear;
+  }
+  .hamburger--collapse-r .hamburger-inner::before {
+    transition:
+      top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+      transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  .hamburger--collapse-r.is-active .hamburger-inner {
+    transform: translate3d(0, -7px, 0) rotate(45deg);
+    transition-delay: 0.22s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .hamburger--collapse-r.is-active .hamburger-inner::after {
+    top: 0;
+    opacity: 0;
+    transition:
+      top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+      opacity 0.1s 0.22s linear;
+  }
+  .hamburger--collapse-r.is-active .hamburger-inner::before {
+    top: 0;
+    transform: rotate(90deg);
+    transition:
+      top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+      transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+</style>
+
+<script>
+  const hamburgerButton = document.querySelector(".hamburger");
+  const sidebar = document.querySelector("#sidebar");
+  if (hamburgerButton && sidebar) {
+    hamburgerButton.addEventListener("click", () => {
+      if (hamburgerButton.classList.contains("is-active")) {
+        sidebar.setAttribute("style", "right: -100%");
+        hamburgerButton.classList.remove("is-active");
+      } else {
+        sidebar.setAttribute("style", "right: 0px");
+        hamburgerButton.classList.add("is-active");
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const button: HTMLButtonElement = document.getElementById(
+      "dropdownButton"
+    ) as HTMLButtonElement;
+    const menu: HTMLElement = document.getElementById(
+      "dropdownMenu"
+    ) as HTMLElement;
+    const svgIcon: SVGElement = button.querySelector("svg") as SVGElement;
+
+    button.addEventListener("click", function (event: MouseEvent) {
+      const isVisible: boolean = menu.classList.contains("opacity-100");
+      if (!isVisible) {
+        menu.classList.remove("opacity-0", "invisible");
+        menu.classList.add("opacity-100", "visible");
+        svgIcon.style.transform = "rotate(0deg)";
+      } else {
+        menu.classList.remove("opacity-100", "visible");
+        menu.classList.add("opacity-0", "invisible");
+        svgIcon.style.transform = "rotate(90deg)";
+      }
+      event.stopPropagation();
+    });
+
+    document.addEventListener("click", function (event: MouseEvent) {
+      if (
+        event.target instanceof Node &&
+        !menu.contains(event.target) &&
+        !button.contains(event.target)
+      ) {
+        menu.classList.remove("opacity-100", "visible");
+        menu.classList.add("opacity-0", "invisible");
+      }
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton: HTMLElement = document.getElementById(
+      "toggleButton"
+    ) as HTMLElement;
+    const contentArea: HTMLElement = document.getElementById(
+      "contentArea"
+    ) as HTMLElement;
+    const svgIcon: SVGElement = toggleButton.querySelector("svg") as SVGElement;
+
+    toggleButton.addEventListener("click", function () {
+      contentArea.classList.toggle("hidden");
+      if (contentArea.classList.contains("hidden")) {
+        svgIcon.style.transform = "rotate(90deg)";
+      } else {
+        svgIcon.style.transform = "rotate(0deg)";
+      }
+    });
+  });
+</script>
