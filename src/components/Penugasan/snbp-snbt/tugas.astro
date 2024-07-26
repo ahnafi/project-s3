@@ -45,11 +45,21 @@ import { penugasan } from "../../../data/penugasan";
           <img
             src="/images/butterfly-metamorphosis/kepompong.webp"
             alt="Kepompong"
-            class="md:block absolute -top-8 -right-6 max-w-20 md:max-w-[128px] lg:max-w-[196px] xl:max-w-[256px] md:mx-auto md:static z-10 md:z-0 animate-wiggle animate-infinite animate-duration-[2000ms] animate-ease-in-out"
+            class="md:block absolute -top-8 -right-6 max-w-20 md:max-w-[128px] lg:max-w-[196px] xl:max-w-[256px] md:mx-auto md:static z-[999] md:z-0 animate-wiggle animate-infinite animate-duration-[2000ms] animate-ease-in-out"
           />
           <div
-            class="py-2 px-4 border-[5px] border-blue-400 rounded-2xl bg-sky-50 md:mt-2"
+            class="relative py-2 px-4 border-[5px] border-blue-400 rounded-2xl bg-sky-50 md:mt-2 overflow-hidden"
           >
+            <div
+              class="flex justify-center items-center absolute bg-blue-base bg-opacity-80 backdrop-blur-sm top-0 left-0 w-full h-full z-10"
+              id="to-be-announced"
+            >
+              <h2
+                class="font-heading sub-header-font-size text-white-base text-center"
+              >
+                To Be Announced!
+              </h2>
+            </div>
             <h2
               class="font-semibold mb-2 font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl"
             >
@@ -220,29 +230,20 @@ import { penugasan } from "../../../data/penugasan";
 </section>
 
 <script type="text/javascript">
-  window.openModal = function (modalId) {
-    document.getElementById(modalId).style.display = "block";
-    document.getElementsByTagName("body")[0].classList.add("overflow-y-hidden");
-  };
+  document.addEventListener("DOMContentLoaded", function () {
+    const toBeAnnounced = document.getElementById("to-be-announced");
 
-  window.closeModal = function (modalId) {
-    document.getElementById(modalId).style.display = "none";
-    document
-      .getElementsByTagName("body")[0]
-      .classList.remove("overflow-y-hidden");
-  };
-
-  // Close all modals when press ESC
-  document.onkeydown = function (event) {
-    event = event || window.event;
-    if (event.keyCode === 27) {
-      document
-        .getElementsByTagName("body")[0]
-        .classList.remove("overflow-y-hidden");
-      let modals = document.getElementsByClassName("modal");
-      Array.prototype.slice.call(modals).forEach((i) => {
-        i.style.display = "none";
-      });
+    function checkDate() {
+      // Target date for the announcement
+      const targetDate = new Date("2024-07-28T09:00:00");
+      // Current date
+      const currentDate = new Date();
+      // Checking if the current date is greater than or equal to the target date
+      if (currentDate >= targetDate) {
+        toBeAnnounced.remove();
+      }
     }
-  };
+
+    checkDate();
+  });
 </script>

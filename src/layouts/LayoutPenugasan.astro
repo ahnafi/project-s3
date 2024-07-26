@@ -127,7 +127,6 @@ const { title, addClass } = Astro.props;
 
   window.addEventListener("scroll", () => {
     let widthPage = window.innerWidth;
-    console.log(widthPage);
     if (!hasConfettiRun && window.pageYOffset < 1) {
       hasConfettiRun = true; // Set variabel menjadi true agar efek tidak dijalankan lagi
       confetti
