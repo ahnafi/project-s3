@@ -1,43 +1,72 @@
 ---
 import Header from "../components/Header/index.astro";
+import Footer from "../components/Footer/Footer.astro";
 
 interface Props {
   title: string;
+  addClass?: string;
 }
 
-const { title } = Astro.props;
+const { title, addClass } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Soedirman Student Summit (S3) adalah acara tahunan Universitas Jenderal Soedirman(Unsoed) yang menyambut mahasiswa baru (Gensoed), memperkenalkan kehidupan kampus, dan menanamkan nilai-nilai penting bagi pengembangan diri mereka."
+    />
+    <meta
+      name="keywords"
+      content="Soedirman Student Summit, S3, Unsoed, Gensoed, mahasiswa, mahasiswa baru, maba, kehidupan kampus, pengembangan diri, kuliah, PKKMB, ospek"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="google-site-verification"
+      content="_MIx_vjbkk2928F0Nkt8rlChnsrs1YQvbwlk0Q4UlW8"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/webp" href="/images/logo-parts/logo.webp" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | Soedirman Student Summit</title>
+    <title>{title} | Soedirman Student Summit (S3)</title>
+    <!-- Meta tag for social media share -->
+    <meta property="og:title" content="Soedirman Student Summit (S3)" />
+    <meta
+      property="og:description"
+      content="Soedirman Student Summit (S3) adalah acara tahunan Universitas Jenderal Soedirman (Unsoed) yang menyambut mahasiswa baru (Gensoed), memperkenalkan kehidupan kampus, dan menanamkan nilai-nilai penting bagi pengembangan diri mereka."
+    />
+    <meta property="og:image" content="/images/banner.jpg" />
+    <meta
+      property="og:url"
+      content="https://soedirmanstudentsummit.unsoed.ac.id/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Soedirman Student Summit (S3)" />
+    <meta property="og:locale" content="id_ID" />
+    <!-- Shortcut url -->
+    <link rel="canonical" href="https://soedirmanstudentsummit.unsoed.ac.id/" />
+    <!-- Twitter share optimazation -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Soedirman Student Summit (S3)" />
+    <meta
+      name="twitter:description"
+      content="Soedirman Student Summit (S3) adalah acara tahunan Universitas Jenderal Soedirman (Unsoed) yang menyambut mahasiswa baru (Gensoed), memperkenalkan kehidupan kampus, dan menanamkan nilai-nilai penting bagi pengembangan diri mereka."
+    />
+    <meta name="twitter:image" content="/images/banner.jpg" />
+    <!-- Other tag -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Orelega+One&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
   </head>
-  <body class="overflow-x-hidden bg-white-base">
+  <body class=`overflow-x-hidden bg-white-base ${addClass}`>
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>
 
@@ -51,11 +80,11 @@ const { title } = Astro.props;
   }
 
   .header-font-size {
-    @apply text-3xl sm:text-4xl lg:text-5xl;
+    @apply text-4xl sm:text-5xl lg:text-6xl;
   }
 
   .sub-header-font-size {
-    @apply text-2xl sm:text-3xl lg:text-4xl;
+    @apply text-3xl sm:text-4xl lg:text-5xl;
   }
 
   .normal-font-size {
@@ -70,8 +99,47 @@ const { title } = Astro.props;
     @apply text-xs lg:text-sm;
   }
 
+  .bg-size {
+    background-size: 128px;
+  }
+
   @font-face {
-    font-family: 'Love Craft';
-    src: url('/fonts/Love Craft.ttf');
+    font-family: "Love Craft";
+    src: url("/fonts/Love Craft.ttf");
   }
 </style>
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css";
+
+  AOS.init({
+    startEvent: "DOMContentLoaded",
+    mirror: true,
+    once: false,
+  });
+</script>
+
+<script>
+  import JSConfetti from "js-confetti";
+  const confetti = new JSConfetti();
+
+  let hasConfettiRun = false; // Variabel untuk melacak apakah efek confetti sudah dijalankan
+
+  window.addEventListener("scroll", () => {
+    let widthPage = window.innerWidth;
+    console.log(widthPage);
+    if (!hasConfettiRun && window.pageYOffset < 1) {
+      hasConfettiRun = true; // Set variabel menjadi true agar efek tidak dijalankan lagi
+      confetti
+        .addConfetti({
+          confettiRadius: 6,
+          confettiNumber: 100,
+          emojis: ["🦋"],
+          emojiSize: widthPage > 1024 ? 60 : 80,
+        })
+        .then(() => {
+          window.removeEventListener("scroll", () => {});
+        });
+    }
+  });
+</script>
