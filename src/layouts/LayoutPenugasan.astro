@@ -118,3 +118,28 @@ const { title, addClass } = Astro.props;
     once: false,
   });
 </script>
+
+<script>
+  import JSConfetti from "js-confetti";
+  const confetti = new JSConfetti();
+
+  let hasConfettiRun = false; // Variabel untuk melacak apakah efek confetti sudah dijalankan
+
+  window.addEventListener("scroll", () => {
+    let widthPage = window.innerWidth;
+    console.log(widthPage);
+    if (!hasConfettiRun && window.pageYOffset < 1) {
+      hasConfettiRun = true; // Set variabel menjadi true agar efek tidak dijalankan lagi
+      confetti
+        .addConfetti({
+          confettiRadius: 6,
+          confettiNumber: 100,
+          emojis: ["🦋"],
+          emojiSize: widthPage > 1024 ? 60 : 80,
+        })
+        .then(() => {
+          window.removeEventListener("scroll", () => {});
+        });
+    }
+  });
+</script>
