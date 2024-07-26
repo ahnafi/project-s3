@@ -125,23 +125,37 @@ const { title, addClass } = Astro.props;
 
   // NEED TIMER FOR THIS
 
-  let hasConfettiRun = false; // Variabel untuk melacak apakah efek confetti sudah dijalankan
+  document.addEventListener("DOMContentLoaded", function () {
+    const toBeAnnounced = document.getElementById("to-be-announced");
 
-  window.addEventListener("scroll", () => {
-    let widthPage = window.innerWidth;
-    if (!hasConfettiRun && window.scrollY < 1) {
-      hasConfettiRun = true; // Set variabel menjadi true agar efek tidak dijalankan lagi
-      confetti
-        .addConfetti({
-          confettiRadius: 10,
-          confettiNumber: 200,
-          // emojis: ["🦋"],
-          emojiSize: widthPage > 1024 ? 60 : 80,
-          confettiColors: ["#facc15", "#22c55e", "#316fe8", "#f1f5f9"],
-        })
-        .then(() => {
-          window.removeEventListener("scroll", () => {});
+    function checkDate() {
+      // Target date for the announcement
+      const targetDate = new Date("2024-07-28T09:00:00");
+      let hasConfettiRun = false; // Variabel untuk melacak apakah efek confetti sudah dijalankan
+      // Current date
+      const currentDate = new Date();
+      // Checking if the current date is greater than or equal to the target date
+      if (currentDate >= targetDate) {
+        window.addEventListener("scroll", () => {
+          let widthPage = window.innerWidth;
+          if (!hasConfettiRun && window.scrollY < 1) {
+            hasConfettiRun = true; // Set variabel menjadi true agar efek tidak dijalankan lagi
+            confetti
+              .addConfetti({
+                confettiRadius: 10,
+                confettiNumber: 200,
+                // emojis: ["🦋"],
+                emojiSize: widthPage > 1024 ? 60 : 80,
+                confettiColors: ["#facc15", "#22c55e", "#316fe8", "#f1f5f9"],
+              })
+              .then(() => {
+                window.removeEventListener("scroll", () => {});
+              });
+          }
         });
+      }
     }
+
+    checkDate();
   });
 </script>
