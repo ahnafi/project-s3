@@ -22,7 +22,7 @@ import { penugasan } from "../../../data/penugasan";
         >
         </div>
       </div>
-      <div class="flex md:contents" id="penugasan-ketiga">
+      <div class="flex md:contents" id="penugasan-kedua">
         <div class="relative col-start-5 col-end-6 mr-4 md:mx-auto">
           <div class="flex items-center justify-center w-6 h-full">
             <div class="w-1 h-full bg-blue-400"></div>
@@ -34,11 +34,18 @@ import { penugasan } from "../../../data/penugasan";
         </div>
         <div
           class="relative p-1 mb-16 md:mb-0 md:p-4 rounded-xl col-start-6 col-end-10 mr-auto"
+          data-aos="zoom-out-up"
+          data-aos-delay="0"
+          data-aos-duration="600"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+          data-aos-mirror="true"
+          data-aos-anchor-placement="top-center"
         >
           <img
             src="/images/butterfly-metamorphosis/kepompong.webp"
             alt="Kepompong"
-            class="md:block absolute -top-8 -right-6 max-w-20 md:max-w-[128px] lg:max-w-[196px] xl:max-w-[256px] md:mx-auto md:static z-10 md:z-0"
+            class="md:block absolute -top-8 -right-6 max-w-20 md:max-w-[128px] lg:max-w-[196px] xl:max-w-[256px] md:mx-auto md:static z-10 md:z-0 animate-wiggle animate-infinite animate-duration-[2000ms] animate-ease-in-out"
           />
           <div
             class="py-2 px-4 border-[5px] border-blue-400 rounded-2xl bg-sky-50 md:mt-2"
@@ -46,7 +53,7 @@ import { penugasan } from "../../../data/penugasan";
             <h2
               class="font-semibold mb-2 font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl"
             >
-              {penugasan.penugasanKetiga.title}
+              Penugasan Kedua
             </h2>
             <ul
               class="list-decimal pl-2 sm:pl-3 md:pl-4 small-font-size text-justify"
@@ -67,14 +74,22 @@ import { penugasan } from "../../../data/penugasan";
           </div>
         </div>
       </div>
-      <div class="flex md:contents flex-row-reverse" id="penugasan-kedua">
+      <div class="flex md:contents flex-row-reverse">
         <div
           class="relative p-1 mb-16 md:mb-0 md:p-4 rounded-xl col-start-1 col-end-5 mr-auto md:ml-auto"
+          data-aos="zoom-out-up"
+          data-aos-delay="0"
+          data-aos-duration="600"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+          data-aos-mirror="true"
+          data-aos-anchor-placement="top-center"
         >
           <img
             src="/images/butterfly-metamorphosis/ulat.webp"
             alt="Ulat"
-            class="md:block absolute -top-8 -right-6 max-w-20 md:max-w-[128px] lg:max-w-[196px] xl:max-w-[256px] md:mx-auto md:static z-10 md:z-0"
+            class="md:block absolute -top-8 -right-6 max-w-20 md:max-w-[128px] lg:max-w-[196px] xl:max-w-[256px] md:mx-auto md:static z-10 md:z-0 animate-wiggle animate-infinite animate-duration-[2000ms] animate-ease-in-out"
+            id="penugasan-pertama"
           />
           <div
             class="relative py-2 px-4 border-[5px] border-blue-400 rounded-2xl bg-sky-50 md:mt-2"
@@ -82,7 +97,7 @@ import { penugasan } from "../../../data/penugasan";
             <h2
               class="font-semibold mb-2 font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl"
             >
-              {penugasan.penugasanKedua.title}
+              Penugasan Pertama
             </h2>
             <ul
               class="list-decimal pl-2 sm:pl-3 md:pl-4 small-font-size text-justify"
@@ -112,7 +127,7 @@ import { penugasan } from "../../../data/penugasan";
           </div>
         </div>
       </div>
-      <div class="flex md:contents" id="penugasan-pertama">
+      <div class="flex md:contents">
         <div class="relative col-start-5 col-end-6 mr-4 md:mx-auto">
           <div class="flex items-center justify-center w-6 h-full">
             <div
@@ -127,37 +142,19 @@ import { penugasan } from "../../../data/penugasan";
         </div>
         <div
           class="relative p-1 mb-16 md:mb-0 md:p-4 rounded-xl col-start-6 col-end-10 mr-auto"
+          data-aos="zoom-out-up"
+          data-aos-delay="0"
+          data-aos-duration="600"
+          data-aos-easing="ease-in-out"
+          data-aos-once="false"
+          data-aos-mirror="true"
+          data-aos-anchor-placement="top-center"
         >
           <img
             src="/images/butterfly-metamorphosis/telur.webp"
             alt="Telur"
-            class="md:block absolute -top-8 -right-6 max-w-20 md:max-w-[128px] lg:max-w-[196px] xl:max-w-[256px] md:mx-auto md:static z-10 md:z-0"
+            class="max-w-[196px] xl:max-w-[256px] animate-wiggle animate-infinite animate-duration-[2000ms] animate-ease-in-out"
           />
-          <div
-            class="py-2 px-4 border-[5px] border-blue-400 rounded-2xl bg-sky-50 md:mt-2"
-          >
-            <h2
-              class="font-semibold mb-2 font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl"
-            >
-              {penugasan.penugasanPertama.title}
-            </h2>
-            <ul
-              class="list-decimal pl-2 sm:pl-3 md:pl-4 small-font-size text-justify"
-            >
-              {
-                penugasan.penugasanPertama.description.map((item) => (
-                  <li>
-                    <strong>{item.type}</strong>
-                    <ul class="list-disc pl-4">
-                      {item.task.map((task) => (
-                        <li>{task}</li>
-                      ))}
-                    </ul>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -165,17 +162,35 @@ import { penugasan } from "../../../data/penugasan";
   <img
     src="/images/elements/saturnus.webp"
     alt="Planet Saturnus"
-    class="hidden opacity-90 md:block absolute md:top-[360px] lg:top-[240px] md:-left-[240px] lg:-left-[360px] md:max-w-[512px] lg:max-w-[768px] z-10"
+    class="hidden opacity-90 md:block absolute md:top-[480px] lg:top-[240px] md:-left-[240px] lg:-left-[360px] md:max-w-[512px] lg:max-w-[768px] z-10 nimate-shake animate-infinite animate-duration-[6000ms] animate-ease-linear"
+    data-aos="fade-right"
+    data-aos-ofset="200"
+    data-aos-delay="0"
+    data-aos-duration="600"
+    data-aos-easing="ease-in-out"
+    data-aos-once="false"
+    data-aos-anchor-placement="bottom-bottom"
   />
   <img
     src="/images/elements/jupiter.webp"
     alt="Planet Yupiter"
-    class="hidden opacity-90 md:block absolute md:top-[1640px] lg:top-[1240px] md:-right-[240px] lg:-right-[360px] md:max-w-[512px] lg:max-w-[840px] z-10"
+    class="hidden opacity-90 md:block absolute md:top-[1560px] lg:top-[1440px] md:-right-[240px] lg:-right-[360px] md:max-w-[640px] lg:max-w-[840px] z-10 animate-pulse animate-infinite animate-duration-[6000ms] animate-ease-in"
+    data-aos="fade-left"
+    data-aos-delay="0"
+    data-aos-duration="600"
+    data-aos-easing="ease-in-out"
+    data-aos-once="false"
   />
   <img
     src="/images/elements/awan-gaje.webp"
     alt="Awan Pokonya"
-    class="hidden opacity-90 md:block absolute md:bottom-[360px] lg:bottom-[64px] md:-left-[240px] lg:-left-[360px] md:max-w-[512px] lg:max-w-[840px] z-10"
+    class="hidden opacity-90 md:block absolute md:-bottom-[196px] lg:-bottom-[400px] md:-left-[240px] lg:-left-[360px] md:max-w-[512px] lg:max-w-[840px] z-10 animate-shake animate-infinite animate-duration-[6000ms] animate-ease-linear"
+    data-aos="fade-right"
+    data-aos-delay="0"
+    data-aos-duration="600"
+    data-aos-easing="ease-in-out"
+    data-aos-once="false"
+    data-aos-ofset="-150"
   />
 </section>
 
