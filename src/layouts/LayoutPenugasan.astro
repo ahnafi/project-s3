@@ -123,19 +123,22 @@ const { title, addClass } = Astro.props;
   import JSConfetti from "js-confetti";
   const confetti = new JSConfetti();
 
+  // NEED TIMER FOR THIS
+
   let hasConfettiRun = false; // Variabel untuk melacak apakah efek confetti sudah dijalankan
 
   window.addEventListener("scroll", () => {
     let widthPage = window.innerWidth;
     console.log(widthPage);
-    if (!hasConfettiRun && window.pageYOffset < 1) {
+    if (!hasConfettiRun && window.scrollY < 1) {
       hasConfettiRun = true; // Set variabel menjadi true agar efek tidak dijalankan lagi
       confetti
         .addConfetti({
-          confettiRadius: 6,
-          confettiNumber: 100,
-          emojis: ["🦋"],
+          confettiRadius: 10,
+          confettiNumber: 200,
+          // emojis: ["🦋"],
           emojiSize: widthPage > 1024 ? 60 : 80,
+          confettiColors: ["#facc15", "#22c55e", "#316fe8", "#f1f5f9"],
         })
         .then(() => {
           window.removeEventListener("scroll", () => {});
