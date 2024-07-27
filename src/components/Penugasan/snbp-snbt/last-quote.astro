@@ -7,6 +7,7 @@
       <div class="text-center max-w-2xl m-auto">
         <h1
           class="font-bold sub-header-font-size font-heading mb-2"
+          id="title"
           data-aos="fade-down"
           data-aos-delay="0"
           data-aos-duration="600"
@@ -18,6 +19,7 @@
         </h1>
         <p
           class="normal-font-size"
+          id="paragraft"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="600"
@@ -52,3 +54,26 @@
     data-aos-once="false"
   />
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const title = document.getElementById("title") as HTMLHeadingElement;
+    const paragraft = document.getElementById(
+      "paragraft"
+    ) as HTMLParagraphElement;
+
+    function checkDate() {
+      // Target date for the announcement
+      const targetDate = new Date("2024-08-08T09:00:00");
+      // Current date
+      const currentDate = new Date();
+      // Checking if the current date is greater than or equal to the target date
+      if (currentDate >= targetDate) {
+        title.innerHTML = "Selamat penugasan S3 selesai!";
+        paragraft.innerHTML =
+          "Wah, Selamat ya Sobat Gensoed! Kini kamu semakin dengan dengan Soedirman Student Summit. Persiapkan semangat kamu untuk di Hari H nanti yaa gens! Sampai jumpa di Soedirman Student Summit!👋🏻";
+      }
+    }
+
+    checkDate();
+  });
+</script>

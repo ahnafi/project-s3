@@ -229,9 +229,9 @@ import { penugasan } from "../../../data/penugasan";
   />
 </section>
 
-<script type="text/javascript">
+<script>
   document.addEventListener("DOMContentLoaded", function () {
-    const toBeAnnounced = document.getElementById("to-be-announced");
+    const toBeAnnounced = document.getElementById("to-be-announced") as HTMLDivElement;
 
     function checkDate() {
       // Target date for the announcement
