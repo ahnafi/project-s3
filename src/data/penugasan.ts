@@ -52,13 +52,6 @@ const penugasan = {
         ],
       },
       {
-        type: "Papermob dan Papan Kelompok",
-        task: [
-          "Merancang papermob sesuai dengan bagiannya masing-masing.",
-          "Membuat papan kelompok yang berisikan nama kelompok dan gugus, serta ketentuan yang sudah ditentukan.",
-        ],
-      },
-      {
         type: "Borang FGD",
         task: [
           "Penugasan borang FGD akan dipublikasikan melalui media sosial Instagram masing masing.",

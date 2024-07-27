@@ -94,7 +94,8 @@ import Layout from "../../layouts/Layout.astro";
             <div>
               <a
                 class="text-dark-base font-semibold rounded-md inline-flex items-center md:mb-2 lg:mb-0 text-xs sm:text-sm md:text-base hover:before:bg-redborder-red-500 relative overflow-hidden border border-dark-base bg-white px-4 py-1 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-base before:transition-all before:duration-500 hover:border-blue-base hover:text-white-base hover:before:left-0 hover:before:w-full"
-                href="/penugasan/mandiri#hero"
+                href="/coming-soon"
+                id="penugasanMandiri"
               >
                 <span class="relative z-10">Cek Penugasan</span>
                 <svg
@@ -117,3 +118,24 @@ import Layout from "../../layouts/Layout.astro";
     </div>
   </section>
 </Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toBeAnnounced = document.getElementById(
+      "penugasanMandiri"
+    ) as HTMLAnchorElement;
+
+    function checkDate() {
+      // Target date for the announcement
+      const targetDate = new Date("2024-08-06T15:00:00");
+      // Current date
+      const currentDate = new Date();
+      // Checking if the current date is greater than or equal to the target date
+      if (currentDate >= targetDate) {
+        toBeAnnounced.href = "/penugasan/mandiri#hero";
+      }
+    }
+
+    checkDate();
+  });
+</script>
