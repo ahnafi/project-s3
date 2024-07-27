@@ -126,6 +126,12 @@ const { title, addClass } = Astro.props;
   // NEED TIMER FOR THIS
 
   document.addEventListener("DOMContentLoaded", function () {
+    const quoteTitle = document.querySelector(
+      "#quote h1"
+    ) as HTMLHeadingElement;
+    const quoteContent = document.querySelector(
+      "#quote p"
+    ) as HTMLParagraphElement;
     // const toBeAnnounced = document.getElementById("to-be-announced");
 
     function checkDate() {
@@ -136,6 +142,16 @@ const { title, addClass } = Astro.props;
       const currentDate = new Date();
       // Checking if the current date is greater than or equal to the target date
       if (currentDate >= targetDate) {
+        // Change the content of the quote
+        if (quoteTitle) {
+          quoteTitle.innerText = "Selamat Penugasan S3 Selesai!";
+        }
+
+        if (quoteContent) {
+          quoteContent.innerText =
+            "Wah, Selamat ya Sobat Gensoed! Kini kamu semakin dekat dengan Soedirman Student Summit. Persiapkan semangat kamu untuk di Hari-H nanti yaa Gens! Sampai jumpa di puncak acara Soedirman Student Summit!👋🏻";
+        }
+
         window.addEventListener("scroll", () => {
           let widthPage = window.innerWidth;
           if (!hasConfettiRun && window.scrollY < 1) {
