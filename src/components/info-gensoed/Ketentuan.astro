@@ -2,15 +2,15 @@
 import { ketentuanUmum } from '../../data/dresscode'
 ---
 
-<article class="py-12 md:ps-6 ">
-  <h2 class="font-heading sub-header-font-size pb-4">
+<article class="py-12 md:ps-6 animate-fade-up animate-once animate-duration-[800ms] animate-delay-200 animate-ease-in-out">
+  <h2 class="font-heading text-lg md:text-xl lg:text-2xl pb-4">
     Ketentuan umum pakaian Mahasiswa baru
   </h2>
   <div class="">
     <ul>
       {
         ketentuanUmum.map((data) => (
-          <li class="small-font-size list-inside list-disc max-w-2xl">{data}</li>
+          <li class="small-font-size list-inside list-disc max-w-2xl lg:max-w-full">{data}</li>
         ))
       }
     </ul>

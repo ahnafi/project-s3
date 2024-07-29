@@ -46,13 +46,13 @@ const female: dataKetentuan = {
     img: [
       {
         src: "/images/dresscode/cewe-day-two.webp",
-        title: "Contoh dress code mahasiswa baru Perempuan day 1",
+        title: "Contoh dress code mahasiswa baru Perempuan day 2",
         list: ["Rambut wajib dikucir satu dan rambut tidak berwarna"],
       },
       {
         src: "/images/dresscode/cewe-day-two-hijab.webp",
         title:
-          "Contoh dress code mahasiswa baru Perempuan yang mengenakan hijab day 1",
+          "Contoh dress code mahasiswa baru Perempuan yang mengenakan hijab day 2",
         list: ["Kerudung hitam segiempat (dilarang pashmina)"],
       },
     ],

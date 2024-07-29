@@ -13,7 +13,7 @@ const { data } = Astro.props;
 >
   {
     data.img.map(({ src, title, list }) => (
-      <div class="">
+      <div class="mx-auto md:mx-0 animate-fade animate-once animate-duration-[800ms] animate-delay-200 animate-ease-in-out">
         <div class="max-w-md">
           <img src={src} alt={title} class="w-full rounded-md" />
         </div>
