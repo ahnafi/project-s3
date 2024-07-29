@@ -1,0 +1,36 @@
+---
+interface Props {
+  data: {
+    img: { src: string; title?: string; list?: string[] }[];
+  };
+}
+
+const { data } = Astro.props;
+---
+
+<div
+  class="flex w-full flex-col justify-center md:flex-row lg:justify-around gap-2"
+>
+  {
+    data.img.map(({ src, title, list }) => (
+      <div class="">
+        <div class="max-w-md">
+          <img src={src} alt={title} class="w-full rounded-md" />
+        </div>
+        <div class="max-w-md">
+          <h2
+            class="font-heading text-base md:text-xl lg:text-2xl text-center"
+            id="title"
+          >
+            {title}
+          </h2>
+          <ul class="" id="list">
+            {list?.map((e) => (
+              <li class="small-font-size list-inside list-disc">{e}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))
+  }
+</div>

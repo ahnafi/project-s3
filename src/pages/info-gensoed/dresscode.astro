@@ -1,92 +1,30 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-
-interface Ketentuan {
-  img: { src: string; title?: string; list?: string[] }[];
-  article: { title: string; list: string[] }[];
-}
-
-const male: Ketentuan = {
-  img: [
-    {
-      src: "/images/documentations/documentation-7.webp",
-      title: "Laki-Laki",
-    },
-  ],
-  article: [
-    {
-      title: "Pakaian yang Diperbolehkan",
-      list: [
-        "Memakai kemeja putih polos, lengan panjang.",
-        "Celana panjang bahan kain berwarna hitam.",
-        "Sepatu pantofel hitam.",
-        "Ikatan pinggang berwarna hitam.",
-      ],
-    },
-    {
-      title: "Aksesoris yang Diperbolehkan",
-      list: ["Menggunakan dasi hitam.", "Memakai jam tangan (tidak mencolok)."],
-    },
-    {
-      title: "Larangan",
-      list: [
-        "Tidak diperbolehkan memakai jeans.",
-        "Tidak memakai sandal.",
-        "Tidak memakai aksesoris berlebihan.",
-      ],
-    },
-  ],
-};
-
-const female: Ketentuan = {
-  img: [
-    {
-      src: "/images/documentations/documentation-7.webp",
-      title: "Berkerudung",
-      list: [
-        "Menggunakan kerudung warna hitam atau putih.",
-        "Kemeja putih polos lengan panjang.",
-        "Rok panjang bahan kain berwarna hitam.",
-        "Sepatu pantofel hitam.",
-      ],
-    },
-    {
-      src: "/images/documentations/documentation-8.webp",
-      title: "Tidak Berkerudung",
-      list: [
-        "Kemeja putih polos lengan panjang.",
-        "Rok panjang bahan kain berwarna hitam.",
-        "Sepatu pantofel hitam.",
-      ],
-    },
-  ],
-  article: [
-    {
-      title: "Aksesoris yang Diperbolehkan",
-      list: ["Menggunakan dasi hitam.", "Memakai jam tangan (tidak mencolok)."],
-    },
-    {
-      title: "Larangan",
-      list: [
-        "Tidak diperbolehkan memakai jeans.",
-        "Tidak memakai sandal.",
-        "Tidak memakai aksesoris berlebihan.",
-      ],
-    },
-  ],
-};
+import Ketentuan from "../../components/info-gensoed/Ketentuan.astro";
+import ContohDresscode from "../../components/info-gensoed/ContohDresscode.astro";
+import { male, female } from "../../data/dresscode";
 ---
 
 <Layout
   title="dresscode"
   addClass="bg-[url('/images/patterns/batik.svg')] bg-size"
 >
-  <section class="py-32 section-padding-x">
+  <section class="pt-32 section-padding-x">
     <div class="text-center md:text-left">
       <h1 class="text-3xl lg:text-4xl text-gray-800 font-love">
         Aturan Cara Berpakaian <br />
         Gensoed 2024
       </h1>
+      <form id="search" class="lg:max-w-sm flex justify-center md:justify-start py-2">
+        <select
+          id="day"
+          name="day"
+          class="bg-gray-50 border-2 border-gray-300 rounded-lg 2-1/4 focus:ring-blue-base focus:border-blue-500 block px-2 py-2 bg-transparent w-1/2 transition-all duration-200 basis-5/12 md:basis-2/5 text-sm md:text-base"
+        >
+          <option value="dayOne" selected class="text-dark-base my-2 block border-b border-gray-100 py-1 font-semibold hover:text-black md:mx-2">Day 1</option>
+          <option value="dayTwo" class="text-dark-base ">Day 2</option>
+        </select>
+      </form>
     </div>
     <div
       class="w-full py-4 flex justify-center items-center text-center normal-font-size"
@@ -106,115 +44,94 @@ const female: Ketentuan = {
     </div>
     <!-- laki laki -->
     <div class="" id="male">
-      <div
-        class="flex w-full flex-col justify-center md:flex-row lg:justify-around gap-2"
-      >
-        {
-          male.img.map((data) => (
-            <div class="">
-              <div class="max-w-md">
-                <img
-                  src={data.src}
-                  alt="photo dresscode"
-                  class="w-full rounded-md"
-                />
-              </div>
-              <div class="max-w-md">
-                <h2 class="font-heading text-base md:text-xl lg:text-2xl text-center">
-                  {data.title}
-                </h2>
-                <ul class="">
-                  {data.list?.map((e) => (
-                    <li class="small-font-size list-inside list-disc">{e}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-      <article class="py-12 md:ps-6">
-        <h2 class="font-heading sub-header-font-size pb-4">Ketentuan</h2>
-        <div>
-          <!-- loop -->
-          {
-            male.article.map((data) => (
-              <div>
-                <h3>{data.title}</h3>
-                <ul>
-                  {data.list.map((list) => (
-                    <li class="small-font-size list-inside list-disc">
-                      {list}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))
-          }
-          <!--  -->
-        </div>
-      </article>
+      <ContohDresscode data={male.dayOne} />
     </div>
     <!--  -->
     <!-- perempuan -->
     <div class="hidden" id="female">
-      <div class="flex w-full flex-col md:flex-row lg:justify-around gap-2">
-        {
-          female.img.map((data) => (
-            <div class="">
-              <div class="max-w-md">
-                <img
-                  src={data.src}
-                  alt={"photo dresscode " + data.title}
-                  class="w-full rounded-md"
-                />
-              </div>
-              <div class="max-w-md">
-                <h2 class="font-heading text-base md:text-xl lg:text-2xl text-center">
-                  {data.title}
-                </h2>
-                <ul class="">
-                  {data.list?.map((e) => (
-                    <li class="small-font-size list-inside list-disc">{e}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-      <article class="py-12 md:ps-6">
-        <h2 class="font-heading sub-header-font-size pb-4">Ketentuan</h2>
-        <div>
-          <!-- loop -->
-          {
-            female.article.map((data) => (
-              <div>
-                <h3>{data.title}</h3>
-                <ul>
-                  {data.list.map((list) => (
-                    <li class="small-font-size list-inside list-disc">
-                      {list}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))
-          }
-          <!--  -->
-        </div>
-      </article>
+      <ContohDresscode data={female.dayOne} />
     </div>
     <!--  -->
+  </section>
+  <section class="section-padding-x">
+    <Ketentuan />
   </section>
 </Layout>
 
 <script>
+  import { male, female } from "../../data/dresscode";
   const btnMale = document.getElementById("btnMale") as HTMLButtonElement;
   const btnFemale = document.getElementById("btnFemale") as HTMLButtonElement;
 
-  const male = document.getElementById("male") as HTMLDivElement;
-  const female = document.getElementById("female") as HTMLDivElement;
+  const divMale = document.getElementById("male") as HTMLDivElement;
+  const divFemale = document.getElementById("female") as HTMLDivElement;
+
+  const search = document.getElementById("search") as HTMLFormElement;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    if (search) {
+      search.addEventListener("submit", (e) => e.preventDefault());
+      search.addEventListener("input", (e) => {
+        e.preventDefault();
+        let data = new FormData(search);
+        let getDay = data.get("day")?.toString().toLowerCase();
+        console.log(getDay);
+
+        if (getDay === "dayone") {
+          // ubah src link dan innerhtml menjadi dayOne
+          divMale.getElementsByTagName("img")[0].src = male.dayOne.img[0].src;
+          divMale.getElementsByTagName("img")[0].alt =
+            male.dayOne.img[0].title ?? "";
+          divMale.getElementsByTagName("h2")[0].innerHTML =
+            male.dayOne.img[0].title ?? "";
+          divMale.getElementsByTagName("ul")[0].innerHTML = (male.dayOne.img[0].list
+            ?.map((e) => `<li class="small-font-size list-inside list-disc">${e}</li>`) ?? []).join('')
+            // female
+          divFemale.getElementsByTagName("img")[0].src = female.dayOne.img[0].src;
+          divFemale.getElementsByTagName("img")[0].alt =
+            female.dayOne.img[0].title ?? "";
+          divFemale.getElementsByTagName("h2")[0].innerHTML =
+            female.dayOne.img[0].title ?? "";
+          divFemale.getElementsByTagName("ul")[0].innerHTML = (female.dayOne.img[0].list
+            ?.map((e) => `<li class="small-font-size list-inside list-disc">${e}</li>`) ?? []).join('')
+          divFemale.getElementsByTagName("img")[1].src = female.dayOne.img[1].src;
+          divFemale.getElementsByTagName("img")[1].alt =
+            female.dayOne.img[1].title ?? "";
+          divFemale.getElementsByTagName("h2")[1].innerHTML =
+            female.dayOne.img[1].title ?? "";
+          divFemale.getElementsByTagName("ul")[1].innerHTML = (female.dayOne.img[1].list
+            ?.map((e) => `<li class="small-font-size list-inside list-disc">${e}</li>`) ?? []).join('')
+        } else if (getDay === "daytwo") {
+          // ubah src link dan innerhtml menjadi dayTwo
+          // male
+          divMale.getElementsByTagName("img")[0].src = male.dayTwo.img[0].src;
+          divMale.getElementsByTagName("img")[0].alt =
+            male.dayTwo.img[0].title ?? "";
+          divMale.getElementsByTagName("h2")[0].innerHTML =
+            male.dayTwo.img[0].title ?? "";
+          divMale.getElementsByTagName("ul")[0].innerHTML = (male.dayTwo.img[0].list
+            ?.map((e) => `<li class="small-font-size list-inside list-disc">${e}</li>`) ?? []).join('')
+            // female
+          divFemale.getElementsByTagName("img")[0].src = female.dayTwo.img[0].src;
+          divFemale.getElementsByTagName("img")[0].alt =
+            female.dayTwo.img[0].title ?? "";
+          divFemale.getElementsByTagName("h2")[0].innerHTML =
+            female.dayTwo.img[0].title ?? "";
+          divFemale.getElementsByTagName("ul")[0].innerHTML = (female.dayTwo.img[0].list
+            ?.map((e) => `<li class="small-font-size list-inside list-disc">${e}</li>`) ?? []).join('')
+          divFemale.getElementsByTagName("img")[1].src = female.dayTwo.img[1].src;
+          divFemale.getElementsByTagName("img")[1].alt =
+            female.dayTwo.img[1].title ?? "";
+          divFemale.getElementsByTagName("h2")[1].innerHTML =
+            female.dayTwo.img[1].title ?? "";
+          divFemale.getElementsByTagName("ul")[1].innerHTML = (female.dayTwo.img[1].list
+            ?.map((e) => `<li class="small-font-size list-inside list-disc">${e}</li>`) ?? []).join('')
+        } else {
+          alert("error");
+        }
+      });
+    }
+  });
 
   btnMale.addEventListener("click", () => {
     btnMale.classList.add("bg-green-base");
@@ -222,8 +139,8 @@ const female: Ketentuan = {
     btnFemale.classList.add("bg-slate-200");
     btnFemale.classList.remove("bg-green-base");
 
-    male.classList.remove("hidden");
-    female.classList.add("hidden");
+    divMale.classList.remove("hidden");
+    divFemale.classList.add("hidden");
   });
 
   btnFemale.addEventListener("click", () => {
@@ -232,7 +149,7 @@ const female: Ketentuan = {
     btnFemale.classList.remove("bg-slate-200");
     btnFemale.classList.add("bg-green-base");
 
-    male.classList.add("hidden");
-    female.classList.remove("hidden");
+    divMale.classList.add("hidden");
+    divFemale.classList.remove("hidden");
   });
 </script>

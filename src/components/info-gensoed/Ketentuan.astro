@@ -1,0 +1,18 @@
+---
+import { ketentuanUmum } from '../../data/dresscode'
+---
+
+<article class="py-12 md:ps-6 ">
+  <h2 class="font-heading sub-header-font-size pb-4">
+    Ketentuan umum pakaian Mahasiswa baru
+  </h2>
+  <div class="">
+    <ul>
+      {
+        ketentuanUmum.map((data) => (
+          <li class="small-font-size list-inside list-disc max-w-2xl">{data}</li>
+        ))
+      }
+    </ul>
+  </div>
+</article>

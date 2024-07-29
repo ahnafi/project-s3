@@ -2,75 +2,23 @@
 import Layout from "../../layouts/Layout.astro";
 
 interface Ketentuan {
-  img: { src: string; title?: string; list?: string[] }[];
-  article: { title: string; list: string[] }[];
+  src: string;
+  title?: string;
+  list: string[];
 }
 
-const male: Ketentuan = {
-  img: [
-    {
-      src: "/images/documentations/documentation-7.webp",
-      title: "Perlengkapan Wajib",
-      list: [
-        "ID Card yang telah disediakan.",
-        "Alat tulis (pena, pensil, buku catatan).",
-        "Botol minum minimal 1 liter.",
-        "Makanan ringan untuk 2 hari.",
-        "Masker cadangan.",
-        "Hand sanitizer.",
-        "Jas hujan atau payung.",
-        "Topi atau pelindung kepala.",
-      ],
-    },
-  ],
-  article: [
-    {
-      title: "Larangan Membawa",
-      list: [
-        "Barang elektronik (kecuali handphone).",
-        "Perhiasan atau barang berharga berlebihan.",
-        "Senjata tajam atau barang berbahaya.",
-        "Rokok atau alat vape.",
-      ],
-    },
-  ],
-};
-
-const female: Ketentuan = {
-  img: [
-    {
-      src: "/images/documentations/documentation-7.webp",
-      title: "Perlengkapan Wajib",
-      list: [
-        "ID Card yang telah disediakan.",
-        "Alat tulis (pena, pensil, buku catatan).",
-        "Botol minum minimal 1 liter.",
-        "Makanan ringan untuk 2 hari.",
-        "Masker cadangan.",
-        "Hand sanitizer.",
-        "Jas hujan atau payung.",
-        "Topi atau pelindung kepala.",
-      ],
-    },
-    {
-      src: "/images/documentations/documentation-8.webp",
-      title: "Perlengkapan Tambahan",
-      list: [
-        "Pembalut atau kebutuhan wanita lainnya.",
-        "Obat pribadi (jika diperlukan).",
-      ],
-    },
-  ],
-  article: [
-    {
-      title: "Larangan Membawa",
-      list: [
-        "Barang elektronik (kecuali handphone).",
-        "Perhiasan atau barang berharga berlebihan.",
-        "Senjata tajam atau barang berbahaya.",
-        "Rokok atau alat vape.",
-      ],
-    },
+const peralatan: Ketentuan = {
+  src: "/images/peralatan.webp",
+  title: "Peralatan yang harus dibawa",
+  list: [
+    "ID Card yang telah disediakan.",
+    "Alat tulis (pena, pensil, buku catatan).",
+    "Air minum pribadi.",
+    "Payung, Ponco atau jas hujan.",
+    "Obat-obatan pribadi.",
+    "Alat sholat (mukena, sajadah, dan perlengkapan sholat lainnya).",
+    "Botol 1,5 liter berisi air untuk berwudhu.",
+    "Sandal",
   ],
 };
 ---
@@ -80,161 +28,33 @@ const female: Ketentuan = {
   addClass="bg-[url('/images/patterns/batik.svg')] bg-size"
 >
   <section class="py-32 section-padding-x">
-    <div class="text-center md:text-left">
+    <div class="text-center md:text-left mb-4">
       <h1 class="text-3xl lg:text-4xl text-gray-800 font-love">
-        Perlengkapan yang harus dibawa <br />
+        Peralatan yang harus dibawa <br />
         Gensoed 2024
       </h1>
     </div>
-    <div
-      class="w-full py-4 flex justify-center items-center text-center normal-font-size"
-    >
-      <button
-        class="bg-yellow-base w-1/2 py-2 rounded-l-md font-bold"
-        id="btnMale"
-      >
-        Laki Laki
-      </button>
-      <button
-        class="bg-slate-200 w-1/2 py-2 font-bold rounded-r-md"
-        id="btnFemale"
-      >
-        Perempuan
-      </button>
-    </div>
-    <!-- laki laki -->
-    <div class="" id="male">
-      <div class="flex w-full flex-col lg:justify-around gap-6">
-        {
-          male.img.map((data) => (
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div class="max-w-md">
-                <img
-                  src={data.src}
-                  alt={"photo dresscode " + data.title}
-                  class="w-full rounded-md"
-                />
-                <h2 class="font-heading text-base md:text-xl lg:text-2xl text-center">
-                  {data.title}
-                </h2>
-              </div>
-              <div class="max-w-md">
-                <h2 class="font-heading text-base md:text-xl lg:text-2xl ">
-                  Ketentuan
-                </h2>
-                <ul class="">
-                  {data.list?.map((e) => (
-                    <li class="small-font-size list-inside list-disc">{e}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-      <article class="py-12 md:ps-6">
-        <h2 class="font-heading sub-header-font-size pb-4">Ketentuan</h2>
-        <div>
-          <!-- loop -->
+    <div class="flex flex-col-reverse md:flex-row gap-4">
+      <div class="max-w-md mx-auto md:mx-0">
+        <h2 class="font-heading text-lg md:text-xl lg:text-2xl">
+          {peralatan.title}
+        </h2>
+        <ul class="ps-2">
           {
-            male.article.map((data) => (
-              <div>
-                <h3>{data.title}</h3>
-                <ul>
-                  {data.list.map((list) => (
-                    <li class="small-font-size list-inside list-disc">
-                      {list}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            peralatan.list.map((e) => (
+              <li class=".normal-font-size list-inside list-decimal">{e}</li>
             ))
           }
-          <!--  -->
-        </div>
-      </article>
-    </div>
-    <!--  -->
-    <!-- perempuan -->
-    <div class="hidden" id="female">
-      <div class="flex w-full flex-col lg:justify-around gap-6">
-        {
-          female.img.map((data) => (
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div class="max-w-md">
-                <img
-                  src={data.src}
-                  alt={"photo dresscode " + data.title}
-                  class="w-full rounded-md"
-                />
-                <h2 class="font-heading text-base md:text-xl lg:text-2xl text-center">
-                  {data.title}
-                </h2>
-              </div>
-              <div class="max-w-md">
-                <h2 class="font-heading text-base md:text-xl lg:text-2xl ">
-                  Ketentuan
-                </h2>
-                <ul class="">
-                  {data.list?.map((e) => (
-                    <li class="small-font-size list-inside list-disc">{e}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))
-        }
+        </ul>
       </div>
-      <article class="py-12 md:ps-6">
-        <h2 class="font-heading sub-header-font-size pb-4">Ketentuan</h2>
-        <div>
-          <!-- loop -->
-          {
-            female.article.map((data) => (
-              <div>
-                <h3>{data.title}</h3>
-                <ul>
-                  {data.list.map((list) => (
-                    <li class="small-font-size list-inside list-disc">
-                      {list}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))
-          }
-          <!--  -->
-        </div>
-      </article>
+      <div class="max-w-md xl:max-w-2xl mx-auto">
+        <img
+          src={peralatan.src}
+          alt={"photo" + peralatan.title}
+          class="w-full rounded-md"
+        />
+      </div>
     </div>
     <!--  -->
   </section>
 </Layout>
-<!-- <style>*{border: 1px solid lime;}</style> -->
-<script>
-  const btnMale = document.getElementById("btnMale") as HTMLButtonElement;
-  const btnFemale = document.getElementById("btnFemale") as HTMLButtonElement;
-
-  const male = document.getElementById("male") as HTMLDivElement;
-  const female = document.getElementById("female") as HTMLDivElement;
-
-  btnMale.addEventListener("click", () => {
-    btnMale.classList.add("bg-yellow-base");
-    btnMale.classList.remove("bg-slate-200");
-    btnFemale.classList.add("bg-slate-200");
-    btnFemale.classList.remove("bg-yellow-base");
-
-    male.classList.remove("hidden");
-    female.classList.add("hidden");
-  });
-
-  btnFemale.addEventListener("click", () => {
-    btnMale.classList.add("bg-slate-200");
-    btnMale.classList.remove("bg-yellow-base");
-    btnFemale.classList.remove("bg-slate-200");
-    btnFemale.classList.add("bg-yellow-base");
-
-    male.classList.add("hidden");
-    female.classList.remove("hidden");
-  });
-</script>
