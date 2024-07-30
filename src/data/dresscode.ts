@@ -63,7 +63,7 @@ const ketentuanUmum: string[] = [
   "Dasi hitam.",
   "Sepatu bertali dominan hitam.",
   "Jas dan topi almamater.",
-  "Rambut tidak berwarna",
+  "Rambut tidak berwarna.",
   "Bagi yang menggunakan ikat pinggang wajib berwarna hitam.",
   "Bagi Laki-laki menggunakan bawahan hitam berupa celana bahan, panjang semata kaki (dilarang skinny Jeans).",
   "Bagi Perempuan menggunakan bawahan berupa rok hitam panjang (dilarang span).",
