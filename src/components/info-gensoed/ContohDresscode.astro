@@ -19,14 +19,14 @@ const { data } = Astro.props;
         </div>
         <div class="max-w-md">
           <h2
-            class="font-heading text-base md:text-xl lg:text-2xl text-center"
+            class="font-heading text-xl md:text-2xl lg:text-3xl text-center mb2"
             id="title"
           >
             {title}
           </h2>
-          <ul class="" id="list">
+          <ul class="normal-font-size pl-4 list-outsite list-disc" id="list">
             {list?.map((e) => (
-              <li class="small-font-size list-inside list-disc">{e}</li>
+              <li>{e}</li>
             ))}
           </ul>
         </div>

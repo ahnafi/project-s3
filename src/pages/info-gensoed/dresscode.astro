@@ -6,23 +6,28 @@ import { male, female } from "../../data/dresscode";
 ---
 
 <Layout
-  title="dresscode"
-  addClass="bg-[url('/images/patterns/batik.svg')] bg-size"
+  title="Dresscode"
+  addClass="bg-[url('/images/patterns/batik.svg')] bg-size text-dark-base"
 >
   <section class="pt-32 section-padding-x">
-    <div class="text-center md:text-left animate-fade-down animate-once animate-duration-[600ms] animate-delay-100 animate-ease-in-out">
-      <h1 class="text-3xl lg:text-4xl text-gray-800 font-love">
-        Aturan Cara Berpakaian <br />
-        Gensoed 2024
-      </h1>
-      <form id="search" class="lg:max-w-sm flex justify-center md:justify-start py-2">
+    <div
+      class="text-center md:text-left animate-fade-down animate-once animate-duration-[600ms] animate-delay-100 animate-ease-in-out"
+    >
+      <div
+        class="text-center md:text-left mb-4 md:bg-gradient-to-r bg-sky-400 md:from-sky-400 md:to-transparent p-2 md:p-4 rounded-xl md:rounded-3xl animate-fade-up animate-once animate-duration-[600ms] animate-ease-in-out"
+      >
+        <h1 class="capitalize font-heading header-font-size text-white-base">
+          Dresscode
+        </h1>
+      </div>
+      <form id="search" class="lg:max-w-sm flex justify-start py-2">
         <select
           id="day"
           name="day"
-          class="bg-gray-50 border-2 border-gray-300 rounded-lg 2-1/4 focus:ring-blue-base focus:border-blue-500 block px-2 py-2 bg-transparent w-1/2 transition-all duration-200 basis-5/12 md:basis-2/5 text-sm md:text-base"
+          class="bg-gray-50 border-2 border-gray-300 rounded-lg 2-1/4 focus:ring-0 focus:border-blue-500 block p-2 bg-transparent w-1/2 transition-all duration-200 basis-5/12 md:basis-2/5 text-sm md:text-base"
         >
-          <option value="dayOne" selected class="text-dark-base my-2 block border-b border-gray-100 py-1 font-semibold hover:text-black md:mx-2">Day 1</option>
-          <option value="dayTwo" class="text-dark-base ">Day 2</option>
+          <option value="dayOne" selected class="">Day 1</option>
+          <option value="dayTwo" class="">Day 2</option>
         </select>
       </form>
     </div>
@@ -30,7 +35,7 @@ import { male, female } from "../../data/dresscode";
       class="w-full py-4 flex justify-center items-center text-center normal-font-size animate-fade-up animate-once animate-duration-[800ms] animate-delay-100 animate-ease-in-out"
     >
       <button
-        class="bg-green-base w-1/2 py-2 rounded-l-md font-bold"
+        class="bg-blue-base text-white-base w-1/2 py-2 rounded-l-md font-bold"
         id="btnMale"
       >
         Laki Laki
@@ -53,7 +58,7 @@ import { male, female } from "../../data/dresscode";
     </div>
     <!--  -->
   </section>
-  <section class="section-padding-x">
+  <section class="section-padding-x pb-16 pt-8">
     <Ketentuan />
   </section>
 </Layout>
@@ -75,7 +80,6 @@ import { male, female } from "../../data/dresscode";
         e.preventDefault();
         let data = new FormData(search);
         let getDay = data.get("day")?.toString().toLowerCase();
-        console.log(getDay);
 
         if (getDay === "dayone") {
           // ubah src link dan innerhtml menjadi dayOne
@@ -84,23 +88,28 @@ import { male, female } from "../../data/dresscode";
             male.dayOne.img[0].title ?? "";
           divMale.getElementsByTagName("h2")[0].innerHTML =
             male.dayOne.img[0].title ?? "";
-          divMale.getElementsByTagName("ul")[0].innerHTML = (male.dayOne.img[0].list
-            ?.map((e) => `<li class="small-font-size list-inside list-disc">${e}</li>`) ?? []).join('')
-            // female
-          divFemale.getElementsByTagName("img")[0].src = female.dayOne.img[0].src;
+          divMale.getElementsByTagName("ul")[0].innerHTML = (
+            male.dayOne.img[0].list?.map((e) => `<li>${e}</li>`) ?? []
+          ).join("");
+          // female
+          divFemale.getElementsByTagName("img")[0].src =
+            female.dayOne.img[0].src;
           divFemale.getElementsByTagName("img")[0].alt =
             female.dayOne.img[0].title ?? "";
           divFemale.getElementsByTagName("h2")[0].innerHTML =
             female.dayOne.img[0].title ?? "";
-          divFemale.getElementsByTagName("ul")[0].innerHTML = (female.dayOne.img[0].list
-            ?.map((e) => `<li class="small-font-size list-inside list-disc">${e}</li>`) ?? []).join('')
-          divFemale.getElementsByTagName("img")[1].src = female.dayOne.img[1].src;
+          divFemale.getElementsByTagName("ul")[0].innerHTML = (
+            female.dayOne.img[0].list?.map((e) => `<li>${e}</li>`) ?? []
+          ).join("");
+          divFemale.getElementsByTagName("img")[1].src =
+            female.dayOne.img[1].src;
           divFemale.getElementsByTagName("img")[1].alt =
             female.dayOne.img[1].title ?? "";
           divFemale.getElementsByTagName("h2")[1].innerHTML =
             female.dayOne.img[1].title ?? "";
-          divFemale.getElementsByTagName("ul")[1].innerHTML = (female.dayOne.img[1].list
-            ?.map((e) => `<li class="small-font-size list-inside list-disc">${e}</li>`) ?? []).join('')
+          divFemale.getElementsByTagName("ul")[1].innerHTML = (
+            female.dayOne.img[1].list?.map((e) => `<li>${e}</li>`) ?? []
+          ).join("");
         } else if (getDay === "daytwo") {
           // ubah src link dan innerhtml menjadi dayTwo
           // male
@@ -109,23 +118,28 @@ import { male, female } from "../../data/dresscode";
             male.dayTwo.img[0].title ?? "";
           divMale.getElementsByTagName("h2")[0].innerHTML =
             male.dayTwo.img[0].title ?? "";
-          divMale.getElementsByTagName("ul")[0].innerHTML = (male.dayTwo.img[0].list
-            ?.map((e) => `<li class="small-font-size list-inside list-disc">${e}</li>`) ?? []).join('')
-            // female
-          divFemale.getElementsByTagName("img")[0].src = female.dayTwo.img[0].src;
+          divMale.getElementsByTagName("ul")[0].innerHTML = (
+            male.dayTwo.img[0].list?.map((e) => `<li>${e}</li>`) ?? []
+          ).join("");
+          // female
+          divFemale.getElementsByTagName("img")[0].src =
+            female.dayTwo.img[0].src;
           divFemale.getElementsByTagName("img")[0].alt =
             female.dayTwo.img[0].title ?? "";
           divFemale.getElementsByTagName("h2")[0].innerHTML =
             female.dayTwo.img[0].title ?? "";
-          divFemale.getElementsByTagName("ul")[0].innerHTML = (female.dayTwo.img[0].list
-            ?.map((e) => `<li class="small-font-size list-inside list-disc">${e}</li>`) ?? []).join('')
-          divFemale.getElementsByTagName("img")[1].src = female.dayTwo.img[1].src;
+          divFemale.getElementsByTagName("ul")[0].innerHTML = (
+            female.dayTwo.img[0].list?.map((e) => `<li>${e}</li>`) ?? []
+          ).join("");
+          divFemale.getElementsByTagName("img")[1].src =
+            female.dayTwo.img[1].src;
           divFemale.getElementsByTagName("img")[1].alt =
             female.dayTwo.img[1].title ?? "";
           divFemale.getElementsByTagName("h2")[1].innerHTML =
             female.dayTwo.img[1].title ?? "";
-          divFemale.getElementsByTagName("ul")[1].innerHTML = (female.dayTwo.img[1].list
-            ?.map((e) => `<li class="small-font-size list-inside list-disc">${e}</li>`) ?? []).join('')
+          divFemale.getElementsByTagName("ul")[1].innerHTML = (
+            female.dayTwo.img[1].list?.map((e) => `<li>${e}</li>`) ?? []
+          ).join("");
         } else {
           alert("error");
         }
@@ -134,20 +148,20 @@ import { male, female } from "../../data/dresscode";
   });
 
   btnMale.addEventListener("click", () => {
-    btnMale.classList.add("bg-green-base");
-    btnMale.classList.remove("bg-slate-200");
-    btnFemale.classList.add("bg-slate-200");
-    btnFemale.classList.remove("bg-green-base");
+    btnMale.classList.add("bg-blue-base", "text-white-base");
+    btnMale.classList.remove("bg-slate-200", "text-dark-base");
+    btnFemale.classList.add("bg-slate-200", "text-dark-base");
+    btnFemale.classList.remove("bg-blue-base", "text-white-base");
 
     divMale.classList.remove("hidden");
     divFemale.classList.add("hidden");
   });
 
   btnFemale.addEventListener("click", () => {
-    btnMale.classList.add("bg-slate-200");
-    btnMale.classList.remove("bg-green-base");
-    btnFemale.classList.remove("bg-slate-200");
-    btnFemale.classList.add("bg-green-base");
+    btnMale.classList.add("bg-slate-200", "text-dark-base");
+    btnMale.classList.remove("bg-blue-base", "text-white-base");
+    btnFemale.classList.add("bg-blue-base", "text-white-base");
+    btnFemale.classList.remove("bg-slate-200", "text-dark-base");
 
     divMale.classList.add("hidden");
     divFemale.classList.remove("hidden");

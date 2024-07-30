@@ -12,7 +12,7 @@ const male: dataKetentuan = {
     img: [
       {
         src: "/images/dresscode/cowo-day-one.webp",
-        title: "Contoh dress code mahasiswa baru Laki-laki day 1",
+        title: "Dresscode Gensoed Laki-laki Day-1.",
       },
     ],
   },
@@ -20,7 +20,7 @@ const male: dataKetentuan = {
     img: [
       {
         src: "/images/dresscode/cowo-day-two.webp",
-        title: "Contoh dress code mahasiswa baru Laki-laki day 2",
+        title: "Dresscode Gensoed Laki-laki Day-2.",
       },
     ],
   },
@@ -31,14 +31,13 @@ const female: dataKetentuan = {
     img: [
       {
         src: "/images/dresscode/cewe-day-one.webp",
-        title: "Contoh dress code mahasiswa baru Perempuan day 1",
-        list: ["Rambut wajib dikucir satu dan rambut tidak berwarna"],
+        title: "Dresscode Gensoed Perempuan Tidak Berhijab Day-1",
+        list: ["Rambut wajib dikucir satu dan rambut tidak berwarna."],
       },
       {
         src: "/images/dresscode/cewe-day-one-hijab.webp",
-        title:
-          "Contoh dress code mahasiswa baru Perempuan yang mengenakan hijab day 1",
-        list: ["Kerudung hitam segiempat (dilarang pashmina)"],
+        title: "Dresscode Gensoed Perempuan Berhijab Day-1",
+        list: ["Kerudung hitam segiempat (dilarang pashmina)."],
       },
     ],
   },
@@ -46,14 +45,13 @@ const female: dataKetentuan = {
     img: [
       {
         src: "/images/dresscode/cewe-day-two.webp",
-        title: "Contoh dress code mahasiswa baru Perempuan day 2",
-        list: ["Rambut wajib dikucir satu dan rambut tidak berwarna"],
+        title: "Dresscode Gensoed Perempuan Tidak Berhijab Day-2",
+        list: ["Rambut wajib dikucir satu dan rambut tidak berwarna."],
       },
       {
         src: "/images/dresscode/cewe-day-two-hijab.webp",
-        title:
-          "Contoh dress code mahasiswa baru Perempuan yang mengenakan hijab day 2",
-        list: ["Kerudung hitam segiempat (dilarang pashmina)"],
+        title: "Dresscode Gensoed Perempuan Berhijab Day-2",
+        list: ["Kerudung hitam segiempat (dilarang pashmina)."],
       },
     ],
   },
@@ -71,4 +69,4 @@ const ketentuanUmum: string[] = [
   "Bagi Perempuan menggunakan bawahan berupa rok hitam panjang (dilarang span).",
 ];
 
-export {type dataKetentuan,male,female,ketentuanUmum}
+export { type dataKetentuan, male, female, ketentuanUmum };
