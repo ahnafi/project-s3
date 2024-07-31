@@ -41,26 +41,30 @@ const sponsors = [
     <div
       class="flex flex-col justify-center content-center items-center bg-white-base text-dark-base"
     >
-      <h2 class="font-heading header-font-size mb-8"
-      data-aos="fade-down"
-      data-aos-duration="600"
-      data-aos-delay="200"
-      data-aos-easing="ease-out"
-      data-aos-offset="200"
-      data-aos-once="true"
-      >Sponsorship</h2>
+      <h2
+        class="font-heading header-font-size mb-8"
+        data-aos="fade-down"
+        data-aos-duration="600"
+        data-aos-delay="200"
+        data-aos-easing="ease-out"
+        data-aos-offset="200"
+        data-aos-once="true"
+      >
+        Sponsorship
+      </h2>
       <div
         class="flex flex-wrap justify-center gap-4 lg:gap-6 md:max-w-xl lg:max-w-3xl"
       >
         {
           sponsors.map((sponsor) => (
-            <span class="max-w-36 sm:max-w-40 flex justify-center items-center drop-shadow-yellow"
-            data-aos="zoom-in"
-            data-aos-duration="600"
-            data-aos-delay="200"
-            data-aos-easing="ease-out"
-            data-aos-offset="50"
-            data-aos-once="true"
+            <span
+              class="max-w-36 sm:max-w-40 flex justify-center items-center"
+              data-aos="zoom-in"
+              data-aos-duration="600"
+              data-aos-delay="200"
+              data-aos-easing="ease-out"
+              data-aos-offset="50"
+              data-aos-once="true"
             >
               <img src={sponsor.img} alt={sponsor.name} />
             </span>
