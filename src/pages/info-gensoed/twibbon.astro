@@ -6,55 +6,56 @@ import Layout from "../../layouts/Layout.astro";
   title="Twibbon"
   addClass="bg-[url('/images/patterns/batik.svg')] bg-size"
 >
-  <section class="pt-40 pb-24 w-full">
-    <div class="container max-w-7xl flex flex-col gap-8 lg:gap-12">
-      <h1 class="text-3xl lg:text-4xl text-gray-800 font-love">
-        Twibbon <br />
-        Gensoed 2024
-      </h1>
+  <section class="pt-32 pb-16 section-padding-x">
+    <div class="container max-w-screen-lg">
       <div
-        class="w-full flex flex-col items-center gap-8 lg:flex-row lg:gap-12 lg:items-start px-6"
+        class="text-center md:text-left mb-4 md:mb-8 md:bg-gradient-to-r bg-sky-400 md:from-sky-400 md:to-transparent p-2 md:p-4 rounded-3xl animate-fade-up animate-once animate-duration-[600ms] animate-ease-in-out"
+      >
+        <h1 class="capitalize font-heading header-font-size text-white-base">
+          Twibbon
+        </h1>
+      </div>
+      <div
+        class="w-full flex flex-col items-center gap-8 lg:flex-row lg:gap-12 lg:items-start"
       >
         <aside class="flex flex-col gap-6 flex-shrink-0">
           <img
             src="/images/dummy-twibbon.png"
-            class="w-full max-w-[325px] aspect-square object-cover"
+            class="w-full max-w-[325px] aspect-square object-cover rounded-md"
             alt="Twibbon"
           />
           <a
             href="/images/dummy-twibbon.png"
             download="/images/dummy-twibbon.png"
-            class="px-6 py-3 lg:px-8 lg:py-4 bg-gray-800 text-white text-center rounded-md w-full max-w-[325px]"
+            class="px-6 py-3 lg:px-8 lg:py-4 bg-dark-base text-white-base normal-font-size text-center rounded-md w-full max-w-[325px] hover:bg-slate-700 transition duration-200"
             >Download
           </a>
         </aside>
         <aside class="flex-grow flex flex-col gap-8">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 normal-font-size"
+          >
             <div class="flex flex-col gap-2">
-              <label for="name-field" class="text-base lg:text-lg text-gray-700"
-                >Nama Lengkap</label
+              <label for="name-field" class="text-dark-base">Nama Lengkap</label
               >
               <input
-                class="px-5 py-3 lg:px-6 lg:py-4 bg-white outline outline-1 outline-gray-300 rounded-md focus:outline-[3px] text-gray-700"
+                class="px-5 py-3 lg:px-6 lg:py-4 bg-white outline outline-1 outline-gray-300 rounded-md focus:outline-[3px] text-dark-base"
                 placeholder="Masukan Nama Kamu"
                 id="name-field"
                 name="name"
               />
             </div>
             <div class="flex flex-col gap-2">
-              <label
-                for="faculty-field"
-                class="text-base lg:text-lg text-gray-700">Fakultas</label
-              >
+              <label for="faculty-field" class="text-dark-base">Fakultas</label>
               <input
-                class="px-5 py-3 lg:px-6 lg:py-4 bg-white outline outline-1 outline-gray-300 rounded-md focus:outline-[3px] text-gray-700"
+                class="px-5 py-3 lg:px-6 lg:py-4 bg-white outline outline-1 outline-gray-300 rounded-md focus:outline-[3px] text-dark-base"
                 placeholder="Masukan Fakultas Kamu"
                 id="faculty-field"
                 name="faculty"
               />
             </div>
           </div>
-          <p class="text-gray-700 text-sm md:text-base" id="caption">
+          <p class="text-dark-base normal-font-size" id="caption">
             [Parampara Aji Satya Bina Adi Karya Negara]<br /><br />Selamat
             datang Brawijaya Muda di Kampus Biru, Kampus Perjuangan, Kampus
             Kebanggaan, Universitas Brawijaya.<br /><br />Bermula dari setitik
@@ -77,7 +78,7 @@ import Layout from "../../layouts/Layout.astro";
             />#GALABRAWIJAYA<br />#[SingkatanFakultas]RB23
           </p>
           <button
-            class="px-6 py-3 lg:px-8 lg:py-4 bg-gray-800 text-white text-center rounded-md hover:brightness-125 disabled:bg-gray-500 disabled:hover:brightness-100"
+            class="px-6 py-3 lg:px-8 lg:py-4 bg-dark-base text-white-base text-center rounded-md hover:brightness-125 disabled:bg-gray-500 disabled:hover:brightness-100 normal-font-size transition duration-200"
             id="copy-caption"
             disabled
           >

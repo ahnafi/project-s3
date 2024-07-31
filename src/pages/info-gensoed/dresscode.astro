@@ -10,56 +10,60 @@ import { male, female } from "../../data/dresscode";
   addClass="bg-[url('/images/patterns/batik.svg')] bg-size text-dark-base"
 >
   <section class="pt-32 section-padding-x">
-    <div
-      class="text-center md:text-left animate-fade-down animate-once animate-duration-[600ms] animate-delay-100 animate-ease-in-out"
-    >
+    <div class="container max-w-screen-lg">
       <div
-        class="text-center md:text-left mb-4 md:bg-gradient-to-r bg-sky-400 md:from-sky-400 md:to-transparent p-2 md:p-4 rounded-xl md:rounded-3xl animate-fade-up animate-once animate-duration-[600ms] animate-ease-in-out"
+        class="text-center md:text-left animate-fade-down animate-once animate-duration-[600ms] animate-delay-100 animate-ease-in-out"
       >
-        <h1 class="capitalize font-heading header-font-size text-white-base">
-          Dresscode
-        </h1>
-      </div>
-      <form id="search" class="lg:max-w-sm flex justify-start py-2">
-        <select
-          id="day"
-          name="day"
-          class="bg-gray-50 border-2 border-gray-300 rounded-lg 2-1/4 focus:ring-0 focus:border-blue-500 block p-2 bg-transparent w-1/2 transition-all duration-200 basis-5/12 md:basis-2/5 text-sm md:text-base"
+        <div
+          class="text-center md:text-left mb-4 md:mb-8 md:bg-gradient-to-r bg-sky-400 md:from-sky-400 md:to-transparent p-2 md:p-4 rounded-xl md:rounded-3xl animate-fade-up animate-once animate-duration-[600ms] animate-ease-in-out"
         >
-          <option value="dayOne" selected class="">Day 1</option>
-          <option value="dayTwo" class="">Day 2</option>
-        </select>
-      </form>
-    </div>
-    <div
-      class="w-full py-4 flex justify-center items-center text-center normal-font-size animate-fade-up animate-once animate-duration-[800ms] animate-delay-100 animate-ease-in-out"
-    >
-      <button
-        class="bg-blue-base text-white-base w-1/2 py-2 rounded-l-md font-bold"
-        id="btnMale"
+          <h1 class="capitalize font-heading header-font-size text-white-base">
+            Dresscode
+          </h1>
+        </div>
+        <form id="search" class="lg:max-w-sm flex justify-start py-2">
+          <select
+            id="day"
+            name="day"
+            class="bg-gray-50 border-2 border-gray-300 rounded-lg 2-1/4 focus:ring-0 focus:border-blue-500 block p-2 bg-transparent w-1/2 transition-all duration-200 basis-5/12 md:basis-2/5 text-sm md:text-base"
+          >
+            <option value="dayOne" selected class="">Day 1</option>
+            <option value="dayTwo" class="">Day 2</option>
+          </select>
+        </form>
+      </div>
+      <div
+        class="w-full py-4 flex justify-center items-center text-center normal-font-size animate-fade-up animate-once animate-duration-[800ms] animate-delay-100 animate-ease-in-out"
       >
-        Laki Laki
-      </button>
-      <button
-        class="bg-slate-200 w-1/2 py-2 font-bold rounded-r-md"
-        id="btnFemale"
-      >
-        Perempuan
-      </button>
+        <button
+          class="bg-blue-base text-white-base w-1/2 py-2 rounded-l-md font-bold"
+          id="btnMale"
+        >
+          Laki Laki
+        </button>
+        <button
+          class="bg-slate-200 w-1/2 py-2 font-bold rounded-r-md"
+          id="btnFemale"
+        >
+          Perempuan
+        </button>
+      </div>
+      <!-- laki laki -->
+      <div class="" id="male">
+        <ContohDresscode data={male.dayOne} />
+      </div>
+      <!--  -->
+      <!-- perempuan -->
+      <div class="hidden" id="female">
+        <ContohDresscode data={female.dayOne} />
+      </div>
+      <!--  -->
     </div>
-    <!-- laki laki -->
-    <div class="" id="male">
-      <ContohDresscode data={male.dayOne} />
-    </div>
-    <!--  -->
-    <!-- perempuan -->
-    <div class="hidden" id="female">
-      <ContohDresscode data={female.dayOne} />
-    </div>
-    <!--  -->
   </section>
   <section class="section-padding-x pb-16 pt-8">
-    <Ketentuan />
+    <div class="container max-w-screen-lg">
+      <Ketentuan />
+    </div>
   </section>
 </Layout>
 
