@@ -21,15 +21,15 @@ import Layout from "../../layouts/Layout.astro";
       >
         <aside class="flex flex-col gap-6 flex-shrink-0">
           <img
-            src="/images/dummy-twibbon.png"
+            src="/images/twibbon.webp"
             class="w-full max-w-[325px] aspect-square object-cover rounded-md"
             alt="Twibbon"
           />
           <a
-            href="/images/dummy-twibbon.png"
-            download="/images/dummy-twibbon.png"
+            href="https://bit.ly/TemplateTwibbonS324"
+            target="_blank"
             class="px-6 py-3 lg:px-8 lg:py-4 bg-dark-base text-white-base normal-font-size text-center rounded-md w-full max-w-[325px] hover:bg-slate-700 transition duration-200"
-            >Download
+            >Template
           </a>
         </aside>
         <aside class="flex-grow flex flex-col gap-8">
@@ -44,6 +44,7 @@ import Layout from "../../layouts/Layout.astro";
                 placeholder="Masukan nama kamu..."
                 id="name-field"
                 name="name"
+                maxlength="50"
               />
             </div>
             <div class="flex flex-col gap-2">
@@ -53,6 +54,7 @@ import Layout from "../../layouts/Layout.astro";
                 placeholder="Masukan fakultas kamu..."
                 id="faculty-field"
                 name="faculty"
+                maxlength="50"
               />
             </div>
             <div class="flex flex-col gap-2">
@@ -62,24 +64,44 @@ import Layout from "../../layouts/Layout.astro";
                 placeholder="Masukan kelompok kamu..."
                 id="group-field"
                 name="group"
+                maxlength="50"
               />
             </div>
+            <div class="flex flex-col gap-2">
+              <label for="companion-field" class="text-dark-base"
+                >Nama Pendamping Kelompok</label
+              >
+              <input
+                class="px-5 py-3 lg:px-6 lg:py-4 bg-white outline outline-1 outline-gray-300 rounded-md focus:outline-[3px] text-dark-base"
+                placeholder="Masukan nama pendamping kamu..."
+                id="companion-field"
+                name="companion"
+                maxlength="50"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="action-plan-field" class="text-dark-base"
+              >Action Plan</label
+            >
+            <textarea
+              class="px-5 py-3 lg:px-6 lg:py-4 bg-white outline outline-1 outline-gray-300 rounded-md focus:outline-[3px] text-dark-base"
+              placeholder="Masukan kelompok kamu..."
+              id="action-plan-field"
+              rows="3"
+              name="caption"
+              maxlength="500"></textarea>
           </div>
           <p class="text-dark-base normal-font-size" id="caption">
             [SATARUPA NISCALA: Satukan Arah Raih Upalamba Lahirkan Panglima Muda
             Sing Humanis Kalihan Gelora]<br /><br />
-            "Tidak ada jalan yang mudah menuju impian, namun setiap langkah penuh
-            perjuangan akhirnya terbayar. Dari lembaran buku yang tak kenal waktu
-            hingga larut malam penuh doa dan harapan, kini aku resmi menjadi mahasiswa
-            baru di Universitas Jenderal Soedirman. Perjuangan ini adalah awal dari
-            perjalanan baru, tempat impian masa depan dirangkai. Semoga langkah ini
-            dapat menjadi pondasi kuat untuk meraih cita-cita.”<br /><br />
+            "<span class="action-plan-text">[Action Plan]</span>”<br /><br />
             Saya <span class="name-text">[Nama]</span> dari Fakultas <span
               class="faculty-text">[Fakultas]</span
             > siap mengikuti rangkaian acara Soedirman Student Summit 2024! #SoedirmanStudentSummit
             #UniversitasJenderalSoedirman #Gensoed2024 #S32024 #SatarupaNiscala #GensoedTwibbon_<span
-              class="name-text-caption">[Nama]</span
-            > #Kelompok<span class="group-text">[Kelompok]</span> #EskalasiBestari
+              class="companion-text">[Nama Pendamping Kelompok]</span
+            > #<span class="group-text">[Kelompok]</span> #EskalasiBestari
           </p>
           <button
             class="px-6 py-3 lg:px-8 lg:py-4 bg-dark-base text-white-base text-center rounded-md hover:brightness-125 disabled:bg-gray-500 disabled:hover:brightness-100 normal-font-size transition duration-200"
@@ -98,31 +120,53 @@ import Layout from "../../layouts/Layout.astro";
   const nameInput = document.querySelector<any>("#name-field");
   const facultyInput = document.querySelector<any>("#faculty-field");
   const groupInput = document.querySelector<any>("#group-field");
+  const actionPlanInput = document.querySelector<any>("#action-plan-field");
+  const companionInput = document.querySelector<any>("#companion-field");
 
   const nameTextElements = document.querySelector<any>(".name-text");
   const facultyTextElement = document.querySelector<any>(".faculty-text");
   const groupTextElement = document.querySelector<any>(".group-text");
-  const nameTextCaption = document.querySelector<any>(".name-text-caption");
+  const actionPlanTextElement =
+    document.querySelector<any>(".action-plan-text");
+  const companionTextElement = document.querySelector<any>(".companion-text");
 
   const copyButton = document.querySelector<any>("#copy-caption");
   const caption = document.querySelector<any>("#caption");
 
   const updateCaption = () => {
+    actionPlanTextElement.innerText = actionPlanInput.value || "[Action Plan]";
     nameTextElements.innerText = nameInput.value || "[Nama]";
     facultyTextElement.innerText = facultyInput.value || "[Fakultas]";
-    groupTextElement.innerText = groupInput.value || "[Kelompok]";
-    nameTextCaption.innerText = nameInput.value.replace(/\s+/g, "");
+    groupTextElement.innerText =
+      groupInput.value.replace(/\s+/g, "") || "[Kelompok]";
+    companionTextElement.innerText =
+      companionInput.value.trim().split(" ")[0] || "[Nama Pendamping Kelompok]";
     watchButton();
   };
 
   const watchButton = () => {
     const nameFilled = nameInput.value && nameInput.value !== "[Nama]";
+    const actionPlanFilled =
+      actionPlanInput.value && actionPlanInput.value !== "[Action Plan]";
+    const groupInputFilled =
+      groupInput.value && groupInput.value !== "[Kelompok]";
     const facultyFilled =
       facultyInput.value && facultyInput.value !== "[Fakultas]";
-    copyButton.disabled = !(nameFilled && facultyFilled);
+    const companionFilled =
+      companionInput.value &&
+      companionInput.value !== "[Nama Pendamping Kelompok]";
+    copyButton.disabled = !(
+      nameFilled &&
+      facultyFilled &&
+      actionPlanFilled &&
+      groupInputFilled &&
+      companionFilled
+    );
   };
 
   nameInput.addEventListener("input", updateCaption);
+  actionPlanInput.addEventListener("input", updateCaption);
+  companionInput.addEventListener("input", updateCaption);
   facultyInput.addEventListener("input", updateCaption);
   groupInput.addEventListener("input", updateCaption);
 
