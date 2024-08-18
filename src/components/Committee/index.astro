@@ -1,0 +1,384 @@
+---
+const committees = [
+  {
+    name: "Project Officer",
+    "member-name": "Muhammad Zaki Dzulfikar",
+    image: "/images/committee/members/project-officer.webp",
+    "image-background":
+      "/images/committee/backgrounds/committee-background-1.webp",
+    description:
+      "Selamat datang rekan-rekan mahasiswa yang bersemangat! Sebagai ketua panitia, saya merasa terhormat dapat berdiri di hadapan kalian semua pada hari yang bersejarah ini. Kegiatan yang kita laksanakan hari ini bukan hanya sekedar acara, tetapi juga wujud nyata dari semangat kolaborasi dan inovasi.",
+    active: true,
+  },
+  {
+    name: "Secretary",
+    "member-name": "Sinta Ayu",
+    image: "/images/committee/members/project-officer.webp",
+    "image-background":
+      "/images/committee/backgrounds/committee-background-2.webp",
+    description:
+      "Aku adalah seorang sekretaris yang bertugas untuk mengatur segala kegiatan panitia.",
+  },
+  {
+    name: "Treasurer",
+    "member-name": "Rizky Fauzan",
+    image: "/images/committee/members/project-officer.webp",
+    "image-background":
+      "/images/committee/backgrounds/committee-background-3.webp",
+    description:
+      "Aku adalah seorang bendahara yang bertugas untuk mengatur segala keuangan panitia.",
+  },
+  {
+    name: "Design, Decoration & Documentation",
+    "member-name": "Dimas Prasetyo",
+    image: "/images/committee/members/project-officer.webp",
+    "image-background":
+      "/images/committee/backgrounds/committee-background-4.webp",
+    description:
+      "Aku adalah seorang dokumentasi yang bertugas untuk mengabadikan momen-momen berharga panitia.",
+  },
+  {
+    name: "Publications & Information Technology",
+    "member-name": "Rifka Diah",
+    image: "/images/committee/members/project-officer.webp",
+    "image-background":
+      "/images/committee/backgrounds/committee-background-5.webp",
+    description:
+      "Aku adalah seorang desainer yang bertugas untuk mendesain segala kebutuhan panitia.",
+  },
+];
+---
+
+<div class="slider">
+  <!-- list Items -->
+  <div class="list">
+    {
+      committees.map((committe, index) => (
+        <div class={`item ${committe.active ? "active" : ""}`}>
+          <img src={committe["image-background"]} class="profile-background" />
+          <div class="content">
+            <p class="position">{committe.name}</p>
+            <h2 class="profile-name">{committe["member-name"]}</h2>
+            <p class="paragraph">{committe.description}</p>
+            <img
+              src={committe.image}
+              alt={committe.name}
+              class="profile-image"
+            />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <!-- button arrows -->
+  <div class="arrows">
+    <button id="prev"><</button>
+    <button id="next">></button>
+  </div>
+  <!-- thumbnail -->
+  <div class="thumbnail">
+    {
+      committees.map((committe, index) => (
+        <div class={`item ${committe.active ? "active" : ""}`}>
+          <img src={committe["image-background"]} alt="Temporary Alt" />
+          <div class="content">{committe.name}</div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  svg {
+    width: 25px;
+  }
+  /* css slider */
+  .slider {
+    height: 100vh;
+    margin-top: -50px;
+    color: #f1f5f9;
+    position: relative;
+  }
+  .slider .list .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .slider .list .item .profile-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slider .list .item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #000 40%, transparent);
+  }
+  .slider .list .item .content {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    width: 768px;
+    max-width: 80%;
+    z-index: 1;
+  }
+  .slider .list .item .content p.position {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
+  }
+  .slider .list .item .content .profile-name {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0;
+  }
+  .slider .list .item .content .profile-image {
+    width: 296px;
+    position: absolute;
+    right: -384px;
+    bottom: -150px;
+    z-index: -1;
+  }
+  .slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+  }
+  @keyframes showContent {
+    to {
+      transform: translateY(0);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  .slider .list .item.active p.position,
+  .slider .list .item.active .profile-name,
+  .slider .list .item.active p.paragraph,
+  .slider .list .item.active .profile-image {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+  }
+  .slider .list .item.active .profile-name {
+    animation-delay: 1s;
+  }
+  .slider .list .item.active p.paragraph {
+    animation-duration: 1.3s;
+  }
+  .arrows {
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 100;
+  }
+  .arrows button {
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #eee;
+    transition: 0.5s;
+  }
+  .arrows button:hover {
+    background-color: #eee;
+    color: black;
+  }
+  .thumbnail {
+    position: absolute;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+    padding-top: 30px;
+    bottom: -12px;
+    overflow-y: auto;
+  }
+  @media screen and (max-width: 768px) {
+    .thumbnail {
+      bottom: -96px;
+    }
+  }
+  .thumbnail::-webkit-scrollbar {
+    width: 0;
+  }
+  .thumbnail .item {
+    width: 150px;
+    height: 220px;
+    filter: brightness(0.5);
+    transition: 0.5s;
+    flex-shrink: 0;
+  }
+  @media screen and (max-width: 768px) {
+    .thumbnail .item {
+      width: 120px;
+      height: 180px;
+    }
+  }
+  .thumbnail .item:hover {
+    transform: translateY(-20px);
+  }
+
+  .thumbnail .item.active {
+    transform: translateY(-20px);
+  }
+  .thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .thumbnail .item.active {
+    filter: brightness(1.5);
+  }
+  .thumbnail .item .content {
+    position: absolute;
+    inset: auto 10px 10px 10px;
+    font-size: 1em;
+  }
+  @media screen and (max-width: 768px) {
+    .thumbnail .item .content {
+      font-size: 0.8em;
+    }
+  }
+
+  /* Staff Position */
+  .slider .list .item .content p.paragraph {
+    font-size: 0.9em;
+    font-weight: 400;
+  }
+  .slider .list .item .content p.paragraph .staff-position {
+    font-size: 0.6em;
+    font-weight: 300;
+  }
+
+  /* Responsive Breakpoints */
+  @media screen and (max-width: 1200px) {
+    .slider .list .item .content .profile-image {
+      width: 256px;
+      bottom: -96px;
+      right: -100px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .arrows {
+      top: 20%;
+    }
+    .thumbnail {
+      justify-content: start;
+    }
+    .slider .list .item .content .profile-name {
+      font-size: 28px;
+    }
+    .slider .list .item .content p.position {
+      font-size: 12px;
+    }
+    .slider .list .item .content {
+      width: 512px;
+      top: 40%;
+    }
+    .slider .list .item .content p.paragraph {
+      font-size: 14px;
+    }
+    .slider .list .item .content .profile-image {
+      width: 196px;
+      bottom: 0;
+      right: -100px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .slider {
+      max-height: 100vh;
+    }
+    .arrows {
+      left: 30px;
+      top: 30%;
+    }
+    .slider .list .item .content {
+      bottom: 25%;
+      top: auto;
+    }
+    .slider .list .item .content p.position {
+      font-size: 10px;
+    }
+    .slider .list .item .content p {
+      margin: 0;
+    }
+    .slider .list .item .content p.paragraph {
+      font-size: 12px;
+    }
+    .slider .list .item .content .profile-image {
+      right: -30px;
+    }
+  }
+</style>
+
+<script>
+  let items = document.querySelectorAll(".slider .list .item");
+  let next = document.getElementById("next");
+  let prev = document.getElementById("prev");
+  let thumbnails = document.querySelectorAll(".thumbnail .item");
+
+  // config param
+  let countItem = items.length;
+  let itemActive = 0;
+  // event next click
+  next.onclick = function () {
+    itemActive = itemActive + 1;
+    if (itemActive >= countItem) {
+      itemActive = 0;
+    }
+    showSlider();
+  };
+  //event prev click
+  prev.onclick = function () {
+    itemActive = itemActive - 1;
+    if (itemActive < 0) {
+      itemActive = countItem - 1;
+    }
+    showSlider();
+  };
+  // auto run slider
+  let refreshInterval = setInterval(() => {
+    next.click();
+  }, 5000);
+  function showSlider() {
+    // remove item active old
+    let itemActiveOld = document.querySelector(".slider .list .item.active");
+    let thumbnailActiveOld = document.querySelector(".thumbnail .item.active");
+    itemActiveOld.classList.remove("active");
+    thumbnailActiveOld.classList.remove("active");
+
+    // active new item
+    items[itemActive].classList.add("active");
+    thumbnails[itemActive].classList.add("active");
+
+    // clear auto time run slider
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => {
+      next.click();
+    }, 5000);
+  }
+
+  // click thumbnail
+  thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener("click", () => {
+      itemActive = index;
+      showSlider();
+    });
+  });
+</script>
