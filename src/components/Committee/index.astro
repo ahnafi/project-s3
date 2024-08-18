@@ -53,7 +53,7 @@ const committees = [
   <!-- list Items -->
   <div class="list">
     {
-      committees.map((committe, index) => (
+      committees.map((committe) => (
         <div class={`item ${committe.active ? "active" : ""}`}>
           <img src={committe["image-background"]} class="profile-background" />
           <div class="content">
@@ -72,13 +72,13 @@ const committees = [
   </div>
   <!-- button arrows -->
   <div class="arrows">
-    <button id="prev"><</button>
-    <button id="next">></button>
+    <button id="prev">&lt;</button>
+    <button id="next">&gt;</button>
   </div>
   <!-- thumbnail -->
   <div class="thumbnail">
     {
-      committees.map((committe, index) => (
+      committees.map((committe) => (
         <div class={`item ${committe.active ? "active" : ""}`}>
           <img src={committe["image-background"]} alt="Temporary Alt" />
           <div class="content">{committe.name}</div>
@@ -328,10 +328,14 @@ const committees = [
 </style>
 
 <script>
-  let items = document.querySelectorAll(".slider .list .item");
-  let next = document.getElementById("next");
-  let prev = document.getElementById("prev");
-  let thumbnails = document.querySelectorAll(".thumbnail .item");
+  let items = document.querySelectorAll(
+    ".slider .list .item"
+  ) as NodeListOf<HTMLDivElement>;
+  let next = document.getElementById("next") as HTMLButtonElement;
+  let prev = document.getElementById("prev") as HTMLButtonElement;
+  let thumbnails = document.querySelectorAll(
+    ".thumbnail .item"
+  ) as NodeListOf<HTMLDivElement>;
 
   // config param
   let countItem = items.length;
@@ -358,8 +362,12 @@ const committees = [
   }, 5000);
   function showSlider() {
     // remove item active old
-    let itemActiveOld = document.querySelector(".slider .list .item.active");
-    let thumbnailActiveOld = document.querySelector(".thumbnail .item.active");
+    let itemActiveOld = document.querySelector(
+      ".slider .list .item.active"
+    ) as HTMLDivElement;
+    let thumbnailActiveOld = document.querySelector(
+      ".thumbnail .item.active"
+    ) as HTMLDivElement;
     itemActiveOld.classList.remove("active");
     thumbnailActiveOld.classList.remove("active");
 
